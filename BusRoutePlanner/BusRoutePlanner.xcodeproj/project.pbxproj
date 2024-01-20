@@ -23,7 +23,6 @@
 		6510757E2B5C355C005BEA4A /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 6510757D2B5C355C005BEA4A /* GoogleMapsM4B */; };
 		651075802B5C35C6005BEA4A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510757F2B5C35C6005BEA4A /* City.swift */; };
 		651075842B5C35E5005BEA4A /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075832B5C35E5005BEA4A /* MapViewControllerBridge.swift */; };
-		65778CBC2B5C53F3000101E6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 65778CBB2B5C53F3000101E6 /* README.md */; };
 		65931BC62B5C3D620019EBF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075722B5C347F005BEA4A /* SceneDelegate.swift */; };
 		65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
 		65931BCB2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
@@ -78,6 +77,7 @@
 		6510757F2B5C35C6005BEA4A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		651075832B5C35E5005BEA4A /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		65778CBB2B5C53F3000101E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		65778CBD2B5C5F0F000101E6 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		65931BC92B5C3DFD0019EBF9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = com.pedrommoreno.swiftlint.yml; sourceTree = "<group>"; };
 		65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				65778CBB2B5C53F3000101E6 /* README.md */,
+				65778CBD2B5C5F0F000101E6 /* Changelog.md */,
 				65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */,
 				65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */,
 				651075432B5C276E005BEA4A /* BusRoutePlanner */,
@@ -333,7 +334,6 @@
 			files = (
 				65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */,
 				6510754C2B5C2770005BEA4A /* Preview Assets.xcassets in Resources */,
-				65778CBC2B5C53F3000101E6 /* README.md in Resources */,
 				651075492B5C2770005BEA4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
