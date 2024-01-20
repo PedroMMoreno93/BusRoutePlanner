@@ -87,15 +87,6 @@ struct ContentView: View {
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
         }
-        .onAppear(perform: {
-            #if DEBUG
-            print("DEBUG PEDRO")
-            #elseif TEST
-            print("TEST PEDRO")
-            #else
-            print("RELEASE PEDRO")
-            #endif
-        })
     }
 }
 
