@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */; };
+		651075472B5C276E005BEA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075462B5C276E005BEA4A /* ContentView.swift */; };
+		651075492B5C2770005BEA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651075482B5C2770005BEA4A /* Assets.xcassets */; };
+		6510754C2B5C2770005BEA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */; };
+		651075562B5C2770005BEA4A /* BusRoutePlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075552B5C2770005BEA4A /* BusRoutePlannerTests.swift */; };
+		651075602B5C2771005BEA4A /* BusRoutePlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510755F2B5C2771005BEA4A /* BusRoutePlannerUITests.swift */; };
+		651075622B5C2771005BEA4A /* BusRoutePlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075612B5C2771005BEA4A /* BusRoutePlannerUITestsLaunchTests.swift */; };
+		6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510756E2B5C27A3005BEA4A /* AppDelegate.swift */; };
+		651075702B5C27A3005BEA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510756E2B5C27A3005BEA4A /* AppDelegate.swift */; };
+		651075742B5C347F005BEA4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075722B5C347F005BEA4A /* SceneDelegate.swift */; };
+		651075782B5C355C005BEA4A /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 651075772B5C355C005BEA4A /* GoogleMaps */; };
+		6510757A2B5C355C005BEA4A /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = 651075792B5C355C005BEA4A /* GoogleMapsBase */; };
+		6510757C2B5C355C005BEA4A /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6510757B2B5C355C005BEA4A /* GoogleMapsCore */; };
+		6510757E2B5C355C005BEA4A /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 6510757D2B5C355C005BEA4A /* GoogleMapsM4B */; };
+		651075802B5C35C6005BEA4A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510757F2B5C35C6005BEA4A /* City.swift */; };
+		651075842B5C35E5005BEA4A /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075832B5C35E5005BEA4A /* MapViewControllerBridge.swift */; };
+		65931BC62B5C3D620019EBF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075722B5C347F005BEA4A /* SceneDelegate.swift */; };
+		65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
+		65931BCB2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
+		65931BCC2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
+		65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
+		65931BD42B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
+		65931BD52B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		651075522B5C2770005BEA4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 651075392B5C276E005BEA4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 651075402B5C276E005BEA4A;
+			remoteInfo = BusRoutePlanner;
+		};
+		6510755C2B5C2771005BEA4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 651075392B5C276E005BEA4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 651075402B5C276E005BEA4A;
+			remoteInfo = BusRoutePlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65931BC52B5C3D530019EBF9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		651075412B5C276E005BEA4A /* BusRoutePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRoutePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerApp.swift; sourceTree = "<group>"; };
+		651075462B5C276E005BEA4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		651075482B5C2770005BEA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		651075512B5C2770005BEA4A /* BusRoutePlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusRoutePlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		651075552B5C2770005BEA4A /* BusRoutePlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerTests.swift; sourceTree = "<group>"; };
+		6510755B2B5C2771005BEA4A /* BusRoutePlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusRoutePlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6510755F2B5C2771005BEA4A /* BusRoutePlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerUITests.swift; sourceTree = "<group>"; };
+		651075612B5C2771005BEA4A /* BusRoutePlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6510756E2B5C27A3005BEA4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		651075722B5C347F005BEA4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6510757F2B5C35C6005BEA4A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		651075832B5C35E5005BEA4A /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
+		65931BC92B5C3DFD0019EBF9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = com.pedrommoreno.swiftlint.yml; sourceTree = "<group>"; };
+		65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6510753E2B5C276E005BEA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651075782B5C355C005BEA4A /* GoogleMaps in Frameworks */,
+				6510757C2B5C355C005BEA4A /* GoogleMapsCore in Frameworks */,
+				6510757E2B5C355C005BEA4A /* GoogleMapsM4B in Frameworks */,
+				6510757A2B5C355C005BEA4A /* GoogleMapsBase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6510754E2B5C2770005BEA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		651075582B5C2771005BEA4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		651075382B5C276E005BEA4A = {
+			isa = PBXGroup;
+			children = (
+				65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */,
+				65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */,
+				651075432B5C276E005BEA4A /* BusRoutePlanner */,
+				651075542B5C2770005BEA4A /* BusRoutePlannerTests */,
+				6510755E2B5C2771005BEA4A /* BusRoutePlannerUITests */,
+				651075422B5C276E005BEA4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		651075422B5C276E005BEA4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				651075412B5C276E005BEA4A /* BusRoutePlanner.app */,
+				651075512B5C2770005BEA4A /* BusRoutePlannerTests.xctest */,
+				6510755B2B5C2771005BEA4A /* BusRoutePlannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		651075432B5C276E005BEA4A /* BusRoutePlanner */ = {
+			isa = PBXGroup;
+			children = (
+				651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */,
+				65931BC32B5C3C820019EBF9 /* Source */,
+				65931BC72B5C3D8B0019EBF9 /* Resources */,
+			);
+			path = BusRoutePlanner;
+			sourceTree = "<group>";
+		};
+		6510754A2B5C2770005BEA4A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		651075542B5C2770005BEA4A /* BusRoutePlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				651075552B5C2770005BEA4A /* BusRoutePlannerTests.swift */,
+			);
+			path = BusRoutePlannerTests;
+			sourceTree = "<group>";
+		};
+		6510755E2B5C2771005BEA4A /* BusRoutePlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6510755F2B5C2771005BEA4A /* BusRoutePlannerUITests.swift */,
+				651075612B5C2771005BEA4A /* BusRoutePlannerUITestsLaunchTests.swift */,
+			);
+			path = BusRoutePlannerUITests;
+			sourceTree = "<group>";
+		};
+		651075872B5C3B5C005BEA4A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				6510756E2B5C27A3005BEA4A /* AppDelegate.swift */,
+				651075722B5C347F005BEA4A /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		65931BC32B5C3C820019EBF9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				65931BC82B5C3DEA0019EBF9 /* Setup */,
+				651075872B5C3B5C005BEA4A /* Delegates */,
+				65931BD12B5C3ED40019EBF9 /* Google Maps Starter */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		65931BC72B5C3D8B0019EBF9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				651075482B5C2770005BEA4A /* Assets.xcassets */,
+				6510754A2B5C2770005BEA4A /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		65931BC82B5C3DEA0019EBF9 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				65931BC92B5C3DFD0019EBF9 /* Configuration.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		65931BD12B5C3ED40019EBF9 /* Google Maps Starter */ = {
+			isa = PBXGroup;
+			children = (
+				651075462B5C276E005BEA4A /* ContentView.swift */,
+				651075832B5C35E5005BEA4A /* MapViewControllerBridge.swift */,
+				6510757F2B5C35C6005BEA4A /* City.swift */,
+			);
+			path = "Google Maps Starter";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		651075402B5C276E005BEA4A /* BusRoutePlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 651075652B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlanner" */;
+			buildPhases = (
+				6510753D2B5C276E005BEA4A /* Sources */,
+				6510753E2B5C276E005BEA4A /* Frameworks */,
+				6510753F2B5C276E005BEA4A /* Resources */,
+				65931BC52B5C3D530019EBF9 /* CopyFiles */,
+				65931BD62B5C423F0019EBF9 /* Swiftlint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusRoutePlanner;
+			packageProductDependencies = (
+				651075772B5C355C005BEA4A /* GoogleMaps */,
+				651075792B5C355C005BEA4A /* GoogleMapsBase */,
+				6510757B2B5C355C005BEA4A /* GoogleMapsCore */,
+				6510757D2B5C355C005BEA4A /* GoogleMapsM4B */,
+			);
+			productName = BusRoutePlanner;
+			productReference = 651075412B5C276E005BEA4A /* BusRoutePlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		651075502B5C2770005BEA4A /* BusRoutePlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 651075682B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlannerTests" */;
+			buildPhases = (
+				6510754D2B5C2770005BEA4A /* Sources */,
+				6510754E2B5C2770005BEA4A /* Frameworks */,
+				6510754F2B5C2770005BEA4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				651075532B5C2770005BEA4A /* PBXTargetDependency */,
+			);
+			name = BusRoutePlannerTests;
+			productName = BusRoutePlannerTests;
+			productReference = 651075512B5C2770005BEA4A /* BusRoutePlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6510755A2B5C2771005BEA4A /* BusRoutePlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6510756B2B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlannerUITests" */;
+			buildPhases = (
+				651075572B5C2771005BEA4A /* Sources */,
+				651075582B5C2771005BEA4A /* Frameworks */,
+				651075592B5C2771005BEA4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6510755D2B5C2771005BEA4A /* PBXTargetDependency */,
+			);
+			name = BusRoutePlannerUITests;
+			productName = BusRoutePlannerUITests;
+			productReference = 6510755B2B5C2771005BEA4A /* BusRoutePlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		651075392B5C276E005BEA4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					651075402B5C276E005BEA4A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					651075502B5C2770005BEA4A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 651075402B5C276E005BEA4A;
+					};
+					6510755A2B5C2771005BEA4A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 651075402B5C276E005BEA4A;
+					};
+				};
+			};
+			buildConfigurationList = 6510753C2B5C276E005BEA4A /* Build configuration list for PBXProject "BusRoutePlanner" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 651075382B5C276E005BEA4A;
+			packageReferences = (
+				651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
+			);
+			productRefGroup = 651075422B5C276E005BEA4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				651075402B5C276E005BEA4A /* BusRoutePlanner */,
+				651075502B5C2770005BEA4A /* BusRoutePlannerTests */,
+				6510755A2B5C2771005BEA4A /* BusRoutePlannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6510753F2B5C276E005BEA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */,
+				6510754C2B5C2770005BEA4A /* Preview Assets.xcassets in Resources */,
+				651075492B5C2770005BEA4A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6510754F2B5C2770005BEA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65931BD42B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		651075592B5C2771005BEA4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65931BD52B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65931BD62B5C423F0019EBF9 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\nexport PATH=\"/opt/homebrew/bin:$PATH\"\nfi\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6510753D2B5C276E005BEA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651075842B5C35E5005BEA4A /* MapViewControllerBridge.swift in Sources */,
+				6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */,
+				65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */,
+				651075802B5C35C6005BEA4A /* City.swift in Sources */,
+				651075472B5C276E005BEA4A /* ContentView.swift in Sources */,
+				651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */,
+				65931BC62B5C3D620019EBF9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6510754D2B5C2770005BEA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651075702B5C27A3005BEA4A /* AppDelegate.swift in Sources */,
+				651075562B5C2770005BEA4A /* BusRoutePlannerTests.swift in Sources */,
+				65931BCB2B5C3DFD0019EBF9 /* Configuration.swift in Sources */,
+				651075742B5C347F005BEA4A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		651075572B5C2771005BEA4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65931BCC2B5C3DFD0019EBF9 /* Configuration.swift in Sources */,
+				651075622B5C2771005BEA4A /* BusRoutePlannerUITestsLaunchTests.swift in Sources */,
+				651075602B5C2771005BEA4A /* BusRoutePlannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		651075532B5C2770005BEA4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 651075402B5C276E005BEA4A /* BusRoutePlanner */;
+			targetProxy = 651075522B5C2770005BEA4A /* PBXContainerItemProxy */;
+		};
+		6510755D2B5C2771005BEA4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 651075402B5C276E005BEA4A /* BusRoutePlanner */;
+			targetProxy = 6510755C2B5C2771005BEA4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		651075632B5C2771005BEA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		651075642B5C2771005BEA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		651075662B5C2771005BEA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusRoutePlanner/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		651075672B5C2771005BEA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusRoutePlanner/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		651075692B5C2771005BEA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRoutePlanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BusRoutePlanner";
+			};
+			name = Debug;
+		};
+		6510756A2B5C2771005BEA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRoutePlanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BusRoutePlanner";
+			};
+			name = Release;
+		};
+		6510756C2B5C2771005BEA4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BusRoutePlanner;
+			};
+			name = Debug;
+		};
+		6510756D2B5C2771005BEA4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BusRoutePlanner;
+			};
+			name = Release;
+		};
+		659B1DC72B5C4A9F0052AF1F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Test;
+		};
+		659B1DC82B5C4A9F0052AF1F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BusRoutePlanner/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TEST;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		659B1DC92B5C4A9F0052AF1F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BusRoutePlanner.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BusRoutePlanner";
+			};
+			name = Test;
+		};
+		659B1DCA2B5C4A9F0052AF1F /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCVXS4R2VN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedrommoreno.BusRoutePlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BusRoutePlanner;
+			};
+			name = Test;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6510753C2B5C276E005BEA4A /* Build configuration list for PBXProject "BusRoutePlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				651075632B5C2771005BEA4A /* Debug */,
+				659B1DC72B5C4A9F0052AF1F /* Test */,
+				651075642B5C2771005BEA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		651075652B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				651075662B5C2771005BEA4A /* Debug */,
+				659B1DC82B5C4A9F0052AF1F /* Test */,
+				651075672B5C2771005BEA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		651075682B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				651075692B5C2771005BEA4A /* Debug */,
+				659B1DC92B5C4A9F0052AF1F /* Test */,
+				6510756A2B5C2771005BEA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6510756B2B5C2771005BEA4A /* Build configuration list for PBXNativeTarget "BusRoutePlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6510756C2B5C2771005BEA4A /* Debug */,
+				659B1DCA2B5C4A9F0052AF1F /* Test */,
+				6510756D2B5C2771005BEA4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 8.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		651075772B5C355C005BEA4A /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
+		};
+		651075792B5C355C005BEA4A /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsBase;
+		};
+		6510757B2B5C355C005BEA4A /* GoogleMapsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsCore;
+		};
+		6510757D2B5C355C005BEA4A /* GoogleMapsM4B */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 651075762B5C355C005BEA4A /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMapsM4B;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 651075392B5C276E005BEA4A /* Project object */;
+}
