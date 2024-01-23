@@ -25,6 +25,8 @@ final class TripListSnapsotTests: XCTestCase {
         let view = TripListView(viewModel: TestTripListViewModel())
         let viewController = UIHostingController(rootView: view)
 
-        assertSnapshot(of: viewController, as: .image)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            assertSnapshot(of: viewController, as: .image)
+        }
     }
 }

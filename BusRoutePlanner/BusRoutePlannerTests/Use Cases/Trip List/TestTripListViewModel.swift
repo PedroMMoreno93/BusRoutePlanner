@@ -45,8 +45,8 @@ extension TripCardModelView {
         origin: "Rio de Janeiro",
         destination: "Tokyo",
         status: .ongoing,
-        startTime: .dateFromString("2024-01-23 18:30:00") ?? .now,
-        endTime: Date(timeInterval: 1200, since: .now)
+        startTime: .dateFromString("2024-01-23 15:30") ?? .now,
+        endTime: Date(timeInterval: 1200, since: .dateFromString("2024-01-23 15:30") ?? .now)
     )
 
     /// Scheduled trip mock model for testing
@@ -63,8 +63,8 @@ extension TripCardModelView {
         origin: "Havana",
         destination: "Dubai",
         status: .scheduled,
-        startTime: .dateFromString("2024-01-23 18:30:00") ?? .now,
-        endTime: Date(timeInterval: 1200, since: .now)
+        startTime: .dateFromString("2024-01-23 15:30") ?? .now,
+        endTime: Date(timeInterval: 1200, since: .dateFromString("2024-01-23 15:30") ?? .now)
     )
 
     /// Cancelled trip mock model for testing
@@ -81,8 +81,8 @@ extension TripCardModelView {
         origin: "Los Angeles",
         destination: "London",
         status: .cancelled,
-        startTime: .dateFromString("2024-01-23 18:30:00") ?? .now,
-        endTime: Date(timeInterval: 1200, since: .now)
+        startTime: .dateFromString("2024-01-23 15:30") ?? .now,
+        endTime: Date(timeInterval: 1200, since: .dateFromString("2024-01-23 15:30") ?? .now)
     )
 
     /// Finalized trip mock model for testing
@@ -99,28 +99,7 @@ extension TripCardModelView {
         origin: "New York City",
         destination: "Sydney",
         status: .finalized,
-        startTime: .dateFromString("2024-01-23 18:30:00") ?? .now,
-        endTime: Date(timeInterval: 1200, since: .now)
+        startTime: .dateFromString("2024-01-23 18:30") ?? .now,
+        endTime: Date(timeInterval: 1200, since: .dateFromString("2024-01-23 15:30") ?? .now)
     )
-}
-extension Date {
-    /* dateFromString */
-    /// Returns date from a string date with a specific format.
-    ///
-    /// - Parameters:
-    ///     - date: String
-    ///     - format: String. Default yyyy-MM-dd HH:mm:ss, ex: "2023-05-19 10:30:00"
-    /// - Returns: Date
-    static func dateFromString(_ date: String, _ format: String = "yyyy-MM-dd HH:mm:ss") -> Date? { // TODO: FALLA
-
-        // Create Date Formatter
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = .current
-
-        // Set Date Format
-        dateFormatter.dateFormat = format
-
-        // Convert String to Date
-        return dateFormatter.date(from: date)
-    }
 }

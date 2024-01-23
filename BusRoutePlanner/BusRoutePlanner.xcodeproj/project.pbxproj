@@ -27,6 +27,7 @@
 		6520B9612B5D8D75004454AD /* GoogleMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9602B5D8D75004454AD /* GoogleMapsView.swift */; };
 		6520B9632B5D8E54004454AD /* TripStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9622B5D8E54004454AD /* TripStatus.swift */; };
 		6520B9652B5D905E004454AD /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9642B5D905E004454AD /* TextStyle.swift */; };
+		6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6558F6F92B606BC100DD76E7 /* Date+String.swift */; };
 		65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
 		65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
 		65B396642B5DA05500C95DAD /* TripListModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B396632B5DA05500C95DAD /* TripListModelView.swift */; };
@@ -83,6 +84,7 @@
 		6520B9622B5D8E54004454AD /* TripStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatus.swift; sourceTree = "<group>"; };
 		6520B9642B5D905E004454AD /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		6520B9662B5D985F004454AD /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		6558F6F92B606BC100DD76E7 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		65778CBB2B5C53F3000101E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65778CBD2B5C5F0F000101E6 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		65931BC92B5C3DFD0019EBF9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -258,6 +260,21 @@
 			path = Architecture;
 			sourceTree = "<group>";
 		};
+		6558F6F72B606B8000DD76E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6558F6F82B606BA000DD76E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6558F6F92B606BC100DD76E7 /* Date+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		656148392B5EFF4C004EB074 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +290,7 @@
 				6520B9592B5D8C9A004454AD /* Architecture */,
 				6520B9412B5D346E004454AD /* Use Cases */,
 				6520B9492B5D3907004454AD /* Components */,
+				6558F6F82B606BA000DD76E7 /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -309,6 +327,7 @@
 				65D66BE32B5F211200046332 /* BusRoutePlannerTests.swift */,
 				65D66BF72B60362D00046332 /* Use Cases */,
 				65D66BF62B60362400046332 /* Exampe */,
+				6558F6F72B606B8000DD76E7 /* Extensions */,
 			);
 			path = BusRoutePlannerTests;
 			sourceTree = "<group>";
@@ -497,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6520B9652B5D905E004454AD /* TextStyle.swift in Sources */,
+				6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */,
 				6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */,
 				6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */,
 				6520B9502B5D89CB004454AD /* Colors.swift in Sources */,
