@@ -28,7 +28,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     var body: some View {
         ZStack {
             map
-                .ignoresSafeArea(edges: .bottom)
+                .ignoresSafeArea()
 
             if viewModel.areAvailableTrips {
                 tripsCards
