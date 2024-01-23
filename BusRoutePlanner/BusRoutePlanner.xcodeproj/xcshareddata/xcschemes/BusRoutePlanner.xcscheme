@@ -39,7 +39,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "651075502B5C2770005BEA4A"
+               BlueprintIdentifier = "65D66BE02B5F211200046332"
                BuildableName = "BusRoutePlannerTests.xctest"
                BlueprintName = "BusRoutePlannerTests"
                ReferencedContainer = "container:BusRoutePlanner.xcodeproj">
@@ -50,9 +50,20 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6510755A2B5C2771005BEA4A"
+               BlueprintIdentifier = "656148462B5F078C004EB074"
                BuildableName = "BusRoutePlannerUITests.xctest"
                BlueprintName = "BusRoutePlannerUITests"
+               ReferencedContainer = "container:BusRoutePlanner.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "65F367F62B5EEADD00952656"
+               BuildableName = "BusRoutePlannerUITests2.xctest"
+               BlueprintName = "BusRoutePlannerUITests2"
                ReferencedContainer = "container:BusRoutePlanner.xcodeproj">
             </BuildableReference>
          </TestableReference>
