@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 @main
 struct BusRoutePlannerApp: App {
@@ -13,7 +14,11 @@ struct BusRoutePlannerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            #if TESTING
+            TripListView(viewModel: TestTripListViewModel())
+            #else
+            TripListView()
+            #endif
         }
     }
 }

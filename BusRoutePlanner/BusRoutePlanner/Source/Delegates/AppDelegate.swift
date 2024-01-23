@@ -15,8 +15,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey(Configuration.API.key)
-        print("App Did Launch!")
+        GMSServices.provideAPIKey(Configuration.API.GoogleMaps.key)
+
         return true
     }
 
