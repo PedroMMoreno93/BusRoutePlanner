@@ -18,10 +18,6 @@ class TestTripListViewModel: TripListViewModelProtocol {
     init(model: TripListModelView = .test) {
         self.model = model
     }
-
-    func selectTrip(trip: TripCardModelView) {
-        self.selectedTrip = selectedTrip
-    }
 }
 
 extension TripListModelView {

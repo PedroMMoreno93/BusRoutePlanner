@@ -21,6 +21,10 @@ extension TripListViewModelProtocol {
     var areAvailableTrips: Bool {
         return !availableTrips.isEmpty
     }
+    
+    func selectTrip(trip: TripCardModelView) {
+        self.selectedTrip = selectedTrip
+    }
 }
 
 class TripListViewModel: TripListViewModelProtocol {
@@ -31,10 +35,5 @@ class TripListViewModel: TripListViewModelProtocol {
 
     init(model: TripListModelView = .previewTripList) {
         self.model = model
-    }
-    
-    // MARK: Functions
-    func selectTrip(trip: TripCardModelView) {
-        self.selectedTrip = selectedTrip
     }
 }
