@@ -38,6 +38,8 @@
 		65D66BEE2B5F217B00046332 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 65D66BED2B5F217B00046332 /* InlineSnapshotTesting */; };
 		65D66BF02B5F217B00046332 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 65D66BEF2B5F217B00046332 /* SnapshotTesting */; };
 		65D66BF52B5F23E600046332 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 65D66BF42B5F23E600046332 /* ViewInspector */; };
+		65D66BFC2B60367900046332 /* TripListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D66BFB2B60367900046332 /* TripListTests.swift */; };
+		65D66BFE2B6036DC00046332 /* TestTripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D66BFD2B6036DC00046332 /* TestTripListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		65D66BE12B5F211200046332 /* BusRoutePlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusRoutePlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D66BE32B5F211200046332 /* BusRoutePlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerTests.swift; sourceTree = "<group>"; };
 		65D66BEB2B5F212600046332 /* ArchitectureExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureExampleTests.swift; sourceTree = "<group>"; };
+		65D66BFB2B60367900046332 /* TripListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTests.swift; sourceTree = "<group>"; };
+		65D66BFD2B6036DC00046332 /* TestTripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,9 +307,51 @@
 			isa = PBXGroup;
 			children = (
 				65D66BE32B5F211200046332 /* BusRoutePlannerTests.swift */,
-				65D66BEB2B5F212600046332 /* ArchitectureExampleTests.swift */,
+				65D66BF72B60362D00046332 /* Use Cases */,
+				65D66BF62B60362400046332 /* Exampe */,
 			);
 			path = BusRoutePlannerTests;
+			sourceTree = "<group>";
+		};
+		65D66BF62B60362400046332 /* Exampe */ = {
+			isa = PBXGroup;
+			children = (
+				65D66BEB2B5F212600046332 /* ArchitectureExampleTests.swift */,
+			);
+			path = Exampe;
+			sourceTree = "<group>";
+		};
+		65D66BF72B60362D00046332 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				65D66BF82B60363800046332 /* Trip List */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		65D66BF82B60363800046332 /* Trip List */ = {
+			isa = PBXGroup;
+			children = (
+				65D66BFB2B60367900046332 /* TripListTests.swift */,
+				65D66BFD2B6036DC00046332 /* TestTripListViewModel.swift */,
+				65D66BF92B60364E00046332 /* Views */,
+				65D66BFA2B60365800046332 /* Models */,
+			);
+			path = "Trip List";
+			sourceTree = "<group>";
+		};
+		65D66BF92B60364E00046332 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65D66BFA2B60365800046332 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +521,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D66BFC2B60367900046332 /* TripListTests.swift in Sources */,
+				65D66BFE2B6036DC00046332 /* TestTripListViewModel.swift in Sources */,
 				65D66BE42B5F211200046332 /* BusRoutePlannerTests.swift in Sources */,
 				65D66BEC2B5F212600046332 /* ArchitectureExampleTests.swift in Sources */,
 			);

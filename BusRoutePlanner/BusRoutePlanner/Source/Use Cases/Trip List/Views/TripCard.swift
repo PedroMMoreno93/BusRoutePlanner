@@ -10,6 +10,7 @@ import SwiftUI
 struct TripCard: View {
     // MARK: Variables
     let model: TripCardModelView
+    var action: () -> Void
 
     // MARK: Scalable constants
     @ScaledMetric(relativeTo: .body) private var cardWidth = 220
@@ -94,7 +95,8 @@ struct TripCard_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.teal
-            TripCard(model: .previewOngoingTrip)
+            TripCard(model: .previewOngoingTrip) {
+            }
         }
     }
 }

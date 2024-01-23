@@ -79,7 +79,9 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
 
     private var list: some View {
         ForEach(viewModel.availableTrips, id: \.id) { trip in
-            TripCard(model: trip)
+            TripCard(model: trip) {
+                self.viewModel.selectTrip(trip: trip)
+            }
                 .padding(.vertical)
                 .padding(.leading)
         }
@@ -89,7 +91,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
 #if DEBUG
 struct TripListView_Previews: PreviewProvider {
     static var previews: some View {
-        TripListView(viewModel: TestTripListViewModel())
+        TripListView(viewModel: TripListViewModel(model: .previewTripList))
     }
 }
 #endif

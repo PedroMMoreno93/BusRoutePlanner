@@ -10,6 +10,7 @@ import SwiftUI
 protocol TripListViewModelProtocol: BaseViewModel {
     var model: TripListModelView { get set }
     var selectedTrip: TripCardModelView? { get set }
+    func selectTrip(trip: TripCardModelView)
 }
 
 extension TripListViewModelProtocol {
@@ -23,7 +24,7 @@ extension TripListViewModelProtocol {
 }
 
 class TripListViewModel: TripListViewModelProtocol {
-
+    
     // MARK: Variables
     @Published var model: TripListModelView
     @Published var selectedTrip: TripCardModelView?
@@ -31,16 +32,9 @@ class TripListViewModel: TripListViewModelProtocol {
     init(model: TripListModelView = .previewTripList) {
         self.model = model
     }
-}
-
-class TestTripListViewModel: TripListViewModelProtocol {
-    typealias ModelView = TripListModelView
-
-    // MARK: Variables
-    @Published var model: TripListModelView
-    @Published var selectedTrip: TripCardModelView?
-
-    init(model: TripListModelView = .previewTripList) {
-        self.model = model
+    
+    // MARK: Functions
+    func selectTrip(trip: TripCardModelView) {
+        self.selectedTrip = selectedTrip
     }
 }

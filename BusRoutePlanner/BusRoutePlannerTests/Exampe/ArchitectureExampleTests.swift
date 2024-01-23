@@ -15,14 +15,14 @@ import ViewInspector
 final class ArchitectureExampleTests: XCTestCase {
 
     func test_setColor() throws {
-        // GIVEN
+
         let viewModel = ArchitectureExampleViewModel()
 
+        // Test initial state
         XCTAssertEqual(viewModel.model.color, Color.blue)
 
         viewModel.setColor(.red)
 
-        // Test initial state, be sure it's 0
         XCTAssertEqual(viewModel.model.color, Color.red)
     }
 }
@@ -30,7 +30,7 @@ final class ArchitectureExampleTests: XCTestCase {
 final class ArchitectureExampleUITests: XCTestCase {
 
     func test_pressRedButton() throws {
-        // GIVEN
+
         let viewModel = ArchitectureExampleViewModel()
         let sut = ArchitectureExampleView(viewModel: viewModel)
 
@@ -40,13 +40,11 @@ final class ArchitectureExampleUITests: XCTestCase {
         let button = try sut.inspect().find(button: "Red")
         try button.tap()
 
-        // Test initial state, be sure it's 0
         XCTAssertEqual(viewModel.model.color, Color.red)
-
     }
 
     func test_pressBlueButton() throws {
-        // GIVEN
+
         let viewModel = ArchitectureExampleViewModel(model: ArchitectureExampleModelView(name: "Test", color: .yellow))
         let sut = ArchitectureExampleView(viewModel: viewModel)
 
@@ -56,9 +54,7 @@ final class ArchitectureExampleUITests: XCTestCase {
         let button = try sut.inspect().find(button: "Blue")
         try button.tap()
 
-        // Test initial state, be sure it's 0
         XCTAssertEqual(viewModel.model.color, Color.blue)
-
     }
 }
 
