@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-// TODO:
+/* StopsVisualizer */
+/// View to show a trip's stops.
+/// - Parameter model: TripModelView
 struct StopsVisualizer: View {
     var model: TripModelView = .prewviewMock1
 
@@ -53,6 +55,10 @@ struct StopsVisualizer: View {
     }
 }
 
-#Preview {
-    StopsVisualizer()
+#if DEBUG
+struct StopsVisualizer_Previews: PreviewProvider {
+    static var previews: some View {
+        StopsVisualizer()
+    }
 }
+#endif
