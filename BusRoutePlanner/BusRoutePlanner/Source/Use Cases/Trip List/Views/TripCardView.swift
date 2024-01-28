@@ -105,8 +105,8 @@ extension TripCardView {
     init(trip: TripModelView, isSelected: Bool, action: @escaping (() -> Void)) {
         self.model = TripCardModelView(
             driverName: trip.driverName,
-            origin: trip.origin.adress,
-            destination: trip.destination.adress,
+            origin: trip.origin.address,
+            destination: trip.destination.address,
             status: trip.status,
             startTime: trip.startTime,
             endTime: trip.endTime

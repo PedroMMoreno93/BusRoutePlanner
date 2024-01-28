@@ -1,17 +1,17 @@
 //
-//  AdressModelServer.swift
+//  AddressModelServer.swift
 //  BusRoutePlanner
 //
 //  Created by Pedro Moreno on 27/01/2024.
 //
 
 import Foundation
-/* AdressModelServer */
-/// Codable structure that represents an adress.
+/* AddressModelServer */
+/// Codable structure that represents an address.
 /// - Parameter:
 ///     - point: Double
 ///     - address: String
-struct AdressModelServer: Codable {
+struct AddressModelServer: Codable {
     let point: PointModelServer
     let address: String
 }

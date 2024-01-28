@@ -85,9 +85,9 @@ struct TripDetailView: View {
             }
             .font(.title3)
             HStack(spacing: 0) {
-                Text(model.origin.adress)
+                Text(model.origin.address)
                 Spacer()
-                Text(model.destination.adress)
+                Text(model.destination.address)
             }
 
             HStack(spacing: 0) {

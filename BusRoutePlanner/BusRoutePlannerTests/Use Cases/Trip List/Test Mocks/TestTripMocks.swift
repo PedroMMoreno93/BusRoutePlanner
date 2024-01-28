@@ -13,12 +13,12 @@ extension TripModelView {
         route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
         description: "Barcelona a Martorell",
         status: .ongoing,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -54,13 +54,13 @@ extension TripModelView {
                 distanceToOrigin: 40
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.49958,
                 longitude: 1.90307
             ),
-            adress: "Seat HQ, Martorell",
-            adressType: .origin
+            address: "Seat HQ, Martorell",
+            addressType: .origin
                                     ),
         startTimeString: "2018-12-18T08:00:00.000Z",
         endTimeString: "2018-12-18T09:00:00.000Z",
@@ -73,13 +73,13 @@ extension TripModelView {
         route: "sdq{Fc}iLeoBrgBs@xsGecD|sEswEv|Cek@cyA",
         description: "Barcelona a Sant cugat",
         status: .scheduled,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -99,13 +99,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.46693,
                 longitude: 2.08006
             ),
-            adress: "Sant Cugat Centre, El Valles",
-            adressType: .origin
+            address: "Sant Cugat Centre, El Valles",
+            addressType: .origin
         ),
         startTimeString: "2018-12-18T08:00:00.000Z",
         endTimeString: "2018-12-18T08:45:00.000Z",
@@ -118,13 +118,13 @@ extension TripModelView {
         route: "sdq{Fc}iLurAy{AyiEabDgfDhqEgyB|gA{x@xv@{x@rsF",
         description: "Barcelona a Cerdanyola",
         status: .finalized,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -144,13 +144,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.4914,
                 longitude: 2.13349
             ),
-            adress: "Cerdanyola Centre, El Valles",
-            adressType: .destination
+            address: "Cerdanyola Centre, El Valles",
+            addressType: .destination
         ),
         startTimeString: "2018-12-18T07:00:00.000Z",
         endTimeString: "2018-12-18T07:50:00.000Z",
@@ -163,13 +163,13 @@ extension TripModelView {
         route: "sdq{Fc}iLeoBrgBs@xsGecD|sEswEv|Cek@cyA",
         description: "Barcelona a Sant cugat",
         status: .cancelled,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -189,13 +189,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.46693,
                 longitude: 2.08006
             ),
-            adress: "Sant Cugat Centre, El Valles",
-            adressType: .origin
+            address: "Sant Cugat Centre, El Valles",
+            addressType: .origin
         ),
         startTimeString: "2018-12-18T08:00:00.000Z",
         endTimeString: "2018-12-18T08:45:00.000Z",
@@ -208,13 +208,13 @@ extension TripModelView {
         route: "sdq{Fc}iLurAy{AyiEabDgfDhqEgyB|gA{x@xv@{x@rsF",
         description: "Barcelona a Cerdanyola",
         status: .unknown,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -234,13 +234,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.4914,
                 longitude: 2.13349
             ),
-            adress: "Cerdanyola Centre, El Valles",
-            adressType: .destination
+            address: "Cerdanyola Centre, El Valles",
+            addressType: .destination
         ),
         startTimeString: "2018-12-18T07:00:00.000Z",
         endTimeString: "2018-12-18T07:50:00.000Z",

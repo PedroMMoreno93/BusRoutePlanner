@@ -50,7 +50,7 @@
 		654A89352B659E2E002A1275 /* TripModelViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89342B659E2E002A1275 /* TripModelViewTest.swift */; };
 		654A89372B65A548002A1275 /* HasPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89362B65A548002A1275 /* HasPointProtocol.swift */; };
 		654A89392B65A6C1002A1275 /* PointModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89382B65A6C1002A1275 /* PointModelView.swift */; };
-		654A893B2B65A6D9002A1275 /* AdressModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A893A2B65A6D9002A1275 /* AdressModelView.swift */; };
+		654A893B2B65A6D9002A1275 /* AddressModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A893A2B65A6D9002A1275 /* AddressModelView.swift */; };
 		654A893D2B65A6FA002A1275 /* StopModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A893C2B65A6FA002A1275 /* StopModelView.swift */; };
 		654A89402B65A7B7002A1275 /* Date+StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A893F2B65A7B7002A1275 /* Date+StringTests.swift */; };
 		654A89422B65AF8C002A1275 /* URLRequestInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89412B65AF8C002A1275 /* URLRequestInitializers.swift */; };
@@ -137,7 +137,7 @@
 		654A89342B659E2E002A1275 /* TripModelViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelViewTest.swift; sourceTree = "<group>"; };
 		654A89362B65A548002A1275 /* HasPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasPointProtocol.swift; sourceTree = "<group>"; };
 		654A89382B65A6C1002A1275 /* PointModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointModelView.swift; sourceTree = "<group>"; };
-		654A893A2B65A6D9002A1275 /* AdressModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressModelView.swift; sourceTree = "<group>"; };
+		654A893A2B65A6D9002A1275 /* AddressModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModelView.swift; sourceTree = "<group>"; };
 		654A893C2B65A6FA002A1275 /* StopModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopModelView.swift; sourceTree = "<group>"; };
 		654A893F2B65A7B7002A1275 /* Date+StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StringTests.swift"; sourceTree = "<group>"; };
 		654A89412B65AF8C002A1275 /* URLRequestInitializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestInitializers.swift; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 				6520B9622B5D8E54004454AD /* TripStatus.swift */,
 				652DC8E62B62E1DA00A4D684 /* TripModelView.swift */,
 				654A89382B65A6C1002A1275 /* PointModelView.swift */,
-				654A893A2B65A6D9002A1275 /* AdressModelView.swift */,
+				654A893A2B65A6D9002A1275 /* AddressModelView.swift */,
 				654A893C2B65A6FA002A1275 /* StopModelView.swift */,
 				654A89362B65A548002A1275 /* HasPointProtocol.swift */,
 			);
@@ -707,7 +707,7 @@
 				654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */,
 				654A894C2B65C482002A1275 /* StopsVisualizer.swift in Sources */,
 				6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */,
-				654A893B2B65A6D9002A1275 /* AdressModelView.swift in Sources */,
+				654A893B2B65A6D9002A1275 /* AddressModelView.swift in Sources */,
 				65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */,
 				6520B9442B5D3498004454AD /* TripListView.swift in Sources */,
 				65B3966A2B5DB0F600C95DAD /* SceneDelegate.swift in Sources */,

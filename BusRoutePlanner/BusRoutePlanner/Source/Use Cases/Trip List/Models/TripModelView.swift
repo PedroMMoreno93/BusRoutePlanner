@@ -16,9 +16,9 @@ import GoogleMaps
 ///     - route: String.
 ///     - description: String.
 ///     - status: TripStatus.
-///     - origin: AdressModelView.
+///     - origin: addressModelView.
 ///     - stops: [StopModelView].
-///     - destination: AdressModelView.
+///     - destination: AddressModelView.
 ///     - startTime: Date?.
 ///     - endTime: Date?.
 ///     - dateFormat: String.
@@ -36,9 +36,9 @@ struct TripModelView: BaseModelView, Identifiable, Equatable {
 
     let status: TripStatus
 
-    let origin: AdressModelView
+    let origin: AddressModelView
     let stops: [StopModelView]
-    let destination: AdressModelView
+    let destination: AddressModelView
 
     let startTime: Date?
     let endTime: Date?
@@ -104,9 +104,9 @@ extension TripModelView {
         route: String,
         description: String,
         status: TripStatus,
-        origin: AdressModelView,
+        origin: AddressModelView,
         stops: [StopModelView],
-        destination: AdressModelView,
+        destination: AddressModelView,
         startTimeString: String,
         endTimeString: String,
         inputDateFormat: String
@@ -131,11 +131,11 @@ extension TripModelView {
             route: modelServer.route,
             description: modelServer.description,
             status: TripStatus(rawValue: modelServer.status) ?? .unknown,
-            origin: AdressModelView(from: modelServer.origin, adressType: .origin),
+            origin: AddressModelView(from: modelServer.origin, addressType: .origin),
             stops: modelServer.stops.compactMap({ stopModelServer in
                 StopModelView(from: stopModelServer, origin: modelServer.origin.point)
             }),
-            destination: AdressModelView(from: modelServer.destination, adressType: .destination),
+            destination: AddressModelView(from: modelServer.destination, addressType: .destination),
             startTimeString: modelServer.startTime,
             endTimeString: modelServer.endTime,
             inputDateFormat: TripModelServer.dateFormat
@@ -152,12 +152,12 @@ extension TripModelView {
         route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
         description: "Barcelona a Martorell",
         status: .ongoing,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -193,13 +193,13 @@ extension TripModelView {
                 distanceToOrigin: 50
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.49958,
                 longitude: 1.90307
             ),
-            adress: "Seat HQ, Martorell",
-            adressType: .origin
+            address: "Seat HQ, Martorell",
+            addressType: .origin
                                     ),
         startTimeString: "2018-12-18T08:00:00.000Z",
         endTimeString: "2018-12-18T09:00:00.000Z",
@@ -212,13 +212,13 @@ extension TripModelView {
         route: "sdq{Fc}iLeoBrgBs@xsGecD|sEswEv|Cek@cyA",
         description: "Barcelona a Sant cugat",
         status: .ongoing,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -238,13 +238,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.46693,
                 longitude: 2.08006
             ),
-            adress: "Sant Cugat Centre, El Valles",
-            adressType: .origin
+            address: "Sant Cugat Centre, El Valles",
+            addressType: .origin
         ),
         startTimeString: "2018-12-18T08:00:00.000Z",
         endTimeString: "2018-12-18T08:45:00.000Z",
@@ -257,13 +257,13 @@ extension TripModelView {
         route: "sdq{Fc}iLurAy{AyiEabDgfDhqEgyB|gA{x@xv@{x@rsF",
         description: "Barcelona a Cerdanyola",
         status: .ongoing,
-        origin: AdressModelView(
+        origin: AddressModelView(
             point: PointModelView(
                 latitude: 41.38074,
                 longitude: 2.18594
             ),
-            adress: "Metropolis:lab, Barcelona",
-            adressType: .origin
+            address: "Metropolis:lab, Barcelona",
+            addressType: .origin
         ),
         stops: [
             StopModelView(
@@ -283,13 +283,13 @@ extension TripModelView {
                 distanceToOrigin: 20
             )
         ],
-        destination: AdressModelView(
+        destination: AddressModelView(
             point: PointModelView(
                 latitude: 41.4914,
                 longitude: 2.13349
             ),
-            adress: "Cerdanyola Centre, El Valles",
-            adressType: .destination
+            address: "Cerdanyola Centre, El Valles",
+            addressType: .destination
         ),
         startTimeString: "2018-12-18T07:00:00.000Z",
         endTimeString: "2018-12-18T07:50:00.000Z",
