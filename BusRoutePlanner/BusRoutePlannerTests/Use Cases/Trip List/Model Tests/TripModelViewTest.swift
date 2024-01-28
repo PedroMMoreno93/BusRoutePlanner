@@ -15,7 +15,7 @@ final class TripModelViewTest: XCTestCase {
         status: "ongoing",
         route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
         startTime: "2018-12-18T08:00:00.000Z",
-        origin: AdressModelServer(
+        origin: AddressModelServer(
             point: PointModelServer(
                 latitude: 0,
                 longitude: 0
@@ -23,7 +23,7 @@ final class TripModelViewTest: XCTestCase {
             address: "Metropolis:lab, Barcelona"
         ),
         description: "Barcelona a Martorell",
-        destination: AdressModelServer(
+        destination: AddressModelServer(
             point: PointModelServer(
                 latitude: 0,
                 longitude: 0
@@ -69,22 +69,28 @@ final class TripModelViewTest: XCTestCase {
         let description = "description"
         let status = TripStatus.ongoing
 
-        let origin = AdressModelView(
+        let origin = AddressModelView(
             point: PointModelView(
                 latitude: 0,
                 longitude: 0
             ),
-            adress: "origin",
-            adressType: .origin
+            address: "origin",
+            addressType: .origin
         )
         XCTAssertNotNil(origin.coordinates)
         XCTAssertNotNil(origin.location)
 
-        let mockStop1 = StopModelView(point: PointModelView(latitude: 0, longitude: 0), stopId: 1)
+        let mockStop1 = StopModelView(point: PointModelView(latitude: 0, longitude: 0), stopId: 1, distanceToOrigin: 10)
         XCTAssertNotNil(mockStop1.id)
         XCTAssertNotNil(mockStop1.marker)
 
-        let mockStop2 = StopModelView(from: StopModelServer(point: PointModelServer(latitude: 0, longitude: 0), id: 2))
+        let mockStop2 = StopModelView(
+            from: StopModelServer(
+                point: PointModelServer(latitude: 0,longitude: 0),
+                id: 2
+            ),
+            origin: PointModelServer(latitude: 10, longitude: 10)
+        )
         XCTAssertNotNil(mockStop2)
         XCTAssertEqual(mockStop2!.stopId, 2)
 
@@ -94,13 +100,13 @@ final class TripModelViewTest: XCTestCase {
             mockStop1
         ]
 
-        let destination = AdressModelView(
+        let destination = AddressModelView(
             point: PointModelView(
                 latitude: 0,
                 longitude: 0
             ),
-            adress: "destination",
-            adressType: .destination
+            address: "destination",
+            addressType: .destination
         )
 
         let startTimeString = "2018-12-18T08:30:00.000Z"
@@ -148,9 +154,9 @@ final class TripModelViewTest: XCTestCase {
         XCTAssertEqual(model.driverName, modelServer.driverName)
         XCTAssertEqual(model.route, modelServer.route)
         XCTAssertEqual(model.status, TripStatus(rawValue: modelServer.status))
-        XCTAssertEqual(model.origin.adress, modelServer.origin.address)
+        XCTAssertEqual(model.origin.address, modelServer.origin.address)
         XCTAssertTrue(!model.stops.isEmpty)
-        XCTAssertEqual(model.destination.adress, modelServer.destination.address)
+        XCTAssertEqual(model.destination.address, modelServer.destination.address)
 
         XCTAssertEqual(model.startTimeString, "09:00")
         XCTAssertEqual(model.endTimeString, "10:00")

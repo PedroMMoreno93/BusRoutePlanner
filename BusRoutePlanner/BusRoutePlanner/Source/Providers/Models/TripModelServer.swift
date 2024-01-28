@@ -14,16 +14,16 @@ import Foundation
 ///     - status: String
 ///     - route: String
 ///     - startTime: String
-///     - origin: AdressModelServer
+///     - origin: AddressModelServer
 ///     - point: PointModelServer
 ///     - description: String
 ///     - stops: [StopModelServer]
 ///     - endTime: String
 struct TripModelServer: Codable {
     let driverName, status, route, startTime: String
-    let origin: AdressModelServer
+    let origin: AddressModelServer
     let description: String
-    let destination: AdressModelServer
+    let destination: AddressModelServer
     let stops: [StopModelServer]
     let endTime: String
 }
@@ -38,7 +38,7 @@ extension TripModelServer {
         status: "ongoing",
         route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
         startTime: "2018-12-18T08:00:00.000Z",
-        origin: AdressModelServer(
+        origin: AddressModelServer(
             point: PointModelServer(
                 latitude: 41.38074,
                 longitude: 2.18594
@@ -46,7 +46,7 @@ extension TripModelServer {
             address: "Metropolis:lab, Barcelona"
         ),
         description: "Barcelona a Martorell",
-        destination: AdressModelServer(
+        destination: AddressModelServer(
             point: PointModelServer(
                 latitude: 41.49958,
                 longitude: 1.90307

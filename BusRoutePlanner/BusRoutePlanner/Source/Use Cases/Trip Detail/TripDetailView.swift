@@ -15,7 +15,7 @@ import SwiftUI
 struct TripDetailView: View {
     let model: TripModelView
     var isLandsCape: Bool
-    var dismissModal: () -> Void
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
             List {
@@ -56,7 +56,7 @@ struct TripDetailView: View {
 
     private var backButton: some View {
         Button {
-            self.dismissModal()
+            dismiss()
         } label: {
             HStack {
                 Image(systemName: "arrow.backward")
@@ -85,9 +85,9 @@ struct TripDetailView: View {
             }
             .font(.title3)
             HStack(spacing: 0) {
-                Text(model.origin.adress)
+                Text(model.origin.address)
                 Spacer()
-                Text(model.destination.adress)
+                Text(model.destination.address)
             }
 
             HStack(spacing: 0) {
@@ -129,10 +129,8 @@ struct TripDetailViewPreviewWrapper: View {
             .buttonStyle(.borderedProminent)
         }
         .sheet(isPresented: $isPresented, content: {
-            TripDetailView(model: .prewviewMock1, isLandsCape: orientation.isLandscape) {
-                isPresented = false
-            }
-                    .presentationDetents([.height(160), .large])
+            TripDetailView(model: .prewviewMock1, isLandsCape: orientation.isLandscape)
+                .presentationDetents([.height(160), .large])
         })
         .detectOrientation($orientation)
     }

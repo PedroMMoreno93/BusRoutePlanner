@@ -24,6 +24,15 @@ struct PointModelView {
     var location: CLLocation {
         return CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
+
+    func getDistanceToLocation(to location: CLLocation) -> Double {
+        return self.location.distance(from: location)
+    }
+
+    func getDistanceToPoint(from point: PointModelView) -> Double {
+        let pointLocation = point.location
+        return self.getDistanceToLocation(to: pointLocation)
+    }
 }
 
 extension PointModelView {

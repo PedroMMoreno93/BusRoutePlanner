@@ -1,5 +1,5 @@
 //
-//  AdressModelView.swift
+//  AddressModelView.swift
 //  BusRoutePlanner
 //
 //  Created by Pedro Moreno on 27/01/2024.
@@ -7,38 +7,39 @@
 
 import GoogleMaps
 
-/* AdressModelView */
-/// Struct that holds the info that defines an adress.
+/* AddressModelView */
+/// Struct that holds the info that defines an address.
 /// - Parameters:
 ///     - point: PointModelView.
-///     - adress: String.
-///     - adressType: AdressType.
+///     - address: String.
+///     - addressType: AddressType.
 ///     - marker: GMSMarker (computed).
-struct AdressModelView: HasPoint, Identifiable, Equatable {
+struct AddressModelView: HasPoint, Identifiable, Equatable {
     let id = UUID()
     let point: PointModelView
-    let adress: String
-    let adressType: AdressType
+    let address: String
+    let addressType: AddressType
 
     var marker: GMSMarker {
         let marker = GMSMarker(position: coordinates)
-        marker.icon = adressType.icon
-
+        marker.icon = addressType.icon
+    
+        marker.title = address
         return marker
     }
 
-    static func == (lhs: AdressModelView, rhs: AdressModelView) -> Bool {
+    static func == (lhs: AddressModelView, rhs: AddressModelView) -> Bool {
         return lhs.id == rhs.id
     }
 }
 
-extension AdressModelView {
-    /* AdressType */
-    /// Enum type that holds the adress type.
+extension AddressModelView {
+    /* AddressType */
+    /// Enum type that holds the address type.
     /// It also provides the equivalent icon.
     /// - origin
     /// - destination
-    enum AdressType {
+    enum AddressType {
         case origin
         case destination
 
@@ -53,12 +54,12 @@ extension AdressModelView {
     }
 }
 
-extension AdressModelView {
+extension AddressModelView {
     /// Init from model server.
     init(
-        from modelServer: AdressModelServer,
-        adressType: AdressType
+        from modelServer: AddressModelServer,
+        addressType: AddressType
     ) {
-        self.init(point: PointModelView(from: modelServer.point), adress: modelServer.address, adressType: adressType)
+        self.init(point: PointModelView(from: modelServer.point), address: modelServer.address, addressType: addressType)
     }
 }
