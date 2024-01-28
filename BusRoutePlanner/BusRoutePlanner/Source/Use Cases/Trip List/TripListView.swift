@@ -41,7 +41,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     private let listVerticalPadding: CGFloat = 5
     /// Value of 5
     private let listHorizontalPadding: CGFloat = 15
-    
+
     // MARK: Computed Properties
     private var isPortrait: Bool {
         return orientation.isPortrait

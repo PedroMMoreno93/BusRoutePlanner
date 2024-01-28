@@ -90,7 +90,6 @@ struct GoogleMapsView: UIViewControllerRepresentable {
 
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         setMarkers(map: map, selectedTrip: selectedTrip)
-
                         onAnimationEnded()
                     })
                 })

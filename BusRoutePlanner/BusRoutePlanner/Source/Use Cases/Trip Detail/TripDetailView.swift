@@ -16,7 +16,7 @@ struct TripDetailView: View {
     let model: TripModelView
     var isLandsCape: Bool
     var dismissModal: () -> Void
-    
+
     var body: some View {
             List {
                 Section {
@@ -137,8 +137,6 @@ struct TripDetailViewPreviewWrapper: View {
         .detectOrientation($orientation)
     }
 }
-
-
 
 struct TripDetailView_Previews: PreviewProvider {
     static var previews: some View {
