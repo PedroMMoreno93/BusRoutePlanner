@@ -21,9 +21,26 @@ struct TripCardModelView: Identifiable {
     let origin: String
     let destination: String
     let status: TripStatus
-    let startTime: Date
-    let endTime: Date
+
+    let startTime: Date?
+    let endTime: Date?
+
+    /// Format: HH:mm
+    private let dateFormat: String = "HH:mm"
+    /// Default: "-"
+    private let datePlaceholder: String = "-"
+
+    var startTimeString: String {
+        guard let endTime = endTime else {
+            return datePlaceholder
+        }
+        return endTime.formatted(date: .omitted, time: .shortened)
+    }
+
     var endTimeString: String {
+        guard let endTime = endTime else {
+            return datePlaceholder
+        }
         return endTime.formatted(date: .omitted, time: .shortened)
     }
 }

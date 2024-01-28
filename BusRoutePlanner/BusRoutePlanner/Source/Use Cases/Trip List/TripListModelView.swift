@@ -7,19 +7,22 @@
 
 import Foundation
 
+/* TripListModelView */
+/// Struct that encapsulates a list of TripModelView.
 struct TripListModelView: BaseModelView {
-    var trips: [TripCardModelView]
+    var trips: [TripModelView]
 }
 
 extension TripListModelView {
+    /// Empty model for initialization.
     static let empty = TripListModelView(trips: [])
 }
 
 extension TripListModelView {
+    /// Model for previews.
     static let previewTripList = TripListModelView(trips: [
-        .previewOngoingTrip,
-        .previewCancelledTrip,
-        .previewShceduledTrip,
-        .previewFinalizedTrip
+        .prewviewMock1,
+        .prewviewMock2,
+        .prewviewMock3
     ])
 }
