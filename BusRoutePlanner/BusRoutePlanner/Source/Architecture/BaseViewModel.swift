@@ -23,6 +23,7 @@ protocol BaseViewModel: ObservableObject {
     var isSheetPresented: Bool { get set }
     var status: ViewModelStatus { get set }
     var showAlert: Bool { get set }
+    var alertMessage: String { get set }
 }
 
 /* ViewModelStatus */

@@ -65,6 +65,9 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                 .presentationDetents([.height(sheetHeight), .large ])
             }
         })
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Text(viewModel.alertMessage))
+        })
         .detectOrientation($orientation)
         .onChange(of: orientation) {
             resetScroll = true

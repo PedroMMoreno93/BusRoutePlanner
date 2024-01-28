@@ -23,11 +23,13 @@ protocol ArchitectureExampleViewModelProtocol: BaseViewModel {
 }
 
 class ArchitectureExampleViewModel: ArchitectureExampleViewModelProtocol {
+
     // MARK: Variables
     @Published var status: ViewModelStatus = .empty
     @Published var model: ArchitectureExampleModelView
     @Published var showAlert: Bool = false
     @Published  var isSheetPresented: Bool = false
+    @Published var alertMessage: String = "Something went wrong."
 
     init(
         model: ArchitectureExampleModelView = ArchitectureExampleModelView(

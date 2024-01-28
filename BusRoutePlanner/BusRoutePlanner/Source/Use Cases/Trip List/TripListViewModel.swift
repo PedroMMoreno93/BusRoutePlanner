@@ -58,6 +58,11 @@ class TripListViewModel: TripListViewModelProtocol {
     @Published var isSheetPresented: Bool = false
     @Published var status: ViewModelStatus = .empty
     @Published var showAlert: Bool = false
+    var alertMessage: String = """
+    Something went wrong.
+Please restart the app.
+If the problem persists, get in contact with the administrator
+"""
 
     // MARK: Providers
     let tripsProvider: TripsProviderProtocol
@@ -77,6 +82,8 @@ class TripListViewModel: TripListViewModelProtocol {
             status = .loading
             let trips = try await self.fetchTrips()
             self.model.trips = trips
+
+            handleSucess(context: nil)
         } catch let error {
             self.handleError(error)
         }
