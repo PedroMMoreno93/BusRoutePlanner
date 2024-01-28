@@ -9,12 +9,14 @@ import SwiftUI
 @testable import BusRoutePlanner
 
 class TestTripListViewModel: BusRoutePlanner.TripListViewModelProtocol {
+
     // MARK: Variables
     @Published var model: BusRoutePlanner.TripListModelView
     @Published var selectedTrip: BusRoutePlanner.TripModelView?
     @Published var status: BusRoutePlanner.ViewModelStatus = .empty
-    @Published var showAlert: Bool = false
     @Published  var isSheetPresented: Bool = false
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = "Something went wrong."
 
     // MARK: Providers
     let tripsProvider: BusRoutePlanner.TripsProviderProtocol
