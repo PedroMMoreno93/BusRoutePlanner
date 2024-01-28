@@ -16,14 +16,36 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
 
     // MARK: Variables
     @State private var orientation: UIDeviceOrientation = .portrait
+    @State private var size: CGSize = .zero
+    @State private var resetScroll: Bool = false
+    @State private var isSheetPresented: Bool = false
+
+    // MARK: Scalable constants
+    /// ScaledMetric(relativeTo: .callout) with value of 10
+    @ScaledMetric(relativeTo: .callout) private var titleCornerRadius = 10
+    /// ScaledMetric(relativeTo: .callout) with value of 160
+    @ScaledMetric(relativeTo: .callout) private var sheetHeight = 160
+    /// ScaledMetric(relativeTo: .body) with value of 220
+    @ScaledMetric(relativeTo: .body) private var cardWidth = 220
+
+    // MARK: Constants
+    /// Value of 12
+    private let titleVerticalPadding: CGFloat = 12
+    /// Value of 20
+    private let titleHorizontalPortraitPadding: CGFloat = 20
+    /// Value of 15
+    private let tripsTitleHorizontalPadding: CGFloat = 15
+    /// Value of 5
+    private let tripsTitleBottomPadding: CGFloat = 5
+    /// Value of 15
+    private let listVerticalPadding: CGFloat = 5
+    /// Value of 5
+    private let listHorizontalPadding: CGFloat = 15
+    
+    // MARK: Computed Properties
     private var isPortrait: Bool {
         return orientation.isPortrait
     }
-    // MARK: Scalable constants
-    @ScaledMetric(relativeTo: .callout) private var titleCornerRadius = 10
-
-    // MARK: Constants
-    private let titleVerticalPadding: CGFloat = 12
 
     var body: some View {
         ZStack {
@@ -34,35 +56,73 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                 tripsCards
             }
         }
+        .geometryReader($size)
+        .sheet(isPresented: $isSheetPresented, onDismiss: {}, content: {
+            if let selectedTrip = viewModel.selectedTrip {
+                TripDetailView(model: selectedTrip, isLandsCape: orientation.isLandscape) {
+                    viewModel.isSheetPresented = false
+                }
+                .presentationDetents([.height(sheetHeight), .large ])
+            }
+        })
         .detectOrientation($orientation)
+        .onChange(of: orientation) {
+            resetScroll = true
+        }
+        .task {
+            await viewModel.onAppear()
+        }
     }
 
     private var map: some View {
-        GoogleMapsView()
+        GoogleMapsView(selectedTrip: viewModel.selectedTrip) {
+            // on animation Ended
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                self.isSheetPresented = true
+            }
+        } mapViewWillMove: { _ in
+        }
     }
 
     private var tripsCards: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Spacer()
+        HStack {
+            VStack(alignment: .leading, spacing: 0) {
+                Spacer()
 
-            tripsTitle
-                .padding(.horizontal)
+                tripsTitle
+                    .frame(width: isPortrait ? size.width - titleHorizontalPortraitPadding : cardWidth )
+                    .padding(.horizontal, tripsTitleHorizontalPadding)
+                    .padding(.bottom, tripsTitleBottomPadding)
 
-            ScrollView(isPortrait ? .horizontal : .vertical, showsIndicators: false) {
-                getListForOrientation()
+                ScrollViewReader { proxy in
+                    ScrollView(isPortrait ? .horizontal : .vertical, showsIndicators: false) {
+                        getListForOrientation()
+                    }
+                    .onChange(of: self.resetScroll) { _, newValue in
+                        if newValue {
+                            proxy.scrollTo(0)
+                            resetScroll = false
+                        }
+                    }
+                }
+            }
+
+            if !isPortrait {
+                Spacer()
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, isPortrait ? titleHorizontalPortraitPadding : 0)
+
     }
 
     @ViewBuilder
     private func getListForOrientation() -> some View {
         if isPortrait {
-            HStack {
+            HStack(spacing: 0) {
                 list
             }
         } else {
-            VStack {
+            VStack(spacing: 0) {
                 list
             }
         }
@@ -72,18 +132,22 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
         Text("Available Trips")
             .textStyle(font: .callout, fontWeight: .bold)
             .frame(maxWidth: .infinity)
-            .padding(titleVerticalPadding)
+            .padding(.vertical, titleVerticalPadding)
             .background(.thinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: titleCornerRadius))
     }
 
     private var list: some View {
-        ForEach(viewModel.availableTrips, id: \.id) { trip in
-            TripCard(model: trip) {
-                self.viewModel.selectTrip(trip: trip)
+        ForEach(self.viewModel.model.trips, id: \.id) { trip in
+            TripCardView(
+                trip: trip,
+                isSelected: self.viewModel.isTripSelected(trip)
+            ) {
+                self.viewModel.selectedTrip = trip
             }
-                .padding(.vertical)
-                .padding(.leading)
+            .padding(.vertical, listVerticalPadding)
+            .padding(.horizontal, listHorizontalPadding)
+            .id(self.viewModel.getIndexForTrip(trip))
         }
     }
 }

@@ -6,7 +6,12 @@
 //
 
 import SwiftUI
-
+/* DetectOrientation */
+/// ViewModifier that listens to a device orientation change
+/// and updates the binding orientation value.
+///
+/// - Parameters:
+///     - orientation: Binding UIDeviceOrientation value.
 struct DetectOrientation: ViewModifier {
     @Binding var orientation: UIDeviceOrientation
 
@@ -19,6 +24,12 @@ struct DetectOrientation: ViewModifier {
 }
 
 extension View {
+    /* detectOrientation */
+    /// View extended function that eases the use of
+    /// the DetectOrientation ViewModifier.
+    ///
+    /// - Parameters:
+    ///     - orientation: Binding UIDeviceOrientation value.
     func detectOrientation(_ orientation: Binding<UIDeviceOrientation>) -> some View {
         modifier(DetectOrientation(orientation: orientation))
     }

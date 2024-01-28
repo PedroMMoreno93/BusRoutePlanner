@@ -7,5 +7,8 @@
 
 import Foundation
 
+/* BaseModelView */
+/// Protocol that defines a base model for the base view & view model to use.
+/// For further info, please check ARCHITECTURE.md.
 protocol BaseModelView {
 }

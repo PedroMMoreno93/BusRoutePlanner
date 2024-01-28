@@ -6,6 +6,11 @@
 //
 
 import SwiftUI
+/*
+ This file provides an example use case that implements the base
+ architecture.
+ For further information, please consult ARCHITECTURE.md.
+ */
 
 struct ArchitectureExampleModelView: BaseModelView {
     var name: String
@@ -18,7 +23,11 @@ protocol ArchitectureExampleViewModelProtocol: BaseViewModel {
 }
 
 class ArchitectureExampleViewModel: ArchitectureExampleViewModelProtocol {
+    // MARK: Variables
+    @Published var status: ViewModelStatus = .empty
     @Published var model: ArchitectureExampleModelView
+    @Published var showAlert: Bool = false
+    @Published  var isSheetPresented: Bool = false
 
     init(
         model: ArchitectureExampleModelView = ArchitectureExampleModelView(
@@ -37,7 +46,6 @@ class ArchitectureExampleViewModel: ArchitectureExampleViewModelProtocol {
 struct ArchitectureExampleView<
     ViewModel: ArchitectureExampleViewModelProtocol
 >: BaseView {
-//    struct ArchitectureExampleView: BaseView {
     @StateObject var viewModel: ViewModel
 
     var body: some View {

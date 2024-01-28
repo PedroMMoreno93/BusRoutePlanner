@@ -7,29 +7,40 @@
 
 import SwiftUI
 
-struct TripCard: View {
+/* TripCardView */
+/// View that shows a very small amount of information of a trip.
+/// - Parametera:
+///     - model: TripCardModelView.
+///     - action: () -> Void. Calls back when pressed.
+struct TripCardView: View {
     // MARK: Variables
     let model: TripCardModelView
+    var isSelected: Bool
     var action: () -> Void
 
     // MARK: Scalable constants
+    /// ScaledMetric(relativeTo: .body) with value of 220
     @ScaledMetric(relativeTo: .body) private var cardWidth = 220
+    /// ScaledMetric(relativeTo: .body) with value of 110
     @ScaledMetric(relativeTo: .body) private var cardHeight = 110
+    /// ScaledMetric(relativeTo: .body) with value of 10
     @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
 
     // MARK: Constants
+    /// Value of 4
     private let verticalSpacing: CGFloat = 4
+    /// Value of 10
     private let shadowRadius: CGFloat = 10
 
     var body: some View {
         Button {
-
+            self.action()
         } label: {
             label
         }
     }
 
-    var label: some View {
+    private var label: some View {
         VStack(alignment: .leading, spacing: verticalSpacing) {
             HStack {
                 driverName
@@ -38,15 +49,15 @@ struct TripCard: View {
             }
             .padding(.bottom, verticalSpacing)
 
-            origin
-
             arrival
+
+            origin
         }
-        .frame(width: cardWidth, height: cardHeight, alignment: .center)
         .padding(.horizontal, verticalSpacing * 2)
         .padding(.vertical, verticalSpacing)
+        .frame(width: cardWidth, height: cardHeight, alignment: .center)
         .background(
-            .thinMaterial
+            isSelected ? .regularMaterial : .ultraThinMaterial
         )
         .clipShape(
             RoundedRectangle(cornerRadius: cornerRadius)
@@ -56,30 +67,30 @@ struct TripCard: View {
         )
     }
 
-    var driverName: some View {
+    private var driverName: some View {
         Text(model.driverName)
             .font(.title3)
             .foregroundStyle(.primaryText)
+            .lineLimit(1)
     }
 
-    var origin: some View {
+    private var origin: some View {
         Text("From \(model.origin)")
             .textStyle()
+            .lineLimit(1)
     }
 
-    var destination: some View {
-        Text(model.destination)
-            .textStyle()
+    private var status: some View {
+        StylizedSystemImage(
+            systemName: model.status.systemIcon,
+            font: .title3,
+            primaryStyle: .white,
+            secondaryStyle: model.status.color,
+            tertiaryStyle: model.status.color
+        )
     }
 
-    var status: some View {
-        Image(systemName: model.status.systemIcon)
-            .font(.title3)
-            .symbolRenderingMode(.palette)
-            .foregroundStyle(.white, model.status.color, model.status.color)
-    }
-
-    var arrival: some View {
+    private var arrival: some View {
         HStack(spacing: 0) {
             Text("Arrival at ")
                 .textStyle()
@@ -90,12 +101,27 @@ struct TripCard: View {
     }
 }
 
+extension TripCardView {
+    init(trip: TripModelView, isSelected: Bool, action: @escaping (() -> Void)) {
+        self.model = TripCardModelView(
+            driverName: trip.driverName,
+            origin: trip.origin.adress,
+            destination: trip.destination.adress,
+            status: trip.status,
+            startTime: trip.startTime,
+            endTime: trip.endTime
+        )
+        self.action = action
+        self.isSelected = isSelected
+    }
+}
+
 #if DEBUG
 struct TripCard_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.teal
-            TripCard(model: .previewOngoingTrip) {
+            TripCardView(model: .previewOngoingTrip, isSelected: true) {
             }
         }
     }

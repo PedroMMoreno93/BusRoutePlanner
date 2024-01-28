@@ -14,7 +14,7 @@ import ViewInspector
 
 final class ArchitectureExampleTests: XCTestCase {
 
-    func test_setColor() throws {
+    func test_setColor() {
 
         let viewModel = ArchitectureExampleViewModel()
 

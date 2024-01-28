@@ -6,7 +6,13 @@
 //
 
 import SwiftUI
-
+/* TextStyle */
+/// View Modifier that eases the implementation of the text style
+/// applied in the app.
+/// - Parameters:
+///     - font: Font.
+///     - fontWeight: Font.Weight?. Optional.
+///     - color: Color.
 struct TextStyle: ViewModifier {
     var font: Font
     var fontWeight: Font.Weight?
@@ -21,6 +27,13 @@ struct TextStyle: ViewModifier {
 }
 
 extension Text {
+    /* textStyle */
+    /// Text extewnded function that eases the implementation of the text style
+    /// applied in the app.
+    /// - Parameters:
+    ///     - font: Font.
+    ///     - fontWeight: Font.Weight?. Optional.
+    ///     - color: Color.
     func textStyle(
         font: Font = .body,
         fontWeight: Font.Weight? = .regular,
