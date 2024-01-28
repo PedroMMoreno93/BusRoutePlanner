@@ -59,9 +59,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
         .geometryReader($size)
         .sheet(isPresented: $isSheetPresented, onDismiss: {}, content: {
             if let selectedTrip = viewModel.selectedTrip {
-                TripDetailView(model: selectedTrip, isLandsCape: orientation.isLandscape) {
-                    viewModel.isSheetPresented = false
-                }
+                TripDetailView(model: selectedTrip, isLandsCape: orientation.isLandscape)
                 .presentationDetents([.height(sheetHeight), .large ])
             }
         })
@@ -78,10 +76,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     }
 
     private var map: some View {
-        GoogleMapsView(selectedTrip: viewModel.selectedTrip) {
-            // on animation Ended
-            self.isSheetPresented = true
-        } mapViewWillMove: { _ in
+        GoogleMapsView(selectedTrip: viewModel.selectedTrip) { _ in
         }
     }
 
@@ -145,6 +140,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                 isSelected: self.viewModel.isTripSelected(trip)
             ) {
                 self.viewModel.selectedTrip = trip
+                self.isSheetPresented = true
             }
             .padding(.vertical, listVerticalPadding)
             .padding(.horizontal, listHorizontalPadding)

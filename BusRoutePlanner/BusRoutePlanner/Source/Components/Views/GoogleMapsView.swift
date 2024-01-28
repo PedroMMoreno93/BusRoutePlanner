@@ -22,7 +22,6 @@ import UIKit
 struct GoogleMapsView: UIViewControllerRepresentable {
     var selectedTrip: TripModelView?
     var animatedTransition: Bool = true
-    var onAnimationEnded: () -> Void
     var mapViewWillMove: (Bool) -> Void
     private static let defaultPolylineStrokeWidth: CGFloat = 4
 
@@ -58,7 +57,7 @@ struct GoogleMapsView: UIViewControllerRepresentable {
         guard map.selectedMarker != selectedTrip.origin.marker else {
             return
         }
-
+     
         map.clear()
         map.selectedMarker = selectedTrip.origin.marker
 
@@ -67,7 +66,6 @@ struct GoogleMapsView: UIViewControllerRepresentable {
         } else {
             setMarkers(map: map, selectedTrip: selectedTrip)
         }
-        onAnimationEnded()
     }
 
     /* setMarkersWithAnimatedZoom */
@@ -90,7 +88,6 @@ struct GoogleMapsView: UIViewControllerRepresentable {
 
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         setMarkers(map: map, selectedTrip: selectedTrip)
-                        onAnimationEnded()
                     })
                 })
             }
@@ -248,7 +245,7 @@ class GoogleMapsViewController: UIViewController {
 #if DEBUG
 struct GoogleMapsView_Previews: PreviewProvider {
     static var previews: some View {
-        GoogleMapsView(selectedTrip: .prewviewMock1, onAnimationEnded: { }, mapViewWillMove: {_ in})
+        GoogleMapsView(selectedTrip: .prewviewMock1, mapViewWillMove: {_ in})
             .ignoresSafeArea()
     }
 }

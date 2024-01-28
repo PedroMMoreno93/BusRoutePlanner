@@ -18,8 +18,7 @@ final class GoogleMapsViewTest: XCTestCase {
         var sut = GoogleMapsView(
             selectedTrip: nil,
             animatedTransition: true
-        ) {
-        } mapViewWillMove: { _ in
+        ) { _ in
         }
         sut.selectedTrip = .prewviewMock1
         XCTAssertEqual(sut.selectedTrip, .prewviewMock1)
@@ -29,8 +28,7 @@ final class GoogleMapsViewTest: XCTestCase {
         var sut = GoogleMapsView(
             selectedTrip: nil,
             animatedTransition: false
-        ) {
-        } mapViewWillMove: { _ in
+        ) { _ in
         }
         sut.selectedTrip = .prewviewMock1
         XCTAssertEqual(sut.selectedTrip, .prewviewMock1)

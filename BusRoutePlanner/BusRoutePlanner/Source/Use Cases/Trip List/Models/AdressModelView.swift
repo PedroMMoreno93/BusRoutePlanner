@@ -23,7 +23,8 @@ struct AdressModelView: HasPoint, Identifiable, Equatable {
     var marker: GMSMarker {
         let marker = GMSMarker(position: coordinates)
         marker.icon = adressType.icon
-
+    
+        marker.title = adress
         return marker
     }
 
