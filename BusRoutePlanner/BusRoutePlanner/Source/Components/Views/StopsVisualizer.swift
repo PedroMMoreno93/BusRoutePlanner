@@ -31,9 +31,8 @@ struct StopsVisualizer: View {
     private func getDistanceToOriginLabel(
         from stop: StopModelView
     ) -> some View {
-        let distance = self.model.getDistanceToOrigin(from: stop.location)
-        let distanceString = String(format: "%.2f", distance)
-        let textLabel = distanceString + " Km away from origin"
+        let distanceString = stop.distanceToOriginString
+        let textLabel = distanceString + " away from origin"
         return Text(textLabel)
     }
 

@@ -80,9 +80,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     private var map: some View {
         GoogleMapsView(selectedTrip: viewModel.selectedTrip) {
             // on animation Ended
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                self.isSheetPresented = true
-            }
+            self.isSheetPresented = true
         } mapViewWillMove: { _ in
         }
     }

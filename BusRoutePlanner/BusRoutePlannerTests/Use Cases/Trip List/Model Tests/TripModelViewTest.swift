@@ -80,11 +80,17 @@ final class TripModelViewTest: XCTestCase {
         XCTAssertNotNil(origin.coordinates)
         XCTAssertNotNil(origin.location)
 
-        let mockStop1 = StopModelView(point: PointModelView(latitude: 0, longitude: 0), stopId: 1)
+        let mockStop1 = StopModelView(point: PointModelView(latitude: 0, longitude: 0), stopId: 1, distanceToOrigin: 10)
         XCTAssertNotNil(mockStop1.id)
         XCTAssertNotNil(mockStop1.marker)
 
-        let mockStop2 = StopModelView(from: StopModelServer(point: PointModelServer(latitude: 0, longitude: 0), id: 2))
+        let mockStop2 = StopModelView(
+            from: StopModelServer(
+                point: PointModelServer(latitude: 0,longitude: 0),
+                id: 2
+            ),
+            origin: PointModelServer(latitude: 10, longitude: 10)
+        )
         XCTAssertNotNil(mockStop2)
         XCTAssertEqual(mockStop2!.stopId, 2)
 
