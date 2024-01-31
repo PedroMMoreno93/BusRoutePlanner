@@ -32,14 +32,12 @@ extension ContactFormModelView {
             name, surname, email, phone, inputText
         ]
     }
-    
+
     var areAllMandatoryFieldsValid: Bool {
-        var firstNonValid = allFields.first { field in
+        let firstNonValid = allFields.first { field in
             field.isMandatory && !field.validateStategy()
         }
-        
+
         return firstNonValid == nil
     }
 }
-
-

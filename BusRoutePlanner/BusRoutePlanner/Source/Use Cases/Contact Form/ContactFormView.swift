@@ -10,16 +10,13 @@ import SwiftData
 struct ContactFormView<
     ViewModel: ContactFormViewModelProtocol
 >: BaseView {
-    
-    
-    @Environment(\.dismiss) private var dismiss
-
+    // MARK: Environment
+     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     @Query private var issues: [Issue]
-    
-    
+
     @EnvironmentObject var badgeManager: AppAlertBadgeManager
-    
+
     @StateObject var viewModel: ViewModel
     let textLimit = 200
 
@@ -32,9 +29,9 @@ struct ContactFormView<
             VStack {
                 HStack {
                     title
-                    
+
                     Spacer()
-                    
+
                     saveButton
                 }
 
@@ -45,14 +42,15 @@ struct ContactFormView<
         .alert(
             viewModel.alertMessage,
             isPresented: $viewModel.showAlert) {
-                Button("OK", role: .cancel) { 
+                Button("OK", role: .cancel) {
                     dismiss()
                 }
-                Button("Cancel", role: .destructive) { 
+
+                Button("Cancel", role: .destructive) {
                     viewModel.deleteIssue(context: context)
                 }
               }
-            .onChange(of: issues) { oldValue, newValue in
+            .onChange(of: issues) { _, newValue in
                 badgeManager.setAlertBadge(number: newValue.count)
             }
 

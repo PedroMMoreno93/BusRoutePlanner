@@ -10,7 +10,7 @@ import SwiftUI
 
 // TODO: documentar
 struct MultilineTextField: ContactFormField {
-    let key: String = "message"
+    var key: String = "message"
     var value: String = ""
     var isMandatory: Bool = true
     var characterNumberLimit: Int? = 200

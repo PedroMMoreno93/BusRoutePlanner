@@ -12,7 +12,7 @@ import ViewInspector
 
 @testable import BusRoutePlanner
 
-final class TripListTests: XCTestCase {
+final class TripListViewModelTests: XCTestCase {
     var viewModel: (any TripListViewModelProtocol)?
 
     func test_init() {

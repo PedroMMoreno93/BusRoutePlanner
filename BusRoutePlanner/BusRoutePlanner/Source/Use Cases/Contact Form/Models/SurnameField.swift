@@ -10,7 +10,7 @@ import SwiftUI
 
 // TODO: documentar
 struct SurnameField: ContactFormField {
-    let key: String = "surname"
+    var key: String = "surname"
     var value: String
     var isMandatory: Bool = true
 

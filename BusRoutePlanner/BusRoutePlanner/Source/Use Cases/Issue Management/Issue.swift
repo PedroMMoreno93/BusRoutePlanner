@@ -13,7 +13,7 @@ class Issue: Identifiable {
     var id: UUID
     var contactForm: ContactFormModelView
     var issuedDate: Date
-    
+
     init(contactForm: ContactFormModelView) {
         self.id = UUID()
         self.contactForm = contactForm

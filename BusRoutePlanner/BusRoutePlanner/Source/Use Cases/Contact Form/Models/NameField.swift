@@ -11,7 +11,7 @@ import SwiftUI
 // TODO: documentar
 
 struct NameField: ContactFormField {
-    let key: String = "name"
+    var key: String = "name"
     var value: String
     var isMandatory: Bool = true
     func validateStategy() -> Bool {
