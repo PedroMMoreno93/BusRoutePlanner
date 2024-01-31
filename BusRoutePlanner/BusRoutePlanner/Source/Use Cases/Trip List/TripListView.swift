@@ -9,17 +9,18 @@ import SwiftUI
 
 struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     @StateObject var viewModel: ViewModel
-
+    
     init(viewModel: ViewModel = TripListViewModel()) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-
+    
     // MARK: Variables
     @State private var orientation: UIDeviceOrientation = .portrait
     @State private var size: CGSize = .zero
     @State private var resetScroll: Bool = false
     @State private var isSheetPresented: Bool = false
-
+    
+    // TODO: Sacar a - styles guide.
     // MARK: Scalable constants
     /// ScaledMetric(relativeTo: .callout) with value of 10
     @ScaledMetric(relativeTo: .callout) private var titleCornerRadius = 10
@@ -27,7 +28,10 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     @ScaledMetric(relativeTo: .callout) private var sheetHeight = 160
     /// ScaledMetric(relativeTo: .body) with value of 220
     @ScaledMetric(relativeTo: .body) private var cardWidth = 220
-
+    /// ScaledMetric(relativeTo: .body) with value of 10
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
+    
+    // TODO: Sacar a - styles guide.
     // MARK: Constants
     /// Value of 12
     private let titleVerticalPadding: CGFloat = 12
@@ -41,26 +45,49 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     private let listVerticalPadding: CGFloat = 5
     /// Value of 5
     private let listHorizontalPadding: CGFloat = 15
-
+    /// Value of 10
+    private let shadowRadius: CGFloat = 10
+    
     // MARK: Computed Properties
     private var isPortrait: Bool {
         return orientation.isPortrait
     }
-
+    
     var body: some View {
         ZStack {
             map
                 .ignoresSafeArea()
-
+            
             if viewModel.areAvailableTrips {
-                tripsCards
+                
+                
+                VStack {
+                    
+                    VStack {
+                        contactButton
+                        
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    Spacer()
+                }
+                .padding(.horizontal,
+                         isPortrait ? titleHorizontalPortraitPadding : 0
+                )
+                .background {
+                    VStack {
+                        Spacer()
+                        tripsCards
+                    }
+                    
+                }
+                
             }
         }
         .geometryReader($size)
         .sheet(isPresented: $isSheetPresented, onDismiss: {}, content: {
             if let selectedTrip = viewModel.selectedTrip {
                 TripDetailView(model: selectedTrip, isLandsCape: orientation.isLandscape)
-                .presentationDetents([.height(sheetHeight), .large ])
+                    .presentationDetents([.height(sheetHeight), .large ])
             }
         })
         .alert(isPresented: $viewModel.showAlert, content: {
@@ -74,22 +101,44 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             await viewModel.onAppear()
         }
     }
-
+    
     private var map: some View {
         GoogleMapsView(selectedTrip: viewModel.selectedTrip) { _ in
         }
     }
-
+    
+    var contactButton: some View {
+        NavigationLink {
+            ContactFormView()
+        } label: {
+            StylizedSystemImage(
+                systemName: "text.bubble.fill",
+                font: .title3,
+                primaryStyle: .white,
+                secondaryStyle: .blue,
+                tertiaryStyle: .blue
+            )
+            .padding()
+            .withTransparentBackground(
+                cornerRadius: cornerRadius,
+                shadowRadius: shadowRadius,
+                isSelected: false
+            )
+        }
+    }
+    
+    
+    
     private var tripsCards: some View {
         HStack {
             VStack(alignment: .leading, spacing: 0) {
                 Spacer()
-
+                
                 tripsTitle
                     .frame(width: isPortrait ? size.width - titleHorizontalPortraitPadding : cardWidth )
                     .padding(.horizontal, tripsTitleHorizontalPadding)
                     .padding(.bottom, tripsTitleBottomPadding)
-
+                
                 ScrollViewReader { proxy in
                     ScrollView(isPortrait ? .horizontal : .vertical, showsIndicators: false) {
                         getListForOrientation()
@@ -102,15 +151,13 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                     }
                 }
             }
-
+            
             if !isPortrait {
                 Spacer()
             }
         }
-        .padding(.horizontal, isPortrait ? titleHorizontalPortraitPadding : 0)
-
     }
-
+    
     @ViewBuilder
     private func getListForOrientation() -> some View {
         if isPortrait {
@@ -123,7 +170,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             }
         }
     }
-
+    
     private var tripsTitle: some View {
         Text("Available Trips")
             .textStyle(font: .callout, fontWeight: .bold)
@@ -132,7 +179,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             .background(.thinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: titleCornerRadius))
     }
-
+    
     private var list: some View {
         ForEach(self.viewModel.model.trips, id: \.id) { trip in
             TripCardView(
@@ -152,7 +199,9 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
 #if DEBUG
 struct TripListView_Previews: PreviewProvider {
     static var previews: some View {
-        TripListView(viewModel: TripListViewModel(model: .previewTripList))
+        NavigationView {
+            TripListView(viewModel: TripListViewModel(model: .previewTripList))
+        }
     }
 }
 #endif

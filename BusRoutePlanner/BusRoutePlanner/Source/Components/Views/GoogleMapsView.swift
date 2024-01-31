@@ -57,7 +57,7 @@ struct GoogleMapsView: UIViewControllerRepresentable {
         guard map.selectedMarker != selectedTrip.origin.marker else {
             return
         }
-     
+
         map.clear()
         map.selectedMarker = selectedTrip.origin.marker
 

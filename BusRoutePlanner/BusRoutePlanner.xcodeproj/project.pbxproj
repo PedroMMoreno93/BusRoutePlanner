@@ -14,6 +14,8 @@
 		6510757A2B5C355C005BEA4A /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = 651075792B5C355C005BEA4A /* GoogleMapsBase */; };
 		6510757C2B5C355C005BEA4A /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6510757B2B5C355C005BEA4A /* GoogleMapsCore */; };
 		6510757E2B5C355C005BEA4A /* GoogleMapsM4B in Frameworks */ = {isa = PBXBuildFile; productRef = 6510757D2B5C355C005BEA4A /* GoogleMapsM4B */; };
+		65188E3F2B69AF24000C018E /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65188E3E2B69AF24000C018E /* Issue.swift */; };
+		65188E412B69BE2C000C018E /* AppAlertBadgeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65188E402B69BE2C000C018E /* AppAlertBadgeManager.swift */; };
 		6520B9442B5D3498004454AD /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9432B5D3498004454AD /* TripListView.swift */; };
 		6520B94B2B5D43AA004454AD /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B94A2B5D43AA004454AD /* TripCardView.swift */; };
 		6520B94E2B5D89AB004454AD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6520B94D2B5D89AB004454AD /* Colors.xcassets */; };
@@ -26,6 +28,20 @@
 		6520B9612B5D8D75004454AD /* GoogleMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9602B5D8D75004454AD /* GoogleMapsView.swift */; };
 		6520B9632B5D8E54004454AD /* TripStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9622B5D8E54004454AD /* TripStatus.swift */; };
 		6520B9652B5D905E004454AD /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9642B5D905E004454AD /* TextStyle.swift */; };
+		65246B222B66EC0A00F17FBC /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B212B66EC0A00F17FBC /* ContactFormView.swift */; };
+		65246B242B66F2B200F17FBC /* TransparentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B232B66F2B200F17FBC /* TransparentBackground.swift */; };
+		65246B262B66F83200F17FBC /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B252B66F83200F17FBC /* ContactFormViewModel.swift */; };
+		65246B282B66F84300F17FBC /* ContactFormModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B272B66F84300F17FBC /* ContactFormModelView.swift */; };
+		65246B2B2B68307600F17FBC /* MultilineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B2A2B68307600F17FBC /* MultilineTextField.swift */; };
+		65246B2D2B68308B00F17FBC /* PhoneField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B2C2B68308B00F17FBC /* PhoneField.swift */; };
+		65246B2F2B6830A000F17FBC /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B2E2B6830A000F17FBC /* EmailField.swift */; };
+		65246B312B6830B900F17FBC /* SurnameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B302B6830B900F17FBC /* SurnameField.swift */; };
+		65246B332B6830C700F17FBC /* NameField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B322B6830C700F17FBC /* NameField.swift */; };
+		65246B352B6830E800F17FBC /* ContactFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B342B6830E800F17FBC /* ContactFormField.swift */; };
+		65246B372B6843F800F17FBC /* ContactFormSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B362B6843F800F17FBC /* ContactFormSectionView.swift */; };
+		65246B392B68441200F17FBC /* TextFieldSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B382B68441200F17FBC /* TextFieldSection.swift */; };
+		65246B3C2B68445200F17FBC /* MultilineInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B3B2B68445200F17FBC /* MultilineInputText.swift */; };
+		65246B3E2B68446900F17FBC /* MultilineTextSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65246B3D2B68446900F17FBC /* MultilineTextSection.swift */; };
 		652DC8E22B62DD3400A4D684 /* TripsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E12B62DD3400A4D684 /* TripsProvider.swift */; };
 		652DC8E42B62E18E00A4D684 /* TripModelServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E32B62E18E00A4D684 /* TripModelServer.swift */; };
 		652DC8E72B62E1DA00A4D684 /* TripModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E62B62E1DA00A4D684 /* TripModelView.swift */; };
@@ -59,7 +75,7 @@
 		654A894A2B65B98B002A1275 /* GoogleMapsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89492B65B98B002A1275 /* GoogleMapsViewTest.swift */; };
 		654A894C2B65C482002A1275 /* StopsVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A894B2B65C482002A1275 /* StopsVisualizer.swift */; };
 		6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6558F6F92B606BC100DD76E7 /* Date+String.swift */; };
-		65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Configuration.swift */; };
+		65931BCA2B5C3DFD0019EBF9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Secrets.swift */; };
 		65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
 		65B396642B5DA05500C95DAD /* TripListModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B396632B5DA05500C95DAD /* TripListModelView.swift */; };
 		65B396662B5DA0FA00C95DAD /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B396652B5DA0FA00C95DAD /* TripListViewModel.swift */; };
@@ -101,6 +117,8 @@
 		651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerApp.swift; sourceTree = "<group>"; };
 		6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6510756E2B5C27A3005BEA4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65188E3E2B69AF24000C018E /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		65188E402B69BE2C000C018E /* AppAlertBadgeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlertBadgeManager.swift; sourceTree = "<group>"; };
 		6520B9432B5D3498004454AD /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		6520B94A2B5D43AA004454AD /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		6520B94D2B5D89AB004454AD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -114,6 +132,20 @@
 		6520B9622B5D8E54004454AD /* TripStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatus.swift; sourceTree = "<group>"; };
 		6520B9642B5D905E004454AD /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		6520B9662B5D985F004454AD /* ARCHITECTURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ARCHITECTURE.md; sourceTree = "<group>"; };
+		65246B212B66EC0A00F17FBC /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
+		65246B232B66F2B200F17FBC /* TransparentBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBackground.swift; sourceTree = "<group>"; };
+		65246B252B66F83200F17FBC /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
+		65246B272B66F84300F17FBC /* ContactFormModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormModelView.swift; sourceTree = "<group>"; };
+		65246B2A2B68307600F17FBC /* MultilineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextField.swift; sourceTree = "<group>"; };
+		65246B2C2B68308B00F17FBC /* PhoneField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneField.swift; sourceTree = "<group>"; };
+		65246B2E2B6830A000F17FBC /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		65246B302B6830B900F17FBC /* SurnameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameField.swift; sourceTree = "<group>"; };
+		65246B322B6830C700F17FBC /* NameField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameField.swift; sourceTree = "<group>"; };
+		65246B342B6830E800F17FBC /* ContactFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormField.swift; sourceTree = "<group>"; };
+		65246B362B6843F800F17FBC /* ContactFormSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormSectionView.swift; sourceTree = "<group>"; };
+		65246B382B68441200F17FBC /* TextFieldSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSection.swift; sourceTree = "<group>"; };
+		65246B3B2B68445200F17FBC /* MultilineInputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineInputText.swift; sourceTree = "<group>"; };
+		65246B3D2B68446900F17FBC /* MultilineTextSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextSection.swift; sourceTree = "<group>"; };
 		652DC8E12B62DD3400A4D684 /* TripsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsProvider.swift; sourceTree = "<group>"; };
 		652DC8E32B62E18E00A4D684 /* TripModelServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelServer.swift; sourceTree = "<group>"; };
 		652DC8E62B62E1DA00A4D684 /* TripModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelView.swift; sourceTree = "<group>"; };
@@ -148,7 +180,7 @@
 		6558F6F92B606BC100DD76E7 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		65778CBB2B5C53F3000101E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65778CBD2B5C5F0F000101E6 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
-		65931BC92B5C3DFD0019EBF9 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		65931BC92B5C3DFD0019EBF9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = com.pedrommoreno.swiftlint.yml; sourceTree = "<group>"; };
 		65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		65B396632B5DA05500C95DAD /* TripListModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListModelView.swift; sourceTree = "<group>"; };
@@ -239,11 +271,21 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		65188E3D2B69AEFC000C018E /* Issue Management */ = {
+			isa = PBXGroup;
+			children = (
+				65188E3E2B69AF24000C018E /* Issue.swift */,
+			);
+			path = "Issue Management";
+			sourceTree = "<group>";
+		};
 		6520B9412B5D346E004454AD /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
 				6520B9422B5D3480004454AD /* Trip List */,
 				65F765712B630EF100FC7DC8 /* Trip Detail */,
+				65246B202B66EBD400F17FBC /* Contact Form */,
+				65188E3D2B69AEFC000C018E /* Issue Management */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -284,6 +326,8 @@
 				6520B9602B5D8D75004454AD /* GoogleMapsView.swift */,
 				654A89152B652BC2002A1275 /* StylizedSystemImage.swift */,
 				654A894B2B65C482002A1275 /* StopsVisualizer.swift */,
+				65246B3B2B68445200F17FBC /* MultilineInputText.swift */,
+				65246B3A2B68441700F17FBC /* Form Sections */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +338,7 @@
 				6520B9532B5D8B7E004454AD /* DetectOrientation.swift */,
 				6520B9642B5D905E004454AD /* TextStyle.swift */,
 				654A89032B644A96002A1275 /* CustomGeometryReader.swift */,
+				65246B232B66F2B200F17FBC /* TransparentBackground.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -329,6 +374,40 @@
 				65B3966C2B5DB35400C95DAD /* Example */,
 			);
 			path = Architecture;
+			sourceTree = "<group>";
+		};
+		65246B202B66EBD400F17FBC /* Contact Form */ = {
+			isa = PBXGroup;
+			children = (
+				65246B212B66EC0A00F17FBC /* ContactFormView.swift */,
+				65246B252B66F83200F17FBC /* ContactFormViewModel.swift */,
+				65246B272B66F84300F17FBC /* ContactFormModelView.swift */,
+				65246B292B68306900F17FBC /* Models */,
+			);
+			path = "Contact Form";
+			sourceTree = "<group>";
+		};
+		65246B292B68306900F17FBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65246B342B6830E800F17FBC /* ContactFormField.swift */,
+				65246B322B6830C700F17FBC /* NameField.swift */,
+				65246B302B6830B900F17FBC /* SurnameField.swift */,
+				65246B2E2B6830A000F17FBC /* EmailField.swift */,
+				65246B2C2B68308B00F17FBC /* PhoneField.swift */,
+				65246B2A2B68307600F17FBC /* MultilineTextField.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65246B3A2B68441700F17FBC /* Form Sections */ = {
+			isa = PBXGroup;
+			children = (
+				65246B362B6843F800F17FBC /* ContactFormSectionView.swift */,
+				65246B382B68441200F17FBC /* TextFieldSection.swift */,
+				65246B3D2B68446900F17FBC /* MultilineTextSection.swift */,
+			);
+			path = "Form Sections";
 			sourceTree = "<group>";
 		};
 		652DC8E02B62DD1300A4D684 /* Providers */ = {
@@ -464,7 +543,7 @@
 		65931BC82B5C3DEA0019EBF9 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
-				65931BC92B5C3DFD0019EBF9 /* Configuration.swift */,
+				65931BC92B5C3DFD0019EBF9 /* Secrets.swift */,
 				651075872B5C3B5C005BEA4A /* Delegates */,
 			);
 			path = Setup;
@@ -483,6 +562,7 @@
 			children = (
 				65D4C10A2B62F33D00387987 /* APIManager.swift */,
 				65D4C10C2B62F4B300387987 /* Logger.swift */,
+				65188E402B69BE2C000C018E /* AppAlertBadgeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -697,24 +777,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				6520B9652B5D905E004454AD /* TextStyle.swift in Sources */,
+				65246B352B6830E800F17FBC /* ContactFormField.swift in Sources */,
+				65246B2F2B6830A000F17FBC /* EmailField.swift in Sources */,
 				6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */,
 				654A89162B652BC2002A1275 /* StylizedSystemImage.swift in Sources */,
+				65188E412B69BE2C000C018E /* AppAlertBadgeManager.swift in Sources */,
+				65246B312B6830B900F17FBC /* SurnameField.swift in Sources */,
 				654A89102B651EBB002A1275 /* AdressModelServer.swift in Sources */,
 				6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */,
 				6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */,
 				6520B9502B5D89CB004454AD /* Colors.swift in Sources */,
 				654A89392B65A6C1002A1275 /* PointModelView.swift in Sources */,
+				65246B242B66F2B200F17FBC /* TransparentBackground.swift in Sources */,
 				654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */,
 				654A894C2B65C482002A1275 /* StopsVisualizer.swift in Sources */,
 				6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */,
+				65246B282B66F84300F17FBC /* ContactFormModelView.swift in Sources */,
+				65246B332B6830C700F17FBC /* NameField.swift in Sources */,
 				654A893B2B65A6D9002A1275 /* AddressModelView.swift in Sources */,
-				65931BCA2B5C3DFD0019EBF9 /* Configuration.swift in Sources */,
+				65931BCA2B5C3DFD0019EBF9 /* Secrets.swift in Sources */,
 				6520B9442B5D3498004454AD /* TripListView.swift in Sources */,
 				65B3966A2B5DB0F600C95DAD /* SceneDelegate.swift in Sources */,
 				654A89142B652221002A1275 /* TripDetailView.swift in Sources */,
 				654A890C2B651E95002A1275 /* StopModelServer.swift in Sources */,
+				65246B3C2B68445200F17FBC /* MultilineInputText.swift in Sources */,
 				652DC8E42B62E18E00A4D684 /* TripModelServer.swift in Sources */,
 				6520B9612B5D8D75004454AD /* GoogleMapsView.swift in Sources */,
+				65246B222B66EC0A00F17FBC /* ContactFormView.swift in Sources */,
 				65D4C10B2B62F33D00387987 /* APIManager.swift in Sources */,
 				6520B9582B5D8C40004454AD /* TripCardModelView.swift in Sources */,
 				65B396642B5DA05500C95DAD /* TripListModelView.swift in Sources */,
@@ -726,15 +815,22 @@
 				654A89422B65AF8C002A1275 /* URLRequestInitializers.swift in Sources */,
 				652DC8EA2B62EACF00A4D684 /* Images.swift in Sources */,
 				6520B95F2B5D8CCA004454AD /* BaseViewModel.swift in Sources */,
+				65246B3E2B68446900F17FBC /* MultilineTextSection.swift in Sources */,
+				65246B372B6843F800F17FBC /* ContactFormSectionView.swift in Sources */,
+				65246B2D2B68308B00F17FBC /* PhoneField.swift in Sources */,
 				6520B9632B5D8E54004454AD /* TripStatus.swift in Sources */,
+				65246B262B66F83200F17FBC /* ContactFormViewModel.swift in Sources */,
 				652DC8E22B62DD3400A4D684 /* TripsProvider.swift in Sources */,
+				65246B2B2B68307600F17FBC /* MultilineTextField.swift in Sources */,
 				65D4C10D2B62F4B300387987 /* Logger.swift in Sources */,
 				65B3966E2B5DB36500C95DAD /* ArchitectureExample.swift in Sources */,
 				651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */,
 				6520B95D2B5D8CC2004454AD /* BaseModelView.swift in Sources */,
 				654A890E2B651EA4002A1275 /* PointModelServer.swift in Sources */,
 				654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */,
+				65246B392B68441200F17FBC /* TextFieldSection.swift in Sources */,
 				65B396662B5DA0FA00C95DAD /* TripListViewModel.swift in Sources */,
+				65188E3F2B69AF24000C018E /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

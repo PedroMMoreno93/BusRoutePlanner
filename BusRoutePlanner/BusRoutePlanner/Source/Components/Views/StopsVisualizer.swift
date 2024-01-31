@@ -41,7 +41,7 @@ struct StopsVisualizer: View {
             .fill(model.status.color)
             .overlay {
                 Circle()
-                    .fill(.background)
+                    .fill(Color.background)
                     .frame(width: 12)
             }
             .frame(width: 30)

@@ -22,7 +22,7 @@ struct StropDetailProvider: StropDetailProviderProtocol {
 #if TEST
         return .mockStopDetailModelServer
 #else
-        let url = Configuration.API.Provider.stopsUrl
+        let url = Secrets.API.Provider.stopsUrl
         let method = HTTPMethod.get
 
         let modelServer: StopDetailModelServer = try await APIManager.callAPI(

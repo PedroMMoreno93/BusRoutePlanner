@@ -97,20 +97,6 @@ struct TripDetailView: View {
             }
         }
     }
-
-    private var departure: some View {
-        HStack(spacing: 0) {
-            Text("Departure at ")
-            Text(model.startTimeString)
-        }
-    }
-
-    private var arrival: some View {
-        HStack(spacing: 0) {
-            Text("Arrival at ")
-            Text(model.endTimeString)
-        }
-    }
 }
 
 #if DEBUG

@@ -23,7 +23,7 @@ struct AddressModelView: HasPoint, Identifiable, Equatable {
     var marker: GMSMarker {
         let marker = GMSMarker(position: coordinates)
         marker.icon = addressType.icon
-    
+
         marker.title = address
         return marker
     }
@@ -60,6 +60,10 @@ extension AddressModelView {
         from modelServer: AddressModelServer,
         addressType: AddressType
     ) {
-        self.init(point: PointModelView(from: modelServer.point), address: modelServer.address, addressType: addressType)
+        self.init(
+            point: PointModelView(from: modelServer.point),
+            address: modelServer.address,
+            addressType: addressType
+        )
     }
 }
