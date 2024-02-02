@@ -8,7 +8,12 @@
 import Foundation
 import SwiftUI
 
-// TODO: documentar
+/* PhoneField */
+/// Struct that implements a phone field of type contact form field.
+/// - Parameters:
+///     - key: String. Default value "phone".
+///     - value: String. Empty by default.
+///     - isMandatory: Bool. Set to false.
 struct PhoneField: ContactFormField {
     var key: String = "phone"
     var value: String
@@ -21,4 +26,5 @@ struct PhoneField: ContactFormField {
 
 extension PhoneField {
     static let empty = PhoneField(value: "")
+    static let mock = PhoneField(value: "123456789")
 }

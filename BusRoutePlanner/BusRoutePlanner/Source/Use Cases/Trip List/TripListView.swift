@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/* TripListView */
+/// App's main view. It shows a map overlayed by a list
+/// of trips represented displayed as cards.
+/// - Parameter viewModel: TripListViewModelProtocol
 struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     @StateObject var viewModel: ViewModel
 
@@ -62,6 +66,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                 VStack {
                     VStack {
                         contactButton
+                        issuesButton
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     Spacer()
@@ -106,11 +111,31 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             ContactFormView()
         } label: {
             StylizedSystemImage(
-                systemName: "text.bubble.fill",
+                systemName: "text.bubble.fill",// TODO: Sacar a - styles guide.
                 font: .title3,
                 primaryStyle: .white,
                 secondaryStyle: .blue,
                 tertiaryStyle: .blue
+            )
+            .padding()
+            .withTransparentBackground(
+                cornerRadius: cornerRadius,
+                shadowRadius: shadowRadius,
+                isSelected: false
+            )
+        }
+    }
+
+    var issuesButton: some View {
+        NavigationLink {
+            IssueManagementView()
+        } label: {
+            StylizedSystemImage(
+                systemName: "folder.fill",// TODO: Sacar a - styles guide.
+                font: .title3,
+                primaryStyle: .blue,
+                secondaryStyle: .white,
+                tertiaryStyle: .white
             )
             .padding()
             .withTransparentBackground(

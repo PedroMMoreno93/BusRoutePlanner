@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-/// Protocol design for dependencies injection
+/* TripListViewModelProtocol */
+/// TripListView interaction and data definition
 protocol TripListViewModelProtocol: BaseViewModel {
     var tripsProvider: TripsProviderProtocol { get }
     var model: TripListModelView { get set }
@@ -48,7 +49,8 @@ extension TripListViewModelProtocol {
      }
 }
 
-/// Class that encapsulates all the info that TripListView required,
+/* TripListViewModel */
+/// Holds all the info that TripListView required,
 /// besides handling the interaction flow.
 class TripListViewModel: TripListViewModelProtocol {
 

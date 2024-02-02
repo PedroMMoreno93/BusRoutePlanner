@@ -20,3 +20,7 @@ class Issue: Identifiable {
         self.issuedDate = Date.now
     }
 }
+
+extension Issue {
+    static let mock = Issue(contactForm: .mock)
+}

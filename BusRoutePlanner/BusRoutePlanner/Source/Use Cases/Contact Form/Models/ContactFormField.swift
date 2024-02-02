@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-// TODO: documentar
+/* ContactFormField */
+/// Protocol that defines a generic field model and
+///  its needed set of features and functions.
 protocol ContactFormField: Codable {
     associatedtype Value: Codable
     var key: String { get }
@@ -23,47 +25,5 @@ extension ContactFormField {
         }
 
         return stringValue.isEmpty
-    }
-}
-
-extension TextFieldSection {
-    init<Field: ContactFormField>(
-        field: Field,
-        inputText: Binding<String>,
-        isValidationTriggered: Bool
-    ) {
-        let title = field.key.capitalized(with: .current)
-
-        let shouldShowWarning = field.isMandatory && isValidationTriggered && !field.validateStategy()
-
-        self.init(
-            sectionTitle: title,
-            text: inputText,
-            placeholder: title,
-            isMandatory: field.isMandatory,
-            shouldShowWarning: shouldShowWarning
-        )
-    }
-}
-
-extension MultilineTextSection {
-    init<Field: ContactFormField>(
-        field: Field,
-        inputText: Binding<String>,
-        isValidationTriggered: Bool,
-        textLimit: Int?
-    ) {
-        let title = field.key.capitalized(with: .current)
-
-        let shouldShowWarning = field.isMandatory && isValidationTriggered && !field.validateStategy()
-
-        self.init(
-            sectionTitle: title,
-            placeholder: title,
-            isMandatory: field.isMandatory,
-            shouldShowWarning: shouldShowWarning,
-            inputText: inputText,
-            textLimit: textLimit
-        )
     }
 }

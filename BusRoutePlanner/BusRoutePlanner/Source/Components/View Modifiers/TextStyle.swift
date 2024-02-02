@@ -28,7 +28,7 @@ struct TextStyle: ViewModifier {
 
 extension Text {
     /* textStyle */
-    /// Text extewnded function that eases the implementation of the text style
+    /// Text extended function that eases the implementation of the text style
     /// applied in the app.
     /// - Parameters:
     ///     - font: Font.

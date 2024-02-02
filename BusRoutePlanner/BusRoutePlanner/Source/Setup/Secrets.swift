@@ -7,6 +7,9 @@
 
 import Foundation
 // swiftlint:disable nesting
+
+/* Secrets */
+/// This file provided by the codeowner contain different sentitive values that are needed for the project
 enum Secrets {
     enum API {
         enum GoogleMaps {

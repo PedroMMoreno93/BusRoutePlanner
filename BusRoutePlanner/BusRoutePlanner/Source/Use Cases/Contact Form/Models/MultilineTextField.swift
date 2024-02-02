@@ -8,7 +8,13 @@
 import Foundation
 import SwiftUI
 
-// TODO: documentar
+/* MultilineTextField */
+/// Struct that implements a multi-line text field of type contact form field.
+/// - Parameters:
+///     - key: String. Default value "message".
+///     - value: String. Empty by default.
+///     - isMandatory: Bool. Set to true.
+///     - characterNumberLimit: Int?.  Default value of 200.
 struct MultilineTextField: ContactFormField {
     var key: String = "message"
     var value: String = ""
@@ -22,4 +28,5 @@ struct MultilineTextField: ContactFormField {
 
 extension MultilineTextField {
     static let empty = MultilineTextField()
+    static let mock = MultilineTextField(value: "why is the rum always gone")
 }

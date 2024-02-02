@@ -8,7 +8,12 @@
 import Foundation
 import SwiftUI
 
-// TODO: documentar
+/* EmailField */
+/// Struct that implements a email field of type contact form field.
+/// - Parameters:
+///     - key: String. Default value "email".
+///     - value: String. Empty by default.
+///     - isMandatory: Bool. Set to false.
 struct EmailField: ContactFormField {
     var key: String = "email"
     var value: String
@@ -28,4 +33,5 @@ struct EmailField: ContactFormField {
 
 extension EmailField {
     static let empty = EmailField(value: "")
+    static let mock = EmailField(value: "jacksparrow@captain.pirate")
 }

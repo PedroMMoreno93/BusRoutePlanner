@@ -7,18 +7,24 @@
 import SwiftUI
 import SwiftData
 
+/* ContactFormView */
+/// View that displays a contact form made by several fields,
+/// such as name, surname, email, and a message to be written by the user.
 struct ContactFormView<
     ViewModel: ContactFormViewModelProtocol
 >: BaseView {
     // MARK: Environment
-     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     @Query private var issues: [Issue]
 
     @EnvironmentObject var badgeManager: AppAlertBadgeManager
 
     @StateObject var viewModel: ViewModel
-    let textLimit = 200
+
+    // MARK: Constants
+    private let horizontalPadding: CGFloat = 20
+    private let sectionsVerticalSpacing: CGFloat = 24
 
     init(viewModel: ViewModel = ContactFormViewModel()) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -37,7 +43,7 @@ struct ContactFormView<
 
                 sections
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, horizontalPadding)
         }
         .alert(
             viewModel.alertMessage,
@@ -77,7 +83,7 @@ struct ContactFormView<
     }
 
     var sections: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: sectionsVerticalSpacing) {
             userNameSection
                 .padding(.top, 10)
                 .id(1)
@@ -138,12 +144,21 @@ struct ContactFormView<
         )
     }
 
+    @ViewBuilder
     private var charCountLabel: some View {
-        Text("\(viewModel.model.inputText.value.count) / \(textLimit)")
-            .font(.caption)
+        if let charLimit = viewModel.model.inputText.characterNumberLimit {
+            Text("\(viewModel.model.inputText.value.count) / \(charLimit)")
+                .font(.caption)
+        } else {
+            EmptyView()
+        }
     }
 }
 
-#Preview {
-    ContactFormView()
+#if DEBUG
+struct ContactFormView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContactFormView()
+    }
 }
+#endif

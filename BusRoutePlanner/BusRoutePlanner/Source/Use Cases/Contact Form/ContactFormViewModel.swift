@@ -8,6 +8,8 @@
 import SwiftUI
 import SwiftData
 
+/* ContactFormViewModelProtocol */
+/// ContactFormView interaction and data definition
 protocol ContactFormViewModelProtocol: BaseViewModel {
     var model: ContactFormModelView { get set }
     var isValidationTriggered: Bool { get set }
@@ -15,6 +17,9 @@ protocol ContactFormViewModelProtocol: BaseViewModel {
     func deleteIssue(context: ModelContext)
 }
 
+/* ContactFormViewModel */
+/// Holds all the info that ContactFormView required,
+/// besides handling the interaction flow.
 class ContactFormViewModel: ContactFormViewModelProtocol {
     @Published var model: ContactFormModelView
     @Published var isSheetPresented: Bool = false

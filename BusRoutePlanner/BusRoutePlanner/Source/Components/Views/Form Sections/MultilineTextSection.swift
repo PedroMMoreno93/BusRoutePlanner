@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/* MultilineTextSection */
+/// View component that provides a stilyzed multi-line textfield section input.
 struct MultilineTextSection: View {
     var sectionTitle: String
     var placeholder: String
@@ -48,11 +50,15 @@ struct MultilineTextSection: View {
     }
 }
 
-#Preview {
-    MultilineTextSection(
-        field: MultilineTextField.empty,
-        inputText: .constant("Message"),
-        isValidationTriggered: true,
-        textLimit: 250
-    )
+#if DEBUG
+struct MultilineTextSection_Previews: PreviewProvider {
+    static var previews: some View {
+        MultilineTextSection(
+            field: MultilineTextField.empty,
+            inputText: .constant("Message"),
+            isValidationTriggered: true,
+            textLimit: 250
+        )
+    }
 }
+#endif

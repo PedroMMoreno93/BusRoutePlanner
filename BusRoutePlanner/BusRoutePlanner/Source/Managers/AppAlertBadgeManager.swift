@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/* AppAlertBadgeManager */
+/// Manager used to handle app's icon badge number value.
 class AppAlertBadgeManager: ObservableObject {
     @MainActor
     func setAlertBadge(number: Int) {

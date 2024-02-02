@@ -8,8 +8,11 @@
 import SwiftUI
 import Combine
 
+/* MultilineInputText */
+/// View component that provides a stilyzed multi-line text input.
 struct MultilineInputText: View {
     @FocusState private var focusField: Bool
+    
     // MARK: Variables
     @Binding var inputText: String
     var textLimit: Int?
@@ -53,6 +56,11 @@ struct MultilineInputText: View {
         }
     }
 }
-#Preview {
-    MultilineInputText(inputText: .constant("Message"))
+
+#if DEBUG
+struct MultilineInputText_Previews: PreviewProvider {
+    static var previews: some View {
+        MultilineInputText(inputText: .constant("Message"))
+    }
 }
+#endif

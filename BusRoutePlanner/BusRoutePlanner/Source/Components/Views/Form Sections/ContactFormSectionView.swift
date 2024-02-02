@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/* ContactFormSectionView */
+/// View component that provides a stilyzed 
+/// generic contact form section.
 struct ContactFormSectionView<
     SectionContent: View
 >: View {
@@ -72,8 +75,12 @@ struct ContactFormSectionView<
     }
 }
 
-#Preview {
-    ContactFormSectionView(sectionTitle: "Name", placeholder: "Name", isMandatory: true, shouldShowWarning: true) {
-        Text("Name")
+#if DEBUG
+struct ContactFormSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContactFormSectionView(sectionTitle: "Name", placeholder: "Name", isMandatory: true, shouldShowWarning: true) {
+            Text("Name")
+        }
     }
 }
+#endif

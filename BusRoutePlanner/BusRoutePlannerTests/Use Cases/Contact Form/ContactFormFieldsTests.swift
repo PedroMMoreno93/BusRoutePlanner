@@ -47,9 +47,9 @@ final class ContactFormFieldsTests: XCTestCase {
         let phone = "phone"
         let phoneField = PhoneField(value: phone)
         XCTAssertEqual(phoneField.value, phone)
-        
+
         XCTAssertFalse(phoneField.isMandatory)
-        
+
         let isValid = phoneField.validateStategy()
         XCTAssertTrue(isValid)
     }

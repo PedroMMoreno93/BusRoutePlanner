@@ -75,7 +75,7 @@ struct TripDetailView: View {
             tertiaryStyle: model.status.color
         )
     }
-
+    // TODO: extact constants
     private var departureArrival: some View {
         VStack(spacing: 10) {
             HStack(spacing: 0) {
@@ -100,6 +100,9 @@ struct TripDetailView: View {
 }
 
 #if DEBUG
+/* TripDetailViewPreviewWrapper */
+/// Wrapper to test the view in the previews.
+/// This is needed due to the sheet interaction flow, that needs a state variable.
 struct TripDetailViewPreviewWrapper: View {
     @State private var orientation: UIDeviceOrientation = .portrait
     @State private var isPresented: Bool = true

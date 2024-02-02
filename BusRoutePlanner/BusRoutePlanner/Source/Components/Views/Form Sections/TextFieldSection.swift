@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/* TextFieldSection */
+/// View component that provides a stilyzed textfield section input.
 struct TextFieldSection: View {
 
     // MARK: Variables
@@ -39,6 +41,10 @@ struct TextFieldSection: View {
     }
 }
 
-#Preview {
-    TextFieldSection(field: NameField.empty, inputText: .constant("Name"), isValidationTriggered: true)
+#if DEBUG
+struct TextFieldSection_Previews: PreviewProvider {
+    static var previews: some View {
+        TextFieldSection(field: NameField.empty, inputText: .constant("Name"), isValidationTriggered: true)
+    }
 }
+#endif
