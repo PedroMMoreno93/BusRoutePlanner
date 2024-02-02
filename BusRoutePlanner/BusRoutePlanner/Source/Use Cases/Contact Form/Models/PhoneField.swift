@@ -15,8 +15,12 @@ import SwiftUI
 ///     - value: String. Empty by default.
 ///     - isMandatory: Bool. Set to false.
 struct PhoneField: ContactFormField {
+    var id = UUID()
     var key: String = "phone"
     var value: String
+    var valueString: String {
+        return value
+    }
     var isMandatory: Bool = false
 
     func validateStategy() -> Bool {

@@ -13,9 +13,13 @@ import SwiftUI
 ///     - model: TripModelView.
 ///     - dismissModal: () -> Void. This is to support sheet dismiss in landscapeMode
 struct TripDetailView: View {
+    // MARK: Variables
     let model: TripModelView
     var isLandsCape: Bool
     @Environment(\.dismiss) private var dismiss
+
+    // MARK: Constants
+    private let verticalSpacing: CGFloat = 10
 
     var body: some View {
             List {
@@ -77,7 +81,7 @@ struct TripDetailView: View {
     }
     // TODO: extact constants
     private var departureArrival: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: verticalSpacing) {
             HStack(spacing: 0) {
                 Text("Departure")
                 Spacer()

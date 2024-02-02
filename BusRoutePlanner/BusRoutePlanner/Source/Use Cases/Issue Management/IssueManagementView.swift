@@ -44,10 +44,10 @@ struct IssueManagementView: View {
         List {
             ForEach(issues) { issue in
                 NavigationLink {
-                    // TODO: nav to Detail
+                  IssueDetailView(model: issue)
                 } label: {
                     Section {
-                        Text("Issue form \(issue.issuedDate.stringFromDate(format: "dd/MM/yy"))")
+                        Text("Issue from \(issue.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
                     }
                 }
             }

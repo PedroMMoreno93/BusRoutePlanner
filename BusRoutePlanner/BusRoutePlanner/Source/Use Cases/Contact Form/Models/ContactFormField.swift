@@ -10,10 +10,12 @@ import SwiftUI
 /* ContactFormField */
 /// Protocol that defines a generic field model and
 ///  its needed set of features and functions.
-protocol ContactFormField: Codable {
+protocol ContactFormField: Codable, Identifiable {
     associatedtype Value: Codable
+    var id: UUID { get set }
     var key: String { get }
     var value: Value { get set }
+    var valueString: String { get }
     var isMandatory: Bool { get }
     func validateStategy() -> Bool
 }

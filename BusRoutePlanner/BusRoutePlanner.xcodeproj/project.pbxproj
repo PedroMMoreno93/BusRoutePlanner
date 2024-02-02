@@ -10,8 +10,6 @@
 		6508F3BD2B6A3C5700578905 /* ContactFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3BC2B6A3C5700578905 /* ContactFormTests.swift */; };
 		6508F3C02B6A40D300578905 /* ContactFormFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3BF2B6A40D300578905 /* ContactFormFieldsTests.swift */; };
 		6508F3C22B6A581A00578905 /* IssueManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3C12B6A581A00578905 /* IssueManagementView.swift */; };
-		6508F3C42B6A583400578905 /* IssueManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3C32B6A583400578905 /* IssueManagementViewModel.swift */; };
-		6508F3C72B6A584800578905 /* IssueManagementModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3C62B6A584800578905 /* IssueManagementModelView.swift */; };
 		651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */; };
 		6510754C2B5C2770005BEA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */; };
 		6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510756E2B5C27A3005BEA4A /* AppDelegate.swift */; };
@@ -25,6 +23,8 @@
 		651F9DB22B6D728F004ACED8 /* ArchitectureExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F9DB12B6D728F004ACED8 /* ArchitectureExampleViewModel.swift */; };
 		651F9DB52B6D78A0004ACED8 /* TextFieldSection+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F9DB42B6D78A0004ACED8 /* TextFieldSection+Initializers.swift */; };
 		651F9DB72B6D7908004ACED8 /* MultilineTextSection+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F9DB62B6D7908004ACED8 /* MultilineTextSection+Initializers.swift */; };
+		651F9DB92B6D84DC004ACED8 /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F9DB82B6D84DC004ACED8 /* IssueDetailView.swift */; };
+		651F9DBB2B6D8C18004ACED8 /* IssueManagementField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F9DBA2B6D8C18004ACED8 /* IssueManagementField.swift */; };
 		6520B9442B5D3498004454AD /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9432B5D3498004454AD /* TripListView.swift */; };
 		6520B94B2B5D43AA004454AD /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B94A2B5D43AA004454AD /* TripCardView.swift */; };
 		6520B94E2B5D89AB004454AD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6520B94D2B5D89AB004454AD /* Colors.xcassets */; };
@@ -125,8 +125,6 @@
 		6508F3BC2B6A3C5700578905 /* ContactFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormTests.swift; sourceTree = "<group>"; };
 		6508F3BF2B6A40D300578905 /* ContactFormFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormFieldsTests.swift; sourceTree = "<group>"; };
 		6508F3C12B6A581A00578905 /* IssueManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementView.swift; sourceTree = "<group>"; };
-		6508F3C32B6A583400578905 /* IssueManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementViewModel.swift; sourceTree = "<group>"; };
-		6508F3C62B6A584800578905 /* IssueManagementModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementModelView.swift; sourceTree = "<group>"; };
 		651075412B5C276E005BEA4A /* BusRoutePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRoutePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerApp.swift; sourceTree = "<group>"; };
 		6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -138,6 +136,8 @@
 		651F9DB12B6D728F004ACED8 /* ArchitectureExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureExampleViewModel.swift; sourceTree = "<group>"; };
 		651F9DB42B6D78A0004ACED8 /* TextFieldSection+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldSection+Initializers.swift"; sourceTree = "<group>"; };
 		651F9DB62B6D7908004ACED8 /* MultilineTextSection+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultilineTextSection+Initializers.swift"; sourceTree = "<group>"; };
+		651F9DB82B6D84DC004ACED8 /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
+		651F9DBA2B6D8C18004ACED8 /* IssueManagementField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementField.swift; sourceTree = "<group>"; };
 		6520B9432B5D3498004454AD /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		6520B94A2B5D43AA004454AD /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		6520B94D2B5D89AB004454AD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -310,9 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				6508F3C12B6A581A00578905 /* IssueManagementView.swift */,
-				6508F3C32B6A583400578905 /* IssueManagementViewModel.swift */,
-				6508F3C62B6A584800578905 /* IssueManagementModelView.swift */,
 				65188E3E2B69AF24000C018E /* Issue.swift */,
+				651F9DB82B6D84DC004ACED8 /* IssueDetailView.swift */,
 				6508F3C52B6A583800578905 /* Persistence */,
 			);
 			path = "Issue Management";
@@ -375,6 +374,7 @@
 				654A894B2B65C482002A1275 /* StopsVisualizer.swift */,
 				65246B3B2B68445200F17FBC /* MultilineInputText.swift */,
 				65246B3A2B68441700F17FBC /* Form Sections */,
+				651F9DBA2B6D8C18004ACED8 /* IssueManagementField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -830,6 +830,7 @@
 				65188E412B69BE2C000C018E /* AppAlertBadgeManager.swift in Sources */,
 				65246B312B6830B900F17FBC /* SurnameField.swift in Sources */,
 				654A89102B651EBB002A1275 /* AdressModelServer.swift in Sources */,
+				651F9DBB2B6D8C18004ACED8 /* IssueManagementField.swift in Sources */,
 				6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */,
 				6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */,
 				6520B9502B5D89CB004454AD /* Colors.swift in Sources */,
@@ -845,6 +846,7 @@
 				65931BCA2B5C3DFD0019EBF9 /* Secrets.swift in Sources */,
 				6520B9442B5D3498004454AD /* TripListView.swift in Sources */,
 				65B3966A2B5DB0F600C95DAD /* SceneDelegate.swift in Sources */,
+				651F9DB92B6D84DC004ACED8 /* IssueDetailView.swift in Sources */,
 				654A89142B652221002A1275 /* TripDetailView.swift in Sources */,
 				654A890C2B651E95002A1275 /* StopModelServer.swift in Sources */,
 				65246B3C2B68445200F17FBC /* MultilineInputText.swift in Sources */,
@@ -856,7 +858,6 @@
 				65B396642B5DA05500C95DAD /* TripListModelView.swift in Sources */,
 				654A89372B65A548002A1275 /* HasPointProtocol.swift in Sources */,
 				654A893D2B65A6FA002A1275 /* StopModelView.swift in Sources */,
-				6508F3C42B6A583400578905 /* IssueManagementViewModel.swift in Sources */,
 				654A89072B651B72002A1275 /* StropDetailProvider.swift in Sources */,
 				652DC8E72B62E1DA00A4D684 /* TripModelView.swift in Sources */,
 				6520B94B2B5D43AA004454AD /* TripCardView.swift in Sources */,
@@ -882,7 +883,6 @@
 				65246B392B68441200F17FBC /* TextFieldSection.swift in Sources */,
 				65B396662B5DA0FA00C95DAD /* TripListViewModel.swift in Sources */,
 				65188E3F2B69AF24000C018E /* Issue.swift in Sources */,
-				6508F3C72B6A584800578905 /* IssueManagementModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

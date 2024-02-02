@@ -16,8 +16,12 @@ import SwiftUI
 ///     - isMandatory: Bool. Set to true.
 ///     - characterNumberLimit: Int?.  Default value of 200.
 struct MultilineTextField: ContactFormField {
+    var id = UUID()
     var key: String = "message"
     var value: String = ""
+    var valueString: String {
+        return value
+    }
     var isMandatory: Bool = true
     var characterNumberLimit: Int? = 200
 

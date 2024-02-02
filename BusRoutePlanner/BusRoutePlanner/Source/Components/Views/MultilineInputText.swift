@@ -12,7 +12,7 @@ import Combine
 /// View component that provides a stilyzed multi-line text input.
 struct MultilineInputText: View {
     @FocusState private var focusField: Bool
-    
+
     // MARK: Variables
     @Binding var inputText: String
     var textLimit: Int?
