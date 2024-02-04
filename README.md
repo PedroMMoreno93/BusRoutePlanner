@@ -56,7 +56,11 @@ The design of the different views follows a guide to make the whole app look hom
 4. Push to the branch (git push origin feature/your-feature)
 5. Create a pull request
 
-## 🙏 Acknowledgments
+## 🙏 Acknowledgments & Attribuitions
+This app has not been developed to be released. There's no intention either to commercialize it. The app uses the following 3rd Party libraries and elements:
+
 * Maps SDK: [Google Maps SDK For iOS Swift package](https://github.com/googlemaps/ios-maps-sdk) 
 * App icon: [Route icons created by Freepik](https://www.flaticon.com/free-icon/route_2055407)
-
+* Bus icon: [Bus icons created by Vectors Market - Flaticon](https://www.flaticon.com/free-icons/bus)
+* Bus stop icon: [Bus stop icons created by mavadee - Flaticon](https://www.flaticon.com/free-icon/bus-stop_3448339?term=bus+stop&page=1&position=10&origin=search&related_id=3448339)
+* Finish icon: [Start icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/start)
