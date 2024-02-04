@@ -25,7 +25,7 @@ class ContactFormViewModel: ContactFormViewModelProtocol {
     @Published var isSheetPresented: Bool = false
     @Published var status: ViewModelStatus = .empty
     @Published var showAlert: Bool = false
-    @Published var alertMessage: String = Texts.Alert.defaultAlertMessage
+    @Published var alertMessage: String = LocalizedKeys.Alert.defaultAlertMessage.stringValue()
     @Published var isValidationTriggered: Bool = false
     @Published var savedIssue: Issue?
 
@@ -43,7 +43,7 @@ class ContactFormViewModel: ContactFormViewModelProtocol {
         }
 
         self.saveIssueInDataBase(context: context)
-        self.alertMessage = Texts.Alert.savedIssueMessage
+        self.alertMessage = LocalizedKeys.Alert.savedIssueMessage.stringValue()
         self.showAlert = true
     }
 

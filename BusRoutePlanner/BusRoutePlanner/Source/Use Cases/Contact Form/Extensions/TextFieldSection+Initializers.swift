@@ -19,7 +19,7 @@ extension TextFieldSection {
         inputText: Binding<String>,
         isValidationTriggered: Bool
     ) {
-        let title = field.key.capitalized(with: .current)
+        let title = String.localizedString(for: field.key).capitalized(with: .current)
 
         let shouldShowWarning = field.isMandatory && isValidationTriggered && !field.validateStategy()
 

@@ -71,7 +71,7 @@ struct TripCardView: View {
     }
 
     private var origin: some View {
-        Text(Texts.TripList.fromLabel + "\(model.origin)")
+        Text(LocalizedKeys.TripList.fromLabel.stringValue() + "\(model.origin)")
             .textStyle()
             .lineLimit(1)
     }
@@ -88,7 +88,7 @@ struct TripCardView: View {
 
     private var arrival: some View {
         HStack(spacing: 0) {
-            Text(Texts.TripList.arrivalAtLabel)
+            Text(LocalizedKeys.TripList.arrivalAtLabel)
                 .textStyle()
 
             Text(model.endTimeString)

@@ -47,7 +47,7 @@ struct IssueManagementField: View {
     }
 
     private var title: some View {
-        Text(field.key.capitalized)
+        Text(String.localizedString(for: field.key).capitalized)
             .font(.title3)
             .bold()
             .padding(titlePadding)

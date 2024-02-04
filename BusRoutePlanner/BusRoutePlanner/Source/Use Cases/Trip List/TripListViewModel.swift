@@ -60,7 +60,7 @@ class TripListViewModel: TripListViewModelProtocol {
     @Published var isSheetPresented: Bool = false
     @Published var status: ViewModelStatus = .empty
     @Published var showAlert: Bool = false
-    var alertMessage: String = Texts.TripList.defaultAlertMessage
+    var alertMessage: String = LocalizedKeys.TripList.defaultAlertMessage.stringValue()
 
     // MARK: Providers
     let tripsProvider: TripsProviderProtocol

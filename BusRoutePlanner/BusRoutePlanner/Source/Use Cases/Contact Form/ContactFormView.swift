@@ -53,11 +53,11 @@ struct ContactFormView<
         .alert(
             viewModel.alertMessage,
             isPresented: $viewModel.showAlert) {
-                Button(Texts.Buttons.okLabel, role: .cancel) {
+                Button(LocalizedKeys.Buttons.okLabel, role: .cancel) {
                     dismiss()
                 }
 
-                Button(Texts.Buttons.cancelLabel, role: .destructive) {
+                Button(LocalizedKeys.Buttons.cancelLabel, role: .destructive) {
                     viewModel.deleteIssue(context: context)
                 }
             }
@@ -67,7 +67,7 @@ struct ContactFormView<
     }
 
     private var title: some View {
-        Text(Texts.ContactForm.contactTitle)
+        Text(LocalizedKeys.ContactForm.contactTitle)
             .font(.largeTitle)
             .bold()
     }
