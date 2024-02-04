@@ -12,6 +12,8 @@ extension String {
     enum Colors {
         /// Color asset named primaryText
         static let primatyText = "primaryText"
+        /// Color asset named primaryTextInver
+        static let primaryTextInvert = "primaryTextInvert"
         /// Color asset named boxStroke
         static let boxStroke = "boxStroke"
         /// Color asset named secondaryColor
@@ -22,6 +24,8 @@ extension String {
 enum Colors {
     /// Color asset named primaryText
     static let primaryText = Color(.Colors.primatyText)
+    /// Color asset named primaryTextInvert
+    static let primaryTextInvert = Color(.Colors.primaryTextInvert)
     /// Color asset named boxStroke
     static let boxStroke = Color(.Colors.boxStroke)
     /// Color asset named secondaryColor

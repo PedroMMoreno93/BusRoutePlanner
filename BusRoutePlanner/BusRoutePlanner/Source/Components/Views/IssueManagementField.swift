@@ -13,8 +13,10 @@ struct IssueManagementField: View {
     // MARK: Variables
     let field: any ContactFormField
     var layout: LayoutTypes
+    /// Default value set to Colors.primaryTextInvert.
+    var titleForegroundColor: Color = Colors.primaryTextInvert
     /// Default value set to Colors.secondaryColor.
-    var backgroundColor: Color = Colors.secondaryBackgroundColor
+    var titleBackgroundColor: Color = Colors.secondaryBackgroundColor
 
     // MARK: Scalable constants
     /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Radius.cornerRadius.
@@ -49,9 +51,10 @@ struct IssueManagementField: View {
             .font(.title3)
             .bold()
             .padding(titlePadding)
+            .foregroundStyle(titleForegroundColor)
             .background {
                 RoundedRectangle(cornerRadius: cornerRadius)
-                    .foregroundStyle(backgroundColor)
+                    .foregroundStyle(titleBackgroundColor)
             }
     }
 
