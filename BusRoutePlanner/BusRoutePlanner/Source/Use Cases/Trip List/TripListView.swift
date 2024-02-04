@@ -48,8 +48,8 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     // Default value set to DesignSystem.Radius.shadowRadius.
     private let shadowRadius: CGFloat = DesignGuide.Radius.shadowRadius
     // Default value set to .background.
-    private let buttonForegroundColor: Color = .systemBackground
-    // Default value set to .background.
+    private let buttonForegroundColor: Color = .secondaryBackground
+    // Default value set to .backgroun<d.
     private let buttonBackgroundColor: Color = .systemBackground
 
     var body: some View {
