@@ -10,6 +10,7 @@
 		6508F3BD2B6A3C5700578905 /* ContactFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3BC2B6A3C5700578905 /* ContactFormTests.swift */; };
 		6508F3C02B6A40D300578905 /* ContactFormFieldsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3BF2B6A40D300578905 /* ContactFormFieldsTests.swift */; };
 		6508F3C22B6A581A00578905 /* IssueManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6508F3C12B6A581A00578905 /* IssueManagementView.swift */; };
+		650B1F922B6ECD84006318F4 /* CustomBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B1F912B6ECD84006318F4 /* CustomBadge.swift */; };
 		651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */; };
 		6510754C2B5C2770005BEA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */; };
 		6510756F2B5C27A3005BEA4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6510756E2B5C27A3005BEA4A /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		652DC8E72B62E1DA00A4D684 /* TripModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E62B62E1DA00A4D684 /* TripModelView.swift */; };
 		652DC8EA2B62EACF00A4D684 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E92B62EACF00A4D684 /* Images.swift */; };
 		652DC8EC2B62EAD500A4D684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DC8EB2B62EAD500A4D684 /* Images.xcassets */; };
+		653DEF7A2B6FB0C7002B115B /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DEF792B6FB0C7002B115B /* DesignSystem.swift */; };
 		654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89032B644A96002A1275 /* CustomGeometryReader.swift */; };
 		654A89072B651B72002A1275 /* StropDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89062B651B72002A1275 /* StropDetailProvider.swift */; };
 		654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89082B651B97002A1275 /* StopDetailModelServer.swift */; };
@@ -125,6 +127,7 @@
 		6508F3BC2B6A3C5700578905 /* ContactFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormTests.swift; sourceTree = "<group>"; };
 		6508F3BF2B6A40D300578905 /* ContactFormFieldsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormFieldsTests.swift; sourceTree = "<group>"; };
 		6508F3C12B6A581A00578905 /* IssueManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementView.swift; sourceTree = "<group>"; };
+		650B1F912B6ECD84006318F4 /* CustomBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBadge.swift; sourceTree = "<group>"; };
 		651075412B5C276E005BEA4A /* BusRoutePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusRoutePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651075442B5C276E005BEA4A /* BusRoutePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusRoutePlannerApp.swift; sourceTree = "<group>"; };
 		6510754B2B5C2770005BEA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 		652DC8E62B62E1DA00A4D684 /* TripModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelView.swift; sourceTree = "<group>"; };
 		652DC8E92B62EACF00A4D684 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		652DC8EB2B62EAD500A4D684 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		653DEF792B6FB0C7002B115B /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		654A89032B644A96002A1275 /* CustomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeometryReader.swift; sourceTree = "<group>"; };
 		654A89062B651B72002A1275 /* StropDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StropDetailProvider.swift; sourceTree = "<group>"; };
 		654A89082B651B97002A1275 /* StopDetailModelServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailModelServer.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		6508F3C52B6A583800578905 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				65188E3E2B69AF24000C018E /* Issue.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -310,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				6508F3C12B6A581A00578905 /* IssueManagementView.swift */,
-				65188E3E2B69AF24000C018E /* Issue.swift */,
 				651F9DB82B6D84DC004ACED8 /* IssueDetailView.swift */,
 				6508F3C52B6A583800578905 /* Persistence */,
 			);
@@ -386,6 +390,7 @@
 				6520B9642B5D905E004454AD /* TextStyle.swift */,
 				654A89032B644A96002A1275 /* CustomGeometryReader.swift */,
 				65246B232B66F2B200F17FBC /* GlassBackground.swift */,
+				650B1F912B6ECD84006318F4 /* CustomBadge.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				65931BC92B5C3DFD0019EBF9 /* Secrets.swift */,
+				653DEF792B6FB0C7002B115B /* DesignSystem.swift */,
 				651075872B5C3B5C005BEA4A /* Delegates */,
 			);
 			path = Setup;
@@ -833,6 +839,7 @@
 				651F9DBB2B6D8C18004ACED8 /* IssueManagementField.swift in Sources */,
 				6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */,
 				6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */,
+				653DEF7A2B6FB0C7002B115B /* DesignSystem.swift in Sources */,
 				6520B9502B5D89CB004454AD /* Colors.swift in Sources */,
 				654A89392B65A6C1002A1275 /* PointModelView.swift in Sources */,
 				65246B242B66F2B200F17FBC /* GlassBackground.swift in Sources */,
@@ -877,6 +884,7 @@
 				65B3966E2B5DB36500C95DAD /* ArchitectureExampleView.swift in Sources */,
 				651075452B5C276E005BEA4A /* BusRoutePlannerApp.swift in Sources */,
 				651F9DB52B6D78A0004ACED8 /* TextFieldSection+Initializers.swift in Sources */,
+				650B1F922B6ECD84006318F4 /* CustomBadge.swift in Sources */,
 				6520B95D2B5D8CC2004454AD /* BaseModelView.swift in Sources */,
 				654A890E2B651EA4002A1275 /* PointModelServer.swift in Sources */,
 				654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */,

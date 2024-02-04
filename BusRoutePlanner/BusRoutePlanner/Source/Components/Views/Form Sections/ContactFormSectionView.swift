@@ -18,15 +18,22 @@ struct ContactFormSectionView<
     var placeholder: String
     var isMandatory: Bool
     var shouldShowWarning: Bool
-    var warningMessage: String = "Required Field"
+    var warningMessage: String = "Required"
+    /// Default set to true.
     var showBoxStroke: Bool = true
-    var cornerRadius: CGFloat = 10
-    var strokeWidth: CGFloat = 2
-    var horizontalPadding: CGFloat = 20
-    var verticalSpacing: CGFloat = 12
-    var verticalPadding: CGFloat = 12
-
     @ViewBuilder var sectionContent: SectionContent
+
+    // MARK: Scalable constants
+    /// ScaledMetric(relativeTo: .body) with value of 2.
+    @ScaledMetric(relativeTo: .body) private var strokeWidth = 2
+    /// ScaledMetric(relativeTo: .body) with value of 10.
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
+    /// ScaledMetric(relativeTo: .body) with value of 20.
+    @ScaledMetric(relativeTo: .body) private var horizontalPadding = 20
+    /// ScaledMetric(relativeTo: .body) with value of 12.
+    @ScaledMetric(relativeTo: .body) private var verticalSpacing = 12
+    /// ScaledMetric(relativeTo: .body) with value of 12.
+    @ScaledMetric(relativeTo: .body) private var verticalPadding = 12
 
     // MARK: Computed properties
     private var sectionTitleText: String {
@@ -78,8 +85,15 @@ struct ContactFormSectionView<
 #if DEBUG
 struct ContactFormSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactFormSectionView(sectionTitle: "Name", placeholder: "Name", isMandatory: true, shouldShowWarning: true) {
-            Text("Name")
+        VStack {
+            ContactFormSectionView(sectionTitle: "Name", placeholder: "Name", isMandatory: true, shouldShowWarning: true) {
+                Text("Jack")
+            }
+            
+            
+            ContactFormSectionView(sectionTitle: "Text", placeholder: "Text", isMandatory: true, shouldShowWarning: true) {
+                MultilineInputText(inputText: .constant("Message"))
+            }
         }
     }
 }

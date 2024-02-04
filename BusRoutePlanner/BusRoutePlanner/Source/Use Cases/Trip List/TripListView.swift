@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 /* TripListView */
 /// App's main view. It shows a map overlayed by a list
 /// of trips represented displayed as cards.
 /// - Parameter viewModel: TripListViewModelProtocol
 struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
+    @Environment(\.modelContext) private var context
+    @Query private var issues: [Issue]
+
     @StateObject var viewModel: ViewModel
 
     init(viewModel: ViewModel = TripListViewModel()) {
@@ -69,6 +73,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
                         issuesButton
                     }
                     .frame(maxWidth: .infinity, alignment: .trailing)
+
                     Spacer()
                 }
                 .padding(.horizontal,
@@ -113,12 +118,12 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             StylizedSystemImage(
                 systemName: "text.bubble.fill",// TODO: Sacar a - styles guide.
                 font: .title3,
-                primaryStyle: .white,
-                secondaryStyle: .blue,
-                tertiaryStyle: .blue
+                primaryStyle: .background,
+                secondaryStyle: .primaryText.opacity(0.6),
+                tertiaryStyle: .primaryText.opacity(0.6)
             )
             .padding()
-            .withTransparentBackground(
+            .glassBackground(
                 cornerRadius: cornerRadius,
                 shadowRadius: shadowRadius,
                 isSelected: false
@@ -133,16 +138,17 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             StylizedSystemImage(
                 systemName: "folder.fill",// TODO: Sacar a - styles guide.
                 font: .title3,
-                primaryStyle: .blue,
-                secondaryStyle: .white,
-                tertiaryStyle: .white
+                primaryStyle: .primaryText.opacity(0.6),
+                secondaryStyle: .primaryText.opacity(0.6),
+                tertiaryStyle: .primaryText.opacity(0.6)
             )
             .padding()
-            .withTransparentBackground(
+            .glassBackground(
                 cornerRadius: cornerRadius,
                 shadowRadius: shadowRadius,
                 isSelected: false
             )
+            .customBadge(issues.count)
         }
     }
 

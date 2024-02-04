@@ -34,13 +34,13 @@ struct GlassBackground: ViewModifier {
 }
 
 extension View {
-    /* withTransparentBackground */
+    /* glassBackground */
     /// View extewnded function that eases the implementation of GlassBackground modifier.
     /// - Parameters:
     ///     - cornerRadius: CGFloat.
     ///     - shadowRadius: CGFloat.
     ///     - isSelected: Bool.
-    func withTransparentBackground(
+    func glassBackground(
         cornerRadius: CGFloat,
         shadowRadius: CGFloat,
         isSelected: Bool
@@ -61,7 +61,7 @@ struct GlassBackground_Previews: PreviewProvider {
 
             Image(systemName: "heart.fill")
                 .padding()
-                .withTransparentBackground(
+                .glassBackground(
                     cornerRadius: 20,
                     shadowRadius: 5,
                     isSelected: true

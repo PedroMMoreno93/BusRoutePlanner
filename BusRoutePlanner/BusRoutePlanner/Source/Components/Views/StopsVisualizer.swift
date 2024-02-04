@@ -10,19 +10,34 @@ import SwiftUI
 /// View to show a trip's stops.
 /// - Parameter model: TripModelView
 struct StopsVisualizer: View {
+    // MARK: Variables
     var model: TripModelView = .prewviewMock1
+    /// Value between 0 - 1. Default set to 0.4.
+    var circleInnerWidthRatio: CGFloat = 0.4
+    /// Value between 0 - 1. Default set to 0.3.
+    var lineWidthRatio: CGFloat = 0.3
+    /// Default set to .background.
+    var circleInnerColor: Color = .background
+
+    // MARK: Scalable constants
+    /// ScaledMetric(relativeTo: .body) with value of 30
+    @ScaledMetric(relativeTo: .body) private var circleWidth = 30
+    /// ScaledMetric(relativeTo: .body) with value of 40
+    @ScaledMetric(relativeTo: .body) private var lineLength = 40
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(self.model.stops, id: \.id) { stop in
-                HStack {
-                    circle()
-                    getDistanceToOriginLabel(from: stop)
-                }
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(self.model.stops, id: \.id) { stop in
+                    HStack {
+                        circle()
+                        getDistanceToOriginLabel(from: stop)
+                    }
 
-                if !model.isLastStop(stop) {
-                    rectangle()
-                        .frame(width: 30)
+                    if !model.isLastStop(stop) {
+                        rectangle()
+                            .frame(width: circleWidth)
+                    }
                 }
             }
         }
@@ -34,6 +49,7 @@ struct StopsVisualizer: View {
         let distanceString = stop.distanceToOriginString
         let textLabel = distanceString + " away from origin"
         return Text(textLabel)
+            .font(.body)
     }
 
     private func circle() -> some View {
@@ -41,16 +57,16 @@ struct StopsVisualizer: View {
             .fill(model.status.color)
             .overlay {
                 Circle()
-                    .fill(Color.background)
-                    .frame(width: 12)
+                    .fill(circleInnerColor)
+                    .frame(width: circleWidth * circleInnerWidthRatio)
             }
-            .frame(width: 30)
+            .frame(width: circleWidth)
     }
 
     private func rectangle() -> some View {
         Rectangle()
             .fill(model.status.color)
-            .frame(width: 8, height: 40)
+            .frame(width: circleWidth * lineWidthRatio, height: lineLength)
     }
 }
 

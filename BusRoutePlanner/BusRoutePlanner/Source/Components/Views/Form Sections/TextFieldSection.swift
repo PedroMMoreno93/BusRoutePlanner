@@ -18,11 +18,11 @@ struct TextFieldSection: View {
     var isMandatory: Bool
     var shouldShowWarning: Bool
 
-    // MARK: Constants
-    /// Value of 18
-    private let verticalSpacing: CGFloat = 18
-    /// Value of 18
-    private let horizontalTextfieldPadding: CGFloat = 20
+    // MARK: Scalable constants
+    /// ScaledMetric(relativeTo: .body) with value of 18.
+    @ScaledMetric(relativeTo: .body) private var verticalSpacing = 18
+    /// ScaledMetric(relativeTo: .body) with value of 20.
+    @ScaledMetric(relativeTo: .body) private var horizontalTextfieldPadding = 20
 
     // MARK: Computed properties
     private var sectionTitleText: String {

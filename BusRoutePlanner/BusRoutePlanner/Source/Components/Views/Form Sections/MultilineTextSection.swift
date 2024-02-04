@@ -23,16 +23,15 @@ struct MultilineTextSection: View {
             placeholder: placeholder,
             isMandatory: isMandatory,
             shouldShowWarning: shouldShowWarning,
-            showBoxStroke: false,
-            horizontalPadding: 0,
-            verticalPadding: 0
+            showBoxStroke: true
         ) {
             VStack {
                 MultilineInputText(
                     inputText: $inputText,
                     textLimit: textLimit
                 )
-
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                
                 charCountLabel
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }

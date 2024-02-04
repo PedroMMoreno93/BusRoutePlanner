@@ -79,7 +79,7 @@ struct TripDetailView: View {
             tertiaryStyle: model.status.color
         )
     }
-    // TODO: extact constants
+
     private var departureArrival: some View {
         VStack(spacing: verticalSpacing) {
             HStack(spacing: 0) {
@@ -88,6 +88,7 @@ struct TripDetailView: View {
                 Text("Arrival")
             }
             .font(.title3)
+
             HStack(spacing: 0) {
                 Text(model.origin.address)
                 Spacer()

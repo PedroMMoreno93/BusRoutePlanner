@@ -23,7 +23,11 @@ struct ContactFormView<
     @StateObject var viewModel: ViewModel
 
     // MARK: Constants
-    private let horizontalPadding: CGFloat = 20
+    /// Default set to 15.
+    private let horizontalPadding: CGFloat = 15
+    /// Default set to 10.
+    private let sectionsTopPadding: CGFloat = 10
+    /// Default set to 24.
     private let sectionsVerticalSpacing: CGFloat = 24
 
     init(viewModel: ViewModel = ContactFormViewModel()) {
@@ -42,6 +46,7 @@ struct ContactFormView<
                 }
 
                 sections
+                    .padding(.top, sectionsTopPadding)
             }
             .padding(.horizontal, horizontalPadding)
         }
@@ -85,9 +90,7 @@ struct ContactFormView<
     var sections: some View {
         VStack(spacing: sectionsVerticalSpacing) {
             userNameSection
-                .padding(.top, 10)
                 .id(1)
-
             surnameSection
                 .id(2)
             emailSection
@@ -142,16 +145,6 @@ struct ContactFormView<
             isValidationTriggered: viewModel.isValidationTriggered,
             textLimit: viewModel.model.inputText.characterNumberLimit
         )
-    }
-
-    @ViewBuilder
-    private var charCountLabel: some View {
-        if let charLimit = viewModel.model.inputText.characterNumberLimit {
-            Text("\(viewModel.model.inputText.value.count) / \(charLimit)")
-                .font(.caption)
-        } else {
-            EmptyView()
-        }
     }
 }
 

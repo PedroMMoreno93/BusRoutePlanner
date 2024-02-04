@@ -25,6 +25,7 @@ struct StylizedSystemImage<
     // MARK: Variables
     let systemName: String
     let font: Font
+    /// Default set to .palette.
     let symbolRenderingMode: SymbolRenderingMode = .palette
     let primaryStyle: PrimaryStyle
     let secondaryStyle: SecondaryStyle

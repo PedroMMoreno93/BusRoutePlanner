@@ -22,24 +22,24 @@ struct IssueDetailView: View {
             Text("Issue from \(model.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
                 .bold()
                 .font(.title2)
-                .padding(.bottom)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical)
 
-            Spacer()
             fields
         }
     }
 
     var fields: some View {
-        ScrollView(.vertical) {
-            VStack(alignment: .leading) {
-                ForEach(model.contactForm.allFields, id: \.id) { field in
-                    IssueManagementField(
-                        field: field,
-                        layout: ((field as? MultilineTextField) != nil) ? .vertical : .horizontal
-                    )
-                }
+        List {
+            ForEach(model.contactForm.allFields, id: \.id) { field in
+                IssueManagementField(
+                    field: field,
+                    layout: ((field as? MultilineTextField) != nil) ? .vertical : .horizontal
+                )
+                .multilineTextAlignment(.leading)
             }
         }
+        .listStyle(.grouped)
     }
 }
 

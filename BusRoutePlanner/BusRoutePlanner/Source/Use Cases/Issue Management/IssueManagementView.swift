@@ -10,11 +10,12 @@ import SwiftData
 
 struct IssueManagementView: View {
     @Environment(\.modelContext) private var context
+    @EnvironmentObject var badgeManager: AppAlertBadgeManager
+
     @Query private var issues: [Issue]
 
     var body: some View {
-        //        ScrollView(.vertical, showsIndicators: true) {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 title
 
@@ -24,16 +25,9 @@ struct IssueManagementView: View {
 
             issueList
         }
-        .padding(.horizontal, 20)
-//    }
-
+        .padding(.horizontal, 10)
     }
-    /*
-     VStack {
-         Text("Issues")
-         issueList
-     }
-     */
+
     var title: some View {
         Text("Issues")
             .font(.largeTitle)
@@ -44,9 +38,10 @@ struct IssueManagementView: View {
         List {
             ForEach(issues) { issue in
                 NavigationLink {
-                  IssueDetailView(model: issue)
+                    IssueDetailView(model: issue)
                 } label: {
-                    Section {
+                    HStack {
+                        Image(systemName: "circle")
                         Text("Issue from \(issue.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
                     }
                 }
@@ -54,28 +49,26 @@ struct IssueManagementView: View {
             .onDelete { indexSet in
                 for index in indexSet {
                     context.delete(issues[index])
+                    badgeManager.setAlertBadge(number: issues.count)
                 }
             }
-//            .background {
-//                RoundedRectangle(cornerRadius: 10)
-//                    .stroke(Color.boxStroke, lineWidth: 2)
-//            }
         }
+        .listRowSpacing(0)
+        .listStyle(.grouped)
     }
 }
 
 // swiftlint:disable force_try
 #if DEBUG
 struct IssueManagementView_Previews: PreviewProvider {
-
     static var previews: some View {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try! ModelContainer(for: Issue.self, configurations: config)
-
         container.mainContext.insert(Issue.mock)
-
-        return IssueManagementView()
-            .modelContainer(container)
+        return NavigationView {
+            IssueManagementView()
+                .modelContainer(container)
+        }
     }
 }
 #endif

@@ -56,7 +56,7 @@ struct TripCardView: View {
         .padding(.horizontal, verticalSpacing * 2)
         .padding(.vertical, verticalSpacing)
         .frame(width: cardWidth, height: cardHeight, alignment: .center)
-        .withTransparentBackground(
+        .glassBackground(
             cornerRadius: cornerRadius,
             shadowRadius: shadowRadius,
             isSelected: isSelected
