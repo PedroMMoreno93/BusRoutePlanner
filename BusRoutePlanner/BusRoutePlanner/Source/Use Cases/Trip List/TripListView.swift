@@ -152,7 +152,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     }
 
     private var tripsTitle: some View {
-        Text(Texts.TripList.tripsTitle)
+        Text(LocalizedKeys.TripList.tripsTitle)
             .textStyle(font: .callout, fontWeight: .bold)
             .frame(maxWidth: .infinity)
             .padding(.vertical, titleVerticalPadding)

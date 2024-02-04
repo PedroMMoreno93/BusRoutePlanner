@@ -22,7 +22,7 @@ struct IssueDetailView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: verticalSpacing) {
-            Text(Texts.IssueManagement.issueTitleLabel +
+            Text(LocalizedKeys.IssueManagement.issueTitleLabel.stringValue() +
                  "\(model.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
             .bold()
             .font(.title2)

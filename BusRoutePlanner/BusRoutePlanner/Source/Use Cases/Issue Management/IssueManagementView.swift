@@ -35,7 +35,7 @@ struct IssueManagementView: View {
     }
 
     private var title: some View {
-        Text(Texts.IssueManagement.issueListTitle)
+        Text(LocalizedKeys.IssueManagement.issueListTitle)
             .font(.largeTitle)
             .bold()
     }
@@ -48,7 +48,7 @@ struct IssueManagementView: View {
                 } label: {
                     HStack {
                         Image.Icons.issueListRowIcon
-                        Text(Texts.IssueManagement.issueTitleLabel +
+                        Text(LocalizedKeys.IssueManagement.issueTitleLabel.stringValue() +
                              "\(issue.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
                     }
                 }
