@@ -48,6 +48,9 @@ Besides, the color system adapts to both theme modes, light and dark.
 
 The design of the different views follows a guide to make the whole app look homogeneous and clean.
 
+In addition, the app supports translations and is so far supported in:
+- English
+- Spanish
 
 ## 🤝 Contributing
 1. Fork the repository
