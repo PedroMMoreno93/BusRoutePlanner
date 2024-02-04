@@ -57,6 +57,7 @@
 		652DC8EA2B62EACF00A4D684 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E92B62EACF00A4D684 /* Images.swift */; };
 		652DC8EC2B62EAD500A4D684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DC8EB2B62EAD500A4D684 /* Images.xcassets */; };
 		653DEF7A2B6FB0C7002B115B /* DesignGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DEF792B6FB0C7002B115B /* DesignGuide.swift */; };
+		654661B12B6FFC2800054126 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654661B02B6FFC2800054126 /* Texts.swift */; };
 		654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89032B644A96002A1275 /* CustomGeometryReader.swift */; };
 		654A89072B651B72002A1275 /* StropDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89062B651B72002A1275 /* StropDetailProvider.swift */; };
 		654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89082B651B97002A1275 /* StopDetailModelServer.swift */; };
@@ -172,6 +173,7 @@
 		652DC8E92B62EACF00A4D684 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		652DC8EB2B62EAD500A4D684 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		653DEF792B6FB0C7002B115B /* DesignGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignGuide.swift; sourceTree = "<group>"; };
+		654661B02B6FFC2800054126 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		654A89032B644A96002A1275 /* CustomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeometryReader.swift; sourceTree = "<group>"; };
 		654A89062B651B72002A1275 /* StropDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StropDetailProvider.swift; sourceTree = "<group>"; };
 		654A89082B651B97002A1275 /* StopDetailModelServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailModelServer.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 		65931BC72B5C3D8B0019EBF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				654661B02B6FFC2800054126 /* Texts.swift */,
 				652DC8E82B62EAC300A4D684 /* Images */,
 				6520B94C2B5D8998004454AD /* Colors */,
 				6510754A2B5C2770005BEA4A /* Preview Content */,
@@ -886,6 +889,7 @@
 				654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */,
 				65246B392B68441200F17FBC /* TextFieldSection.swift in Sources */,
 				65B396662B5DA0FA00C95DAD /* TripListViewModel.swift in Sources */,
+				654661B12B6FFC2800054126 /* Texts.swift in Sources */,
 				65188E3F2B69AF24000C018E /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

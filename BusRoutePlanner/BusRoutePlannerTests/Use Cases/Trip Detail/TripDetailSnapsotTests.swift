@@ -16,7 +16,7 @@ import ViewInspector
 final class TripDetailSnapsotTests: XCTestCase {
 
     func test_snapshot() {
-        let view = TripDetailView(model: .testCancelledTripModel, isLandsCape: false)
+        let view = TripDetailView(model: .testCancelledTripModel)
 
         let viewController = UIHostingController(rootView: view)
 

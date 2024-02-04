@@ -7,7 +7,9 @@
 
 import SwiftUI
 import SwiftData
-
+/* IssueManagementView */
+/// View that displays a list of issues, that can be deleted
+/// and clicked to see the detail.
 struct IssueManagementView: View {
     @Environment(\.modelContext) private var context
     @EnvironmentObject var badgeManager: AppAlertBadgeManager
@@ -33,7 +35,7 @@ struct IssueManagementView: View {
     }
 
     private var title: some View {
-        Text("Issues")
+        Text(Texts.IssueManagement.issueListTitle)
             .font(.largeTitle)
             .bold()
     }
@@ -45,8 +47,9 @@ struct IssueManagementView: View {
                     IssueDetailView(model: issue)
                 } label: {
                     HStack {
-                        Image(systemName: "circle")
-                        Text("Issue from \(issue.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
+                        Image.Icons.issueListRowIcon
+                        Text(Texts.IssueManagement.issueTitleLabel +
+                             "\(issue.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
                     }
                 }
             }

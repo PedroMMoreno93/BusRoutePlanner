@@ -25,7 +25,7 @@ class ContactFormViewModel: ContactFormViewModelProtocol {
     @Published var isSheetPresented: Bool = false
     @Published var status: ViewModelStatus = .empty
     @Published var showAlert: Bool = false
-    @Published var alertMessage: String = "Something went wrong."
+    @Published var alertMessage: String = Texts.Alert.defaultAlertMessage
     @Published var isValidationTriggered: Bool = false
     @Published var savedIssue: Issue?
 
@@ -43,13 +43,12 @@ class ContactFormViewModel: ContactFormViewModelProtocol {
         }
 
         self.saveIssueInDataBase(context: context)
-        self.alertMessage = "Issue saved!"
+        self.alertMessage = Texts.Alert.savedIssueMessage
         self.showAlert = true
     }
 
     func deleteIssue(context: ModelContext) {
         self.isValidationTriggered = false
-
         self.removeIssueFromDataBase(context: context)
         self.savedIssue = nil
     }

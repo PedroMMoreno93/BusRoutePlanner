@@ -53,32 +53,31 @@ struct ContactFormView<
         .alert(
             viewModel.alertMessage,
             isPresented: $viewModel.showAlert) {
-                Button("OK", role: .cancel) {
+                Button(Texts.Buttons.okLabel, role: .cancel) {
                     dismiss()
                 }
 
-                Button("Cancel", role: .destructive) {
+                Button(Texts.Buttons.cancelLabel, role: .destructive) {
                     viewModel.deleteIssue(context: context)
                 }
-              }
+            }
             .onChange(of: issues) { _, newValue in
                 badgeManager.setAlertBadge(number: newValue.count)
             }
-
     }
 
-    var title: some View {
-        Text("Contact")
+    private var title: some View {
+        Text(Texts.ContactForm.contactTitle)
             .font(.largeTitle)
             .bold()
     }
 
-    var saveButton: some View {
+    private var saveButton: some View {
         Button {
             viewModel.saveIssue(context: context)
         } label: {
             StylizedSystemImage(
-                systemName: "square.and.arrow.down.fill",
+                systemName: .Images.saveButtonIcon,
                 font: .title2,
                 primaryStyle: .blue,
                 secondaryStyle: .blue,
@@ -87,18 +86,17 @@ struct ContactFormView<
         }
     }
 
-    var sections: some View {
+    private var sections: some View {
         VStack(spacing: sectionsVerticalSpacing) {
             userNameSection
-                .id(1)
+
             surnameSection
-                .id(2)
+
             emailSection
-                .id(3)
+
             phoneNumerSection
-                .id(4)
+
             inputTextSection
-                .id(5)
         }
     }
 
@@ -126,7 +124,7 @@ struct ContactFormView<
         )
     }
 
-    func isValidField<Field: ContactFormField>(_ field: Field) -> Bool {
+    private func isValidField<Field: ContactFormField>(_ field: Field) -> Bool {
         return viewModel.isValidationTriggered && field.validateStategy()
     }
 

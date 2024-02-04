@@ -16,17 +16,18 @@ struct IssueDetailView: View {
 
     // MARK: Constants
     /// Default value set to 10.
-    private let verticalSpacing: CGFloat = 10
+    private let verticalSpacing: CGFloat = DesignGuide.List.verticalSpacing
     /// Default value set to 10.
     private let titleVerticalPadding: CGFloat = DesignGuide.Basics.titleVerticalPadding
 
     var body: some View {
         VStack(alignment: .leading, spacing: verticalSpacing) {
-            Text("Issue from \(model.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
-                .bold()
-                .font(.title2)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, titleVerticalPadding)
+            Text(Texts.IssueManagement.issueTitleLabel +
+                 "\(model.issuedDate.stringFromDate(format: "dd/MM/yy hh:mm"))")
+            .bold()
+            .font(.title2)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, titleVerticalPadding)
 
             fields
         }
@@ -49,7 +50,6 @@ struct IssueDetailView: View {
 // swiftlint:disable force_try
 #if DEBUG
 struct IssueDetailView_Previews: PreviewProvider {
-
     static var previews: some View {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try! ModelContainer(for: Issue.self, configurations: config)

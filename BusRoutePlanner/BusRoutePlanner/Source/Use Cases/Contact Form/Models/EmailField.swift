@@ -16,7 +16,7 @@ import SwiftUI
 ///     - isMandatory: Bool. Set to false.
 struct EmailField: ContactFormField {
     var id = UUID()
-    var key: String = "email"
+    var key: String = Texts.ContactForm.FieldKeys.email
     var value: String
     var valueString: String {
         return value

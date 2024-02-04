@@ -79,7 +79,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
         .geometryReader($size)
         .sheet(isPresented: $isSheetPresented, onDismiss: {}, content: {
             if let selectedTrip = viewModel.selectedTrip {
-                TripDetailView(model: selectedTrip, isLandsCape: false)
+                TripDetailView(model: selectedTrip)
                     .presentationDetents([.height(sheetHeight), .large ])
             }
         })
@@ -138,21 +138,21 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     }
 
     private var tripsCards: some View {
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer()
+        VStack(alignment: .leading, spacing: 0) {
+            Spacer()
 
-                tripsTitle
-                    .frame(width: size.width - titleHorizontalPadding)
-                    .padding(.horizontal, titleHorizontalPadding)
-                    .padding(.bottom, tripsTitleBottomPadding)
+            tripsTitle
+                .frame(width: size.width - titleHorizontalPadding)
+                .padding(.horizontal, titleHorizontalPadding)
+                .padding(.bottom, tripsTitleBottomPadding)
 
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        list                    }
-            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                list                    }
+        }
     }
 
     private var tripsTitle: some View {
-        Text("Available Trips")
+        Text(Texts.TripList.tripsTitle)
             .textStyle(font: .callout, fontWeight: .bold)
             .frame(maxWidth: .infinity)
             .padding(.vertical, titleVerticalPadding)
