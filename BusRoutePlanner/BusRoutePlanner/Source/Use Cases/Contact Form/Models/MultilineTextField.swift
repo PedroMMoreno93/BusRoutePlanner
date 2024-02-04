@@ -17,7 +17,7 @@ import SwiftUI
 ///     - characterNumberLimit: Int?.  Default value of 200.
 struct MultilineTextField: ContactFormField {
     var id = UUID()
-    var key: String = Texts.ContactForm.FieldKeys.multilineText
+    var key: String = LocalizedKeys.ContactForm.FieldKeys.multilineText.stringKey
     var value: String = ""
     var valueString: String {
         return value

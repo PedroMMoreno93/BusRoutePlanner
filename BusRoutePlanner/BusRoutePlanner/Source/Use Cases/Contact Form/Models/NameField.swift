@@ -16,7 +16,7 @@ import SwiftUI
 ///     - isMandatory: Bool. Set to false.
 struct NameField: ContactFormField {
     var id = UUID()
-    var key: String = Texts.ContactForm.FieldKeys.name
+    var key: String = LocalizedKeys.ContactForm.FieldKeys.name.stringKey
     var value: String
     var valueString: String {
         return value

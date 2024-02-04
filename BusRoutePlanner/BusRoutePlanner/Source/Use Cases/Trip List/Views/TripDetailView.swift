@@ -40,7 +40,7 @@ struct TripDetailView: View {
                 Section {
                     StopsVisualizer(model: model)
                 } header: {
-                    Text(Texts.TripList.stopsSectionTitle)
+                    Text(LocalizedKeys.TripList.stopsSectionTitle)
                 }
             }
         }
@@ -64,9 +64,9 @@ struct TripDetailView: View {
     private var departureArrival: some View {
         VStack(spacing: verticalSpacing) {
             HStack(spacing: 0) {
-                Text(Texts.TripList.departureTitle)
+                Text(LocalizedKeys.TripList.departureTitle)
                 Spacer()
-                Text(Texts.TripList.arrivalTitle)
+                Text(LocalizedKeys.TripList.arrivalTitle)
             }
             .font(.title3)
 
