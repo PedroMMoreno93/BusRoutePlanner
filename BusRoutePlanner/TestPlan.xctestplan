@@ -9,22 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "mainThreadCheckerEnabled" : false,
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:BusRoutePlanner.xcodeproj",
-        "identifier" : "651075502B5C2770005BEA4A",
+        "identifier" : "65D66BE02B5F211200046332",
         "name" : "BusRoutePlannerTests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:BusRoutePlanner.xcodeproj",
-        "identifier" : "6510755A2B5C2771005BEA4A",
-        "name" : "BusRoutePlannerUITests"
       }
     }
   ],
