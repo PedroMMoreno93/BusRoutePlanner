@@ -17,13 +17,13 @@ struct StopsVisualizer: View {
     /// Value between 0 - 1. Default set to 0.3.
     var lineWidthRatio: CGFloat = 0.3
     /// Default set to .background.
-    var circleInnerColor: Color = .background
+    var circleInnerColor: Color = .systemBackground
 
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .body) with value of 30
-    @ScaledMetric(relativeTo: .body) private var circleWidth = 30
-    /// ScaledMetric(relativeTo: .body) with value of 40
-    @ScaledMetric(relativeTo: .body) private var lineLength = 40
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Stops.circleWidth
+    @ScaledMetric(relativeTo: .body) private var circleWidth = DesignGuide.Stops.circleWidth
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Stops.lineLength
+    @ScaledMetric(relativeTo: .body) private var lineLength = DesignGuide.Stops.lineLength
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {

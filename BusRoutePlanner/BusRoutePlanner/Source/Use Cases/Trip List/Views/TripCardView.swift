@@ -20,17 +20,17 @@ struct TripCardView: View {
 
     // MARK: Scalable constants
     /// ScaledMetric(relativeTo: .body) with value of 220
-    @ScaledMetric(relativeTo: .body) private var cardWidth = 220
+    @ScaledMetric(relativeTo: .body) private var cardWidth = DesignGuide.Card.width
     /// ScaledMetric(relativeTo: .body) with value of 110
-    @ScaledMetric(relativeTo: .body) private var cardHeight = 110
+    @ScaledMetric(relativeTo: .body) private var cardHeight = DesignGuide.Card.height
     /// ScaledMetric(relativeTo: .body) with value of 10
-    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = DesignGuide.Radius.cornerRadius
 
     // MARK: Constants
     /// Value of 4
-    private let verticalSpacing: CGFloat = 4
+    private let verticalSpacing: CGFloat = DesignGuide.List.verticalSpacing
     /// Value of 10
-    private let shadowRadius: CGFloat = 10
+    private let shadowRadius: CGFloat = DesignGuide.Radius.shadowRadius
 
     var body: some View {
         Button {

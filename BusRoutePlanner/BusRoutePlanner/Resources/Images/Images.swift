@@ -17,6 +17,10 @@ extension String {
         static let busStopIcon = "bus stop"
         /// Image asset named finish
         static let finishIcon = "finish"
+        /// System image named text.bubble.fill
+        static let contactButtonIcon = "text.bubble.fill"
+        /// System image named folder.fill
+        static let issuesButtonIcon = "folder.fill"
     }
 }
 

@@ -23,43 +23,34 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     }
 
     // MARK: Variables
-    @State private var orientation: UIDeviceOrientation = .portrait
     @State private var size: CGSize = .zero
-    @State private var resetScroll: Bool = false
     @State private var isSheetPresented: Bool = false
 
-    // TODO: Sacar a - styles guide.
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .callout) with value of 10
-    @ScaledMetric(relativeTo: .callout) private var titleCornerRadius = 10
-    /// ScaledMetric(relativeTo: .callout) with value of 160
-    @ScaledMetric(relativeTo: .callout) private var sheetHeight = 160
-    /// ScaledMetric(relativeTo: .body) with value of 220
-    @ScaledMetric(relativeTo: .body) private var cardWidth = 220
     /// ScaledMetric(relativeTo: .body) with value of 10
-    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = DesignGuide.Radius.cornerRadius
+    /// ScaledMetric(relativeTo: .callout) with value of 160
+    @ScaledMetric(relativeTo: .callout) private var sheetHeight = DesignGuide.Basics.sheetHeight
+    /// ScaledMetric(relativeTo: .body) with value of 220
+    @ScaledMetric(relativeTo: .body) private var cardWidth = DesignGuide.Card.width
 
-    // TODO: Sacar a - styles guide.
     // MARK: Constants
-    /// Value of 12
-    private let titleVerticalPadding: CGFloat = 12
-    /// Value of 20
-    private let titleHorizontalPortraitPadding: CGFloat = 20
-    /// Value of 15
-    private let tripsTitleHorizontalPadding: CGFloat = 15
-    /// Value of 5
-    private let tripsTitleBottomPadding: CGFloat = 5
-    /// Value of 15
-    private let listVerticalPadding: CGFloat = 5
-    /// Value of 5
-    private let listHorizontalPadding: CGFloat = 15
-    /// Value of 10
-    private let shadowRadius: CGFloat = 10
-
-    // MARK: Computed Properties
-    private var isPortrait: Bool {
-        return orientation.isPortrait
-    }
+    // Default value set to DesignSystem.Basics.titleVerticalPadding.
+    private let titleVerticalPadding: CGFloat = DesignGuide.Basics.titleVerticalPadding
+    // Default value set to DesignSystem.Basics.titleHorizontalPadding.
+    private let titleHorizontalPadding: CGFloat = DesignGuide.Basics.titleHorizontalPadding
+    // Default value set to DesignSystem.Basics.titleBottomPadding.
+    private let tripsTitleBottomPadding: CGFloat = DesignGuide.Basics.titleBottomPadding
+    // Default value set to DesignSystem.List.verticalPadding.
+    private let listVerticalPadding: CGFloat = DesignGuide.List.verticalPadding
+    // Default value set to DesignSystem.List.horizontalPadding.
+    private let listHorizontalPadding: CGFloat = DesignGuide.List.horizontalPadding
+    // Default value set to DesignSystem.Radius.shadowRadius.
+    private let shadowRadius: CGFloat = DesignGuide.Radius.shadowRadius
+    // Default value set to .background.
+    private let buttonForegroundColor: Color = .systemBackground
+    // Default value set to .background.
+    private let buttonBackgroundColor: Color = .systemBackground
 
     var body: some View {
         ZStack {
@@ -76,9 +67,7 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
 
                     Spacer()
                 }
-                .padding(.horizontal,
-                         isPortrait ? titleHorizontalPortraitPadding : 0
-                )
+                .padding(.horizontal, titleHorizontalPadding)
                 .background {
                     VStack {
                         Spacer()
@@ -90,17 +79,13 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
         .geometryReader($size)
         .sheet(isPresented: $isSheetPresented, onDismiss: {}, content: {
             if let selectedTrip = viewModel.selectedTrip {
-                TripDetailView(model: selectedTrip, isLandsCape: orientation.isLandscape)
+                TripDetailView(model: selectedTrip, isLandsCape: false)
                     .presentationDetents([.height(sheetHeight), .large ])
             }
         })
         .alert(isPresented: $viewModel.showAlert, content: {
             Alert(title: Text(viewModel.alertMessage))
         })
-        .detectOrientation($orientation)
-        .onChange(of: orientation) {
-            resetScroll = true
-        }
         .task {
             await viewModel.onAppear()
         }
@@ -116,11 +101,11 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             ContactFormView()
         } label: {
             StylizedSystemImage(
-                systemName: "text.bubble.fill",// TODO: Sacar a - styles guide.
+                systemName: .Images.contactButtonIcon,
                 font: .title3,
-                primaryStyle: .background,
-                secondaryStyle: .primaryText.opacity(0.6),
-                tertiaryStyle: .primaryText.opacity(0.6)
+                primaryStyle: buttonBackgroundColor,
+                secondaryStyle: buttonForegroundColor,
+                tertiaryStyle: buttonForegroundColor
             )
             .padding()
             .glassBackground(
@@ -136,11 +121,11 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             IssueManagementView()
         } label: {
             StylizedSystemImage(
-                systemName: "folder.fill",// TODO: Sacar a - styles guide.
+                systemName: .Images.issuesButtonIcon,
                 font: .title3,
-                primaryStyle: .primaryText.opacity(0.6),
-                secondaryStyle: .primaryText.opacity(0.6),
-                tertiaryStyle: .primaryText.opacity(0.6)
+                primaryStyle: buttonForegroundColor,
+                secondaryStyle: buttonForegroundColor,
+                tertiaryStyle: buttonForegroundColor
             )
             .padding()
             .glassBackground(
@@ -153,44 +138,17 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
     }
 
     private var tripsCards: some View {
-        HStack {
             VStack(alignment: .leading, spacing: 0) {
                 Spacer()
 
                 tripsTitle
-                    .frame(width: isPortrait ? size.width - titleHorizontalPortraitPadding : cardWidth )
-                    .padding(.horizontal, tripsTitleHorizontalPadding)
+                    .frame(width: size.width - titleHorizontalPadding)
+                    .padding(.horizontal, titleHorizontalPadding)
                     .padding(.bottom, tripsTitleBottomPadding)
 
-                ScrollViewReader { proxy in
-                    ScrollView(isPortrait ? .horizontal : .vertical, showsIndicators: false) {
-                        getListForOrientation()
-                    }
-                    .onChange(of: self.resetScroll) { _, newValue in
-                        if newValue {
-                            proxy.scrollTo(0)
-                            resetScroll = false
-                        }
-                    }
-                }
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        list                    }
             }
-            if !isPortrait {
-                Spacer()
-            }
-        }
-    }
-
-    @ViewBuilder
-    private func getListForOrientation() -> some View {
-        if isPortrait {
-            HStack(spacing: 0) {
-                list
-            }
-        } else {
-            VStack(spacing: 0) {
-                list
-            }
-        }
     }
 
     private var tripsTitle: some View {
@@ -199,21 +157,23 @@ struct TripListView<ViewModel: TripListViewModelProtocol>: BaseView {
             .frame(maxWidth: .infinity)
             .padding(.vertical, titleVerticalPadding)
             .background(.thinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: titleCornerRadius))
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
     }
 
     private var list: some View {
-        ForEach(self.viewModel.model.trips, id: \.id) { trip in
-            TripCardView(
-                trip: trip,
-                isSelected: self.viewModel.isTripSelected(trip)
-            ) {
-                self.viewModel.selectedTrip = trip
-                self.isSheetPresented = true
+        HStack(spacing: 0) {
+            ForEach(self.viewModel.model.trips, id: \.id) { trip in
+                TripCardView(
+                    trip: trip,
+                    isSelected: self.viewModel.isTripSelected(trip)
+                ) {
+                    self.viewModel.selectedTrip = trip
+                    self.isSheetPresented = true
+                }
+                .padding(.vertical, listVerticalPadding)
+                .padding(.horizontal, listHorizontalPadding)
+                .id(self.viewModel.getIndexForTrip(trip))
             }
-            .padding(.vertical, listVerticalPadding)
-            .padding(.horizontal, listHorizontalPadding)
-            .id(self.viewModel.getIndexForTrip(trip))
         }
     }
 }

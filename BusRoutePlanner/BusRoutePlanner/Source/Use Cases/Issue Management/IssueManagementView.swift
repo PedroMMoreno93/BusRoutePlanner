@@ -12,7 +12,11 @@ struct IssueManagementView: View {
     @Environment(\.modelContext) private var context
     @EnvironmentObject var badgeManager: AppAlertBadgeManager
 
+    // MARK: Variables
     @Query private var issues: [Issue]
+
+    // MARK: Constants
+    private let horizontalPadding: CGFloat = DesignGuide.List.horizontalPadding
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,16 +29,16 @@ struct IssueManagementView: View {
 
             issueList
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal, horizontalPadding)
     }
 
-    var title: some View {
+    private var title: some View {
         Text("Issues")
             .font(.largeTitle)
             .bold()
     }
 
-    var issueList: some View {
+    private var issueList: some View {
         List {
             ForEach(issues) { issue in
                 NavigationLink {

@@ -26,12 +26,12 @@ struct GoogleMapsView: UIViewControllerRepresentable {
     var mapViewWillMove: (Bool) -> Void
 
     // MARK: Constants
-    /// Default set to 4.
-    private static let defaultPolylineStrokeWidth: CGFloat = 4
-    /// Default set to 0.5.
-    private let animationStepDuration: Double = 0.5
-    /// Default set to 12.
-    private let animationZoom: Float = 12
+    /// Default set to DesignSystem.Map.polilyneStrokeWidth.
+    private static let defaultPolylineStrokeWidth: CGFloat = DesignGuide.Map.polilyneStrokeWidth
+    /// Default set to DesignSystem.Map.animationStepDuration.
+    private let animationStepDuration: Double = DesignGuide.Map.animationStepDuration
+    /// Default set to DesignSystem.Map.animationZoom.
+    private let animationZoom: Float = DesignGuide.Map.animationZoom
 
     func makeUIViewController(context: Context) -> GoogleMapsViewController {
         let uiViewController = GoogleMapsViewController()

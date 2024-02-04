@@ -30,7 +30,6 @@
 		6520B94B2B5D43AA004454AD /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B94A2B5D43AA004454AD /* TripCardView.swift */; };
 		6520B94E2B5D89AB004454AD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6520B94D2B5D89AB004454AD /* Colors.xcassets */; };
 		6520B9502B5D89CB004454AD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B94F2B5D89CB004454AD /* Colors.swift */; };
-		6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9532B5D8B7E004454AD /* DetectOrientation.swift */; };
 		6520B9582B5D8C40004454AD /* TripCardModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B9572B5D8C40004454AD /* TripCardModelView.swift */; };
 		6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B95A2B5D8CAB004454AD /* BaseView.swift */; };
 		6520B95D2B5D8CC2004454AD /* BaseModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520B95C2B5D8CC1004454AD /* BaseModelView.swift */; };
@@ -57,7 +56,7 @@
 		652DC8E72B62E1DA00A4D684 /* TripModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E62B62E1DA00A4D684 /* TripModelView.swift */; };
 		652DC8EA2B62EACF00A4D684 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652DC8E92B62EACF00A4D684 /* Images.swift */; };
 		652DC8EC2B62EAD500A4D684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DC8EB2B62EAD500A4D684 /* Images.xcassets */; };
-		653DEF7A2B6FB0C7002B115B /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DEF792B6FB0C7002B115B /* DesignSystem.swift */; };
+		653DEF7A2B6FB0C7002B115B /* DesignGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DEF792B6FB0C7002B115B /* DesignGuide.swift */; };
 		654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89032B644A96002A1275 /* CustomGeometryReader.swift */; };
 		654A89072B651B72002A1275 /* StropDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89062B651B72002A1275 /* StropDetailProvider.swift */; };
 		654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89082B651B97002A1275 /* StopDetailModelServer.swift */; };
@@ -145,7 +144,6 @@
 		6520B94A2B5D43AA004454AD /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		6520B94D2B5D89AB004454AD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6520B94F2B5D89CB004454AD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		6520B9532B5D8B7E004454AD /* DetectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectOrientation.swift; sourceTree = "<group>"; };
 		6520B9572B5D8C40004454AD /* TripCardModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardModelView.swift; sourceTree = "<group>"; };
 		6520B95A2B5D8CAB004454AD /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		6520B95C2B5D8CC1004454AD /* BaseModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelView.swift; sourceTree = "<group>"; };
@@ -173,7 +171,7 @@
 		652DC8E62B62E1DA00A4D684 /* TripModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModelView.swift; sourceTree = "<group>"; };
 		652DC8E92B62EACF00A4D684 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		652DC8EB2B62EAD500A4D684 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		653DEF792B6FB0C7002B115B /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		653DEF792B6FB0C7002B115B /* DesignGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignGuide.swift; sourceTree = "<group>"; };
 		654A89032B644A96002A1275 /* CustomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeometryReader.swift; sourceTree = "<group>"; };
 		654A89062B651B72002A1275 /* StropDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StropDetailProvider.swift; sourceTree = "<group>"; };
 		654A89082B651B97002A1275 /* StopDetailModelServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailModelServer.swift; sourceTree = "<group>"; };
@@ -386,7 +384,6 @@
 		6520B9522B5D8B72004454AD /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				6520B9532B5D8B7E004454AD /* DetectOrientation.swift */,
 				6520B9642B5D905E004454AD /* TextStyle.swift */,
 				654A89032B644A96002A1275 /* CustomGeometryReader.swift */,
 				65246B232B66F2B200F17FBC /* GlassBackground.swift */,
@@ -598,7 +595,7 @@
 			isa = PBXGroup;
 			children = (
 				65931BC92B5C3DFD0019EBF9 /* Secrets.swift */,
-				653DEF792B6FB0C7002B115B /* DesignSystem.swift */,
+				653DEF792B6FB0C7002B115B /* DesignGuide.swift */,
 				651075872B5C3B5C005BEA4A /* Delegates */,
 			);
 			path = Setup;
@@ -837,9 +834,8 @@
 				65246B312B6830B900F17FBC /* SurnameField.swift in Sources */,
 				654A89102B651EBB002A1275 /* AdressModelServer.swift in Sources */,
 				651F9DBB2B6D8C18004ACED8 /* IssueManagementField.swift in Sources */,
-				6520B9542B5D8B7E004454AD /* DetectOrientation.swift in Sources */,
 				6520B95B2B5D8CAB004454AD /* BaseView.swift in Sources */,
-				653DEF7A2B6FB0C7002B115B /* DesignSystem.swift in Sources */,
+				653DEF7A2B6FB0C7002B115B /* DesignGuide.swift in Sources */,
 				6520B9502B5D89CB004454AD /* Colors.swift in Sources */,
 				654A89392B65A6C1002A1275 /* PointModelView.swift in Sources */,
 				65246B242B66F2B200F17FBC /* GlassBackground.swift in Sources */,
@@ -1064,7 +1060,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1100,7 +1097,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1199,7 +1197,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

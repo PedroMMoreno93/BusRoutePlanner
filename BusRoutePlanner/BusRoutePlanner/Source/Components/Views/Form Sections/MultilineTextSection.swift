@@ -31,7 +31,7 @@ struct MultilineTextSection: View {
                     textLimit: textLimit
                 )
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                
+
                 charCountLabel
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }

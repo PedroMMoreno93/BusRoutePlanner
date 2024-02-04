@@ -47,7 +47,7 @@ struct CustomBadge: ViewModifier {
             }
     }
 
-    var capsule: some View {
+    private var capsule: some View {
         Text("\(count)")
             .font(.caption)
             .foregroundStyle(foregroundColor)

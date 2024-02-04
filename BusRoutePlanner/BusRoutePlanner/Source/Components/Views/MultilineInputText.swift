@@ -20,7 +20,7 @@ struct MultilineInputText: View {
     var backgroundColor: UIColor = .clear
 
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .body) with value of 400
+    /// ScaledMetric(relativeTo: .body) with value of 400.
     @ScaledMetric(relativeTo: .body) private var frameHeight = 400
 
     var body: some View {
@@ -54,7 +54,7 @@ struct MultilineInputText: View {
             }
     }
 
-    func limitText(_ upper: Int) {
+    private func limitText(_ upper: Int) {
         if inputText.count > upper {
             inputText = String(inputText.prefix(upper))
         }

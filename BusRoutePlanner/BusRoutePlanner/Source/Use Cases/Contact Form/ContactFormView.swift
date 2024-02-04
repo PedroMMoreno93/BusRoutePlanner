@@ -24,11 +24,11 @@ struct ContactFormView<
 
     // MARK: Constants
     /// Default set to 15.
-    private let horizontalPadding: CGFloat = 15
+    private let horizontalPadding: CGFloat = DesignGuide.List.horizontalPadding
     /// Default set to 10.
-    private let sectionsTopPadding: CGFloat = 10
+    private let sectionsTopPadding: CGFloat = DesignGuide.List.sectionsTopPadding
     /// Default set to 24.
-    private let sectionsVerticalSpacing: CGFloat = 24
+    private let sectionsVerticalSpacing: CGFloat = DesignGuide.List.sectionsVerticalSpacing
 
     init(viewModel: ViewModel = ContactFormViewModel()) {
         self._viewModel = StateObject(wrappedValue: viewModel)

@@ -24,16 +24,16 @@ struct ContactFormSectionView<
     @ViewBuilder var sectionContent: SectionContent
 
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .body) with value of 2.
-    @ScaledMetric(relativeTo: .body) private var strokeWidth = 2
-    /// ScaledMetric(relativeTo: .body) with value of 10.
-    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
-    /// ScaledMetric(relativeTo: .body) with value of 20.
-    @ScaledMetric(relativeTo: .body) private var horizontalPadding = 20
-    /// ScaledMetric(relativeTo: .body) with value of 12.
-    @ScaledMetric(relativeTo: .body) private var verticalSpacing = 12
-    /// ScaledMetric(relativeTo: .body) with value of 12.
-    @ScaledMetric(relativeTo: .body) private var verticalPadding = 12
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Card.strokeWidth.
+    @ScaledMetric(relativeTo: .body) private var strokeWidth = DesignGuide.Card.strokeWidth
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Radius.cornerRadius.
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = DesignGuide.Radius.cornerRadius
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.List.horizontalPadding.
+    @ScaledMetric(relativeTo: .body) private var horizontalPadding = DesignGuide.List.horizontalPadding
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.List.verticalSpacing.
+    @ScaledMetric(relativeTo: .body) private var verticalSpacing = DesignGuide.List.verticalSpacing
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.List.verticalPadding.
+    @ScaledMetric(relativeTo: .body) private var verticalPadding = DesignGuide.List.verticalPadding
 
     // MARK: Computed properties
     private var sectionTitleText: String {
@@ -65,14 +65,14 @@ struct ContactFormSectionView<
         }
     }
 
-    var warning: some View {
+    private var warning: some View {
         Text(warningMessage)
             .font(.caption)
             .foregroundStyle(.red)
     }
 
     @ViewBuilder
-    var background: some View {
+    private var background: some View {
         if showBoxStroke {
             RoundedRectangle(cornerRadius: cornerRadius)
                 .stroke(Color.boxStroke, lineWidth: strokeWidth)
@@ -86,12 +86,21 @@ struct ContactFormSectionView<
 struct ContactFormSectionView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            ContactFormSectionView(sectionTitle: "Name", placeholder: "Name", isMandatory: true, shouldShowWarning: true) {
+            ContactFormSectionView(
+                sectionTitle: "Name",
+                placeholder: "Name",
+                isMandatory: true,
+                shouldShowWarning: true
+            ) {
                 Text("Jack")
             }
-            
-            
-            ContactFormSectionView(sectionTitle: "Text", placeholder: "Text", isMandatory: true, shouldShowWarning: true) {
+
+            ContactFormSectionView(
+                sectionTitle: "Text",
+                placeholder: "Text",
+                isMandatory: true,
+                shouldShowWarning: true
+            ) {
                 MultilineInputText(inputText: .constant("Message"))
             }
         }

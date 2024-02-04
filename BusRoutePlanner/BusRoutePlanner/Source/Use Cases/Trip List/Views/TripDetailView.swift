@@ -19,7 +19,8 @@ struct TripDetailView: View {
     @Environment(\.dismiss) private var dismiss
 
     // MARK: Constants
-    private let verticalSpacing: CGFloat = 10
+    /// Default value set to 10
+    private let verticalSpacing: CGFloat = DesignGuide.List.verticalSpacing
 
     var body: some View {
             List {
@@ -109,7 +110,6 @@ struct TripDetailView: View {
 /// Wrapper to test the view in the previews.
 /// This is needed due to the sheet interaction flow, that needs a state variable.
 struct TripDetailViewPreviewWrapper: View {
-    @State private var orientation: UIDeviceOrientation = .portrait
     @State private var isPresented: Bool = true
 
     var body: some View {
@@ -123,10 +123,9 @@ struct TripDetailViewPreviewWrapper: View {
             .buttonStyle(.borderedProminent)
         }
         .sheet(isPresented: $isPresented, content: {
-            TripDetailView(model: .prewviewMock1, isLandsCape: orientation.isLandscape)
+            TripDetailView(model: .prewviewMock1, isLandsCape: false)
                 .presentationDetents([.height(160), .large])
         })
-        .detectOrientation($orientation)
     }
 }
 

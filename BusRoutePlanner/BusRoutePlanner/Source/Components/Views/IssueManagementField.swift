@@ -13,14 +13,14 @@ struct IssueManagementField: View {
     // MARK: Variables
     let field: any ContactFormField
     var layout: LayoutTypes
-    /// Default value se to .gray.opacity(0.6)
-    var backgroundColor: Color = .gray.opacity(0.6)
+    /// Default value set to Colors.secondaryColor.
+    var backgroundColor: Color = Colors.secondaryBackgroundColor
 
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .body) with value of 10
-    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
-    /// ScaledMetric(relativeTo: .body) with value of 8
-    @ScaledMetric(relativeTo: .body) private var titlePadding = 8
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Radius.cornerRadius.
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = DesignGuide.Radius.cornerRadius
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.Basics.titleVerticalPadding.
+    @ScaledMetric(relativeTo: .body) private var titlePadding = DesignGuide.Basics.titleVerticalPadding
 
     /// Layout variants definitio
     enum LayoutTypes {
@@ -44,7 +44,7 @@ struct IssueManagementField: View {
         }
     }
 
-    var title: some View {
+    private var title: some View {
         Text(field.key.capitalized)
             .font(.title3)
             .bold()
@@ -55,7 +55,7 @@ struct IssueManagementField: View {
             }
     }
 
-    var value: some View {
+    private var value: some View {
         Text(field.valueString.capitalized)
             .font(.body)
     }

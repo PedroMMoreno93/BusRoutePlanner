@@ -15,7 +15,10 @@ struct IssueDetailView: View {
     var model: Issue = Issue(contactForm: .mock)
 
     // MARK: Constants
-    private let verticalSpacing: CGFloat = 20
+    /// Default value set to 10.
+    private let verticalSpacing: CGFloat = 10
+    /// Default value set to 10.
+    private let titleVerticalPadding: CGFloat = DesignGuide.Basics.titleVerticalPadding
 
     var body: some View {
         VStack(alignment: .leading, spacing: verticalSpacing) {
@@ -23,13 +26,13 @@ struct IssueDetailView: View {
                 .bold()
                 .font(.title2)
                 .frame(maxWidth: .infinity)
-                .padding(.vertical)
+                .padding(.vertical, titleVerticalPadding)
 
             fields
         }
     }
 
-    var fields: some View {
+    private var fields: some View {
         List {
             ForEach(model.contactForm.allFields, id: \.id) { field in
                 IssueManagementField(

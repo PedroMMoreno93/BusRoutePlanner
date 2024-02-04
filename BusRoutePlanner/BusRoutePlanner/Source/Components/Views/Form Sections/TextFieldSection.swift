@@ -19,10 +19,12 @@ struct TextFieldSection: View {
     var shouldShowWarning: Bool
 
     // MARK: Scalable constants
-    /// ScaledMetric(relativeTo: .body) with value of 18.
-    @ScaledMetric(relativeTo: .body) private var verticalSpacing = 18
-    /// ScaledMetric(relativeTo: .body) with value of 20.
-    @ScaledMetric(relativeTo: .body) private var horizontalTextfieldPadding = 20
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.TextField.verticalSpacing.
+    @ScaledMetric(relativeTo: .body) private var verticalSpacing =
+    DesignGuide.TextField.verticalSpacing
+    /// ScaledMetric(relativeTo: .body) with value of DesignSystem.TextField.horizontalTextfieldPadding.
+    @ScaledMetric(relativeTo: .body) private var horizontalTextfieldPadding =
+    DesignGuide.TextField.horizontalTextfieldPadding
 
     // MARK: Computed properties
     private var sectionTitleText: String {
