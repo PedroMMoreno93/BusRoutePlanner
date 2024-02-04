@@ -1,8 +1,8 @@
 //
-//  TripDetailSnapsotTests.swift
+//  IssueManagementTests.swift
 //  BusRoutePlannerTests
 //
-//  Created by Pedro Moreno on 27/01/2024.
+//  Created by Pedro Moreno on 04/02/2024.
 //
 
 import Foundation
@@ -10,14 +10,13 @@ import XCTest
 import SwiftUI
 import SnapshotTesting
 import ViewInspector
+import SwiftData
 
 @testable import BusRoutePlanner
 
-final class TripDetailSnapsotTests: XCTestCase {
-
-    func test_snapshot() {
-        let view = TripDetailView(model: .testCancelledTripModel, isLandsCape: false)
-
+final class IssueManagementSnapsotTests: XCTestCase {
+    func test_issueManagementViewSnapshot() {
+        let view = IssueManagementView()
         let viewController = UIHostingController(rootView: view)
 
         assertSnapshot(of: viewController, as: .image)

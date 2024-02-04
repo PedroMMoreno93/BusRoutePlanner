@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
-import UserNotifications
+import SwiftData
 
 @main
 struct BusRoutePlannerApp: App {
-
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    @State var badgeManager = AppAlertBadgeManager()
 
     /* body */
     /// This is the main body of the app's view.
-    /// 
+    ///
     /// By using custom flags, it is posible to determine which
     /// dependencies are injected at the birth of the app.
     ///
@@ -23,7 +23,21 @@ struct BusRoutePlannerApp: App {
     /// avoiding network calls for instance.
     var body: some Scene {
         WindowGroup {
-            TripListView()
+            NavigationView {
+                TripListView()
+            }
+            .task {
+                do {
+                    try await UNUserNotificationCenter.current().requestAuthorization(options: .badge)
+                } catch {
+                    return
+                }
+            }
+            .environmentObject(badgeManager)
         }
+#if !TEST
+        .modelContainer(for: Issue.self)
+#endif
+
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 /* TripListModelView */
 /// Struct that encapsulates a list of TripModelView.
+/// - Param: trips: [TripModelView]
 struct TripListModelView: BaseModelView {
     var trips: [TripModelView]
 }

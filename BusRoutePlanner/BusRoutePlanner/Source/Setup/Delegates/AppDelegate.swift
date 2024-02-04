@@ -10,11 +10,14 @@ import GoogleMaps
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 
+    /// This is needed to set up Google Maps SDK.
+    /// For further info please visit [link]
+    /// (https://developers.google.com/codelabs/maps-platform/maps-platform-ios-swiftui?hl=es-419#1)
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        GMSServices.provideAPIKey(Configuration.API.GoogleMaps.key)
+        GMSServices.provideAPIKey(Secrets.API.GoogleMaps.key)
 
         return true
     }

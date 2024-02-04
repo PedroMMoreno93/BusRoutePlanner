@@ -86,7 +86,7 @@ final class TripModelViewTest: XCTestCase {
 
         let mockStop2 = StopModelView(
             from: StopModelServer(
-                point: PointModelServer(latitude: 0,longitude: 0),
+                point: PointModelServer(latitude: 0, longitude: 0),
                 id: 2
             ),
             origin: PointModelServer(latitude: 10, longitude: 10)

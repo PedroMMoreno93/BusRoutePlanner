@@ -13,57 +13,42 @@ import SwiftUI
 ///     - model: TripModelView.
 ///     - dismissModal: () -> Void. This is to support sheet dismiss in landscapeMode
 struct TripDetailView: View {
+    // MARK: Variables
     let model: TripModelView
-    var isLandsCape: Bool
     @Environment(\.dismiss) private var dismiss
 
+    // MARK: Constants
+    /// Default value set to 10
+    private let verticalSpacing: CGFloat = DesignGuide.List.verticalSpacing
+
     var body: some View {
-            List {
-                Section {
-                  departureArrival
-                } header: {
-                    HStack {
-                        status
+        List {
+            Section {
+                departureArrival
+            } header: {
+                HStack {
+                    status
 
-                        title
+                    title
 
-                        Spacer()
-
-                        if isLandsCape {
-                            backButton
-                        }
-                    }
-                }
-
-                if !model.stops.isEmpty {
-
-                    Section {
-                        StopsVisualizer(model: model)
-                    } header: {
-                        HStack {
-                           Text("Stops")
-
-                        }
-                    }
+                    Spacer()
                 }
             }
+
+            if !model.stops.isEmpty {
+
+                Section {
+                    StopsVisualizer(model: model)
+                } header: {
+                    Text(Texts.TripList.stopsSectionTitle)
+                }
+            }
+        }
     }
 
     private var title: some View {
         Text(model.description)
             .font(.body)
-    }
-
-    private var backButton: some View {
-        Button {
-            dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "arrow.backward")
-                Text("Back")
-            }
-            .foregroundStyle(.blue)
-        }
     }
 
     private var status: some View {
@@ -77,13 +62,14 @@ struct TripDetailView: View {
     }
 
     private var departureArrival: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: verticalSpacing) {
             HStack(spacing: 0) {
-                Text("Departure")
+                Text(Texts.TripList.departureTitle)
                 Spacer()
-                Text("Arrival")
+                Text(Texts.TripList.arrivalTitle)
             }
             .font(.title3)
+
             HStack(spacing: 0) {
                 Text(model.origin.address)
                 Spacer()
@@ -97,25 +83,13 @@ struct TripDetailView: View {
             }
         }
     }
-
-    private var departure: some View {
-        HStack(spacing: 0) {
-            Text("Departure at ")
-            Text(model.startTimeString)
-        }
-    }
-
-    private var arrival: some View {
-        HStack(spacing: 0) {
-            Text("Arrival at ")
-            Text(model.endTimeString)
-        }
-    }
 }
 
 #if DEBUG
+/* TripDetailViewPreviewWrapper */
+/// Wrapper to test the view in the previews.
+/// This is needed due to the sheet interaction flow, that needs a state variable.
 struct TripDetailViewPreviewWrapper: View {
-    @State private var orientation: UIDeviceOrientation = .portrait
     @State private var isPresented: Bool = true
 
     var body: some View {
@@ -129,10 +103,9 @@ struct TripDetailViewPreviewWrapper: View {
             .buttonStyle(.borderedProminent)
         }
         .sheet(isPresented: $isPresented, content: {
-            TripDetailView(model: .prewviewMock1, isLandsCape: orientation.isLandscape)
+            TripDetailView(model: .prewviewMock1)
                 .presentationDetents([.height(160), .large])
         })
-        .detectOrientation($orientation)
     }
 }
 

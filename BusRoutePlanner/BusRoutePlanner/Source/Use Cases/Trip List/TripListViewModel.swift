@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-/// Protocol design for dependencies injection
+/* TripListViewModelProtocol */
+/// TripListView interaction and data definition
 protocol TripListViewModelProtocol: BaseViewModel {
     var tripsProvider: TripsProviderProtocol { get }
     var model: TripListModelView { get set }
@@ -32,23 +33,24 @@ extension TripListViewModelProtocol {
     }
 
     func isTripSelected(_ trip: TripModelView) -> Bool {
-         guard let selectedTrip = selectedTrip else {
-             return false
-         }
+        guard let selectedTrip = selectedTrip else {
+            return false
+        }
 
-         return selectedTrip == trip
-     }
+        return selectedTrip == trip
+    }
 
-     func getIndexForTrip(_ trip: TripModelView) -> Int {
-         let index = availableTrips.firstIndex { availableTrip in
-             trip == availableTrip
-         }
+    func getIndexForTrip(_ trip: TripModelView) -> Int {
+        let index = availableTrips.firstIndex { availableTrip in
+            trip == availableTrip
+        }
 
-         return index ?? 0
-     }
+        return index ?? 0
+    }
 }
 
-/// Class that encapsulates all the info that TripListView required,
+/* TripListViewModel */
+/// Holds all the info that TripListView required,
 /// besides handling the interaction flow.
 class TripListViewModel: TripListViewModelProtocol {
 
@@ -58,11 +60,7 @@ class TripListViewModel: TripListViewModelProtocol {
     @Published var isSheetPresented: Bool = false
     @Published var status: ViewModelStatus = .empty
     @Published var showAlert: Bool = false
-    var alertMessage: String = """
-    Something went wrong.
-Please restart the app.
-If the problem persists, get in contact with the administrator
-"""
+    var alertMessage: String = Texts.TripList.defaultAlertMessage
 
     // MARK: Providers
     let tripsProvider: TripsProviderProtocol
@@ -102,10 +100,10 @@ If the problem persists, get in contact with the administrator
 
     // MARK: Private functions
     private func fetchTrips() async throws -> [TripModelView] {
-            let tripsModelServer = try await tripsProvider.fetchTrips()
-            let tripsModelView = tripsModelServer.compactMap({ modelServer in
-                TripModelView(from: modelServer)
-            })
-            return tripsModelView
+        let tripsModelServer = try await tripsProvider.fetchTrips()
+        let tripsModelView = tripsModelServer.compactMap({ modelServer in
+            TripModelView(from: modelServer)
+        })
+        return tripsModelView
     }
 }

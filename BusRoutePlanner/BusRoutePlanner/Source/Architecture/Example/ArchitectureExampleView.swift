@@ -1,50 +1,17 @@
 //
-//  ArchitectureExample.swift
+//  ArchitectureExampleView.swift
 //  BusRoutePlanner
 //
 //  Created by Pedro Moreno on 21/01/2024.
 //
 
 import SwiftUI
-/*
- This file provides an example use case that implements the base
- architecture.
- For further information, please consult ARCHITECTURE.md.
- */
 
-struct ArchitectureExampleModelView: BaseModelView {
-    var name: String
-    var color: Color
-}
-
-protocol ArchitectureExampleViewModelProtocol: BaseViewModel {
-    var model: ArchitectureExampleModelView { get set }
-    func setColor(_ color: Color)
-}
-
-class ArchitectureExampleViewModel: ArchitectureExampleViewModelProtocol {
-
-    // MARK: Variables
-    @Published var status: ViewModelStatus = .empty
-    @Published var model: ArchitectureExampleModelView
-    @Published var showAlert: Bool = false
-    @Published  var isSheetPresented: Bool = false
-    @Published var alertMessage: String = "Something went wrong."
-
-    init(
-        model: ArchitectureExampleModelView = ArchitectureExampleModelView(
-            name: "Jack Sparrow",
-            color: .blue
-        )
-    ) {
-        self.model = model
-    }
-
-    func setColor(_ color: Color) {
-        self.model.color = color
-    }
-}
-
+/* ArchitectureExampleView */
+/// This example view implements the BaseView protocol, and 
+/// takes advantadge of generics to define the use case view model
+/// protocol injection, leaving room to inject different classes
+/// that implement the view model.
 struct ArchitectureExampleView<
     ViewModel: ArchitectureExampleViewModelProtocol
 >: BaseView {

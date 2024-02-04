@@ -19,7 +19,7 @@ struct TripsProvider: TripsProviderProtocol {
 #if TEST
         return [.mock1]
 #else
-        let url = Configuration.API.Provider.tripsUrl
+        let url = Secrets.API.Provider.tripsUrl
         let method = HTTPMethod.get
 
         let modelServer: [TripModelServer] = try await APIManager.callAPI(

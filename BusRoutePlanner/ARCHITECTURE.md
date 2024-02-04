@@ -11,6 +11,7 @@ The MVVM architectural pattern is employed in this project to separate concerns 
 - ****View:**** Presents the user interface and displays data from the ViewModel.
 - ****ViewModel:**** Acts as an intermediary between the Model and the View, handling data manipulation and business logic.
 
+It's woth mentioning that these layers define a basic use case. In case of needing additional dependencies, as interactors or providers, it is always possible (and recommended) to inject those dependencies to the View Model via protocols.
 
 ## 📐 MVVM Diagram
 

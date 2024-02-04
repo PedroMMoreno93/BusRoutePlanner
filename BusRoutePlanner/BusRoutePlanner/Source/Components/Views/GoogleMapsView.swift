@@ -20,10 +20,18 @@ import UIKit
 ///     - mapViewWillMove: (Bool) -> Void. Calls back indicating if the map has mooved.
 ///     - defaultPolylineStrokeWidth: defaultPolylineStrokeWidth [private]. Default value set to 4.
 struct GoogleMapsView: UIViewControllerRepresentable {
+    // MARK: Variables
     var selectedTrip: TripModelView?
     var animatedTransition: Bool = true
     var mapViewWillMove: (Bool) -> Void
-    private static let defaultPolylineStrokeWidth: CGFloat = 4
+
+    // MARK: Constants
+    /// Default set to DesignSystem.Map.polilyneStrokeWidth.
+    private static let defaultPolylineStrokeWidth: CGFloat = DesignGuide.Map.polilyneStrokeWidth
+    /// Default set to DesignSystem.Map.animationStepDuration.
+    private let animationStepDuration: Double = DesignGuide.Map.animationStepDuration
+    /// Default set to DesignSystem.Map.animationZoom.
+    private let animationZoom: Float = DesignGuide.Map.animationZoom
 
     func makeUIViewController(context: Context) -> GoogleMapsViewController {
         let uiViewController = GoogleMapsViewController()
@@ -57,7 +65,7 @@ struct GoogleMapsView: UIViewControllerRepresentable {
         guard map.selectedMarker != selectedTrip.origin.marker else {
             return
         }
-     
+
         map.clear()
         map.selectedMarker = selectedTrip.origin.marker
 
@@ -77,16 +85,16 @@ struct GoogleMapsView: UIViewControllerRepresentable {
         map: GMSMapView,
         selectedTrip: TripModelView
     ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + animationStepDuration) {
             map.animate(toZoom: kGMSMinZoomLevel)
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + animationStepDuration) {
                 map.animate(with: GMSCameraUpdate.setTarget(selectedTrip.origin.marker.position))
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                    map.animate(toZoom: 12)
+                DispatchQueue.main.asyncAfter(deadline: .now() + animationStepDuration, execute: {
+                    map.animate(toZoom: animationZoom)
 
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + animationStepDuration, execute: {
                         setMarkers(map: map, selectedTrip: selectedTrip)
                     })
                 })

@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct GeometryReaderModifier: ViewModifier {
+/* CustomGeometryReader */
+/// Custom View modifier that enables the use of
+///  Geometry Reader without altering the view's layout.
+struct CustomGeometryReader: ViewModifier {
     @Binding var size: CGSize
 
     func body(content: Content) -> some View {
@@ -24,7 +27,12 @@ struct GeometryReaderModifier: ViewModifier {
 }
 
 extension View {
+    /* geometryReader */
+    /// View extewnded function that eases the implementation
+    ///  of CustomGeometryReader modifier.
+    /// - Parameters:
+    ///     - size: Binding<CGSize>.
     func geometryReader(_ size: Binding<CGSize>) -> some View {
-        modifier(GeometryReaderModifier(size: size))
+        modifier(CustomGeometryReader(size: size))
     }
 }

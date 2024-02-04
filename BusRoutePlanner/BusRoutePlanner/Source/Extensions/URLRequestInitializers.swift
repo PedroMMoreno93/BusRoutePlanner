@@ -8,6 +8,10 @@
 import Foundation
 
 #if !TEST
+
+/*
+ This file contais a URLRequest set of overloaded initializers to ease its implementation.
+ */
 extension URLRequest {
     public init(
         url: URL,

@@ -20,17 +20,17 @@ struct TripCardView: View {
 
     // MARK: Scalable constants
     /// ScaledMetric(relativeTo: .body) with value of 220
-    @ScaledMetric(relativeTo: .body) private var cardWidth = 220
+    @ScaledMetric(relativeTo: .body) private var cardWidth = DesignGuide.Card.width
     /// ScaledMetric(relativeTo: .body) with value of 110
-    @ScaledMetric(relativeTo: .body) private var cardHeight = 110
+    @ScaledMetric(relativeTo: .body) private var cardHeight = DesignGuide.Card.height
     /// ScaledMetric(relativeTo: .body) with value of 10
-    @ScaledMetric(relativeTo: .body) private var cornerRadius = 10
+    @ScaledMetric(relativeTo: .body) private var cornerRadius = DesignGuide.Radius.cornerRadius
 
     // MARK: Constants
     /// Value of 4
-    private let verticalSpacing: CGFloat = 4
+    private let verticalSpacing: CGFloat = DesignGuide.List.verticalSpacing
     /// Value of 10
-    private let shadowRadius: CGFloat = 10
+    private let shadowRadius: CGFloat = DesignGuide.Radius.shadowRadius
 
     var body: some View {
         Button {
@@ -56,14 +56,10 @@ struct TripCardView: View {
         .padding(.horizontal, verticalSpacing * 2)
         .padding(.vertical, verticalSpacing)
         .frame(width: cardWidth, height: cardHeight, alignment: .center)
-        .background(
-            isSelected ? .regularMaterial : .ultraThinMaterial
-        )
-        .clipShape(
-            RoundedRectangle(cornerRadius: cornerRadius)
-        )
-        .shadow(
-            radius: shadowRadius
+        .glassBackground(
+            cornerRadius: cornerRadius,
+            shadowRadius: shadowRadius,
+            isSelected: isSelected
         )
     }
 
@@ -75,7 +71,7 @@ struct TripCardView: View {
     }
 
     private var origin: some View {
-        Text("From \(model.origin)")
+        Text(Texts.TripList.fromLabel + "\(model.origin)")
             .textStyle()
             .lineLimit(1)
     }
@@ -92,7 +88,7 @@ struct TripCardView: View {
 
     private var arrival: some View {
         HStack(spacing: 0) {
-            Text("Arrival at ")
+            Text(Texts.TripList.arrivalAtLabel)
                 .textStyle()
 
             Text(model.endTimeString)
