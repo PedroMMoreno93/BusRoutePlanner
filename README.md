@@ -5,10 +5,10 @@
 ## 📱 Overview 
 A simple trip manager for a bus-on-demand solution. This tool will be used by the operators of the service in order to see the trips available in the system.
 
-<img src="https://github.com/PedroMMoreno93/BusRoutePlanner/assets/136183437/fd618849-0893-4f25-9899-c8917120dad0" width="195.0" height="422.0" />
+<img src="https://github.com/PedroMMoreno93/BusRoutePlanner/assets/136183437/939c33b9-06e9-438f-82bf-ca74f561db08" width="195.0" height="422.0" />
 <sup></sup>
 
-<img src="https://github.com/PedroMMoreno93/BusRoutePlanner/assets/136183437/b7cc4764-84c4-4279-873e-7ae97854ea2e" width="195.0" height="422.0" />
+<img src="https://github.com/PedroMMoreno93/BusRoutePlanner/assets/136183437/b117b447-51c8-49e4-8325-6ddf4c672caf" width="195.0" height="422.0" />
 <sup></sup>
 
 
