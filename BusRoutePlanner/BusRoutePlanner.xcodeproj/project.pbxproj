@@ -58,6 +58,8 @@
 		652DC8EC2B62EAD500A4D684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652DC8EB2B62EAD500A4D684 /* Images.xcassets */; };
 		653DEF7A2B6FB0C7002B115B /* DesignGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653DEF792B6FB0C7002B115B /* DesignGuide.swift */; };
 		654661B12B6FFC2800054126 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654661B02B6FFC2800054126 /* Texts.swift */; };
+		654661B32B70060200054126 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654661B22B70060200054126 /* Secrets.swift */; };
+		654661B62B70090000054126 /* IssueManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654661B52B70090000054126 /* IssueManagementTests.swift */; };
 		654A89042B644A96002A1275 /* CustomGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89032B644A96002A1275 /* CustomGeometryReader.swift */; };
 		654A89072B651B72002A1275 /* StropDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89062B651B72002A1275 /* StropDetailProvider.swift */; };
 		654A89092B651B97002A1275 /* StopDetailModelServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89082B651B97002A1275 /* StopDetailModelServer.swift */; };
@@ -86,7 +88,6 @@
 		654A894A2B65B98B002A1275 /* GoogleMapsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A89492B65B98B002A1275 /* GoogleMapsViewTest.swift */; };
 		654A894C2B65C482002A1275 /* StopsVisualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A894B2B65C482002A1275 /* StopsVisualizer.swift */; };
 		6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6558F6F92B606BC100DD76E7 /* Date+String.swift */; };
-		65931BCA2B5C3DFD0019EBF9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65931BC92B5C3DFD0019EBF9 /* Secrets.swift */; };
 		65931BD32B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */; };
 		65B396642B5DA05500C95DAD /* TripListModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B396632B5DA05500C95DAD /* TripListModelView.swift */; };
 		65B396662B5DA0FA00C95DAD /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B396652B5DA0FA00C95DAD /* TripListViewModel.swift */; };
@@ -174,6 +175,8 @@
 		652DC8EB2B62EAD500A4D684 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		653DEF792B6FB0C7002B115B /* DesignGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignGuide.swift; sourceTree = "<group>"; };
 		654661B02B6FFC2800054126 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		654661B22B70060200054126 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		654661B52B70090000054126 /* IssueManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueManagementTests.swift; sourceTree = "<group>"; };
 		654A89032B644A96002A1275 /* CustomGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGeometryReader.swift; sourceTree = "<group>"; };
 		654A89062B651B72002A1275 /* StropDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StropDetailProvider.swift; sourceTree = "<group>"; };
 		654A89082B651B97002A1275 /* StopDetailModelServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailModelServer.swift; sourceTree = "<group>"; };
@@ -203,7 +206,6 @@
 		6558F6F92B606BC100DD76E7 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		65778CBB2B5C53F3000101E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		65778CBD2B5C5F0F000101E6 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
-		65931BC92B5C3DFD0019EBF9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		65931BD22B5C420E0019EBF9 /* com.pedrommoreno.swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = com.pedrommoreno.swiftlint.yml; sourceTree = "<group>"; };
 		65931BD72B5C45F60019EBF9 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		65B396632B5DA05500C95DAD /* TripListModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListModelView.swift; sourceTree = "<group>"; };
@@ -490,6 +492,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		654661B42B7008DE00054126 /* Issue Management */ = {
+			isa = PBXGroup;
+			children = (
+				654661B52B70090000054126 /* IssueManagementTests.swift */,
+			);
+			path = "Issue Management";
+			sourceTree = "<group>";
+		};
 		654A89052B65196C002A1275 /* Stops */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +607,7 @@
 		65931BC82B5C3DEA0019EBF9 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
-				65931BC92B5C3DFD0019EBF9 /* Secrets.swift */,
+				654661B22B70060200054126 /* Secrets.swift */,
 				653DEF792B6FB0C7002B115B /* DesignGuide.swift */,
 				651075872B5C3B5C005BEA4A /* Delegates */,
 			);
@@ -649,8 +659,8 @@
 			isa = PBXGroup;
 			children = (
 				65D66BF82B60363800046332 /* Trip List */,
-				654A89432B65AFE0002A1275 /* Trip Detail */,
 				6508F3BB2B6A3C2600578905 /* Contact Form */,
+				654661B42B7008DE00054126 /* Issue Management */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -661,6 +671,7 @@
 				65D66BFB2B60367900046332 /* TripListViewModelTests.swift */,
 				65D66BFD2B6036DC00046332 /* TestTripListViewModel.swift */,
 				654A89472B65B0CB002A1275 /* TestTripCard.swift */,
+				654A89432B65AFE0002A1275 /* Trip Detail */,
 				65D66BFA2B60365800046332 /* Test Mocks */,
 				65D66BF92B60364E00046332 /* Model Tests */,
 			);
@@ -828,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6520B9652B5D905E004454AD /* TextStyle.swift in Sources */,
+				654661B32B70060200054126 /* Secrets.swift in Sources */,
 				65246B352B6830E800F17FBC /* ContactFormField.swift in Sources */,
 				65246B2F2B6830A000F17FBC /* EmailField.swift in Sources */,
 				6558F6FA2B606BC100DD76E7 /* Date+String.swift in Sources */,
@@ -849,7 +861,6 @@
 				65246B282B66F84300F17FBC /* ContactFormModelView.swift in Sources */,
 				65246B332B6830C700F17FBC /* NameField.swift in Sources */,
 				654A893B2B65A6D9002A1275 /* AddressModelView.swift in Sources */,
-				65931BCA2B5C3DFD0019EBF9 /* Secrets.swift in Sources */,
 				6520B9442B5D3498004454AD /* TripListView.swift in Sources */,
 				65B3966A2B5DB0F600C95DAD /* SceneDelegate.swift in Sources */,
 				651F9DB92B6D84DC004ACED8 /* IssueDetailView.swift in Sources */,
@@ -904,6 +915,7 @@
 				654A89282B657AB4002A1275 /* TestTripCardMocks.swift in Sources */,
 				6508F3BD2B6A3C5700578905 /* ContactFormTests.swift in Sources */,
 				654A89292B657ABC002A1275 /* TestTripListMocks.swift in Sources */,
+				654661B62B70090000054126 /* IssueManagementTests.swift in Sources */,
 				654A89272B657A8E002A1275 /* TestTripListViewModel.swift in Sources */,
 				654A89482B65B0CB002A1275 /* TestTripCard.swift in Sources */,
 				6508F3C02B6A40D300578905 /* ContactFormFieldsTests.swift in Sources */,

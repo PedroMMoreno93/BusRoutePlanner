@@ -12,7 +12,7 @@ import SwiftData
 /// View that displays the detailed info of an issue.
 struct IssueDetailView: View {
     // MARK: Variables
-    var model: Issue = Issue(contactForm: .mock)
+    var model: Issue
 
     // MARK: Constants
     /// Default value set to 10.
@@ -56,7 +56,7 @@ struct IssueDetailView_Previews: PreviewProvider {
 
         container.mainContext.insert(Issue.mock)
 
-        return IssueDetailView()
+        return IssueDetailView(model: .mock)
             .modelContainer(container)
     }
 }

@@ -45,7 +45,6 @@ enum Texts {
 
     enum IssueManagement {
         static let issueListTitle = "Issues"
-
         static let issueTitleLabel = "Issue from "
     }
 

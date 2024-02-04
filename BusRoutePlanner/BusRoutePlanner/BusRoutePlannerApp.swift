@@ -10,13 +10,12 @@ import SwiftData
 
 @main
 struct BusRoutePlannerApp: App {
-
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State var badgeManager = AppAlertBadgeManager()
 
     /* body */
     /// This is the main body of the app's view.
-    /// 
+    ///
     /// By using custom flags, it is posible to determine which
     /// dependencies are injected at the birth of the app.
     ///
@@ -36,6 +35,9 @@ struct BusRoutePlannerApp: App {
             }
             .environmentObject(badgeManager)
         }
+#if !TEST
         .modelContainer(for: Issue.self)
+#endif
+
     }
 }
